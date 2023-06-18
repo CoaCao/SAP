@@ -1,0 +1,1591 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="docsearch:language" content="en">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://training.codestar.vn/css/common.css">
+
+
+</head>
+
+<body class="fixed-nav" id="page-top">
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="row mb-3" id="app">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="tab-pane active" id="exam" role="tabpanel" aria-labelledby="exam-tab">
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="username">Tài khoản</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="username" name="username"
+                                            value="caoquochuy@gmail.com" placeholder="" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="take-exam-time">Thời gian thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="take-exam-time" name="take-exam-time"
+                                            value="2023-05-30 22:07:04" placeholder="" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-name">Tên đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-name" name="exam-name"
+                                            value="AWS-SA Pro Chương 1" placeholder="" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-type">Loại đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-type" name="exam-type"
+                                            value="Kết quả thi lần đầu" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-time">Thời gian làm bài (phút)</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-time" name="exam-time"
+                                            value="16.883333333333" placeholder="" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-result">Kết quả thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-result" name="exam-result"
+                                            value="Trượt" placeholder="" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="">
+
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="correct-answer">Đáp án chính xác</label>
+                                        <p id="star-required"></p>
+                                    </div>
+
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="correct-answer" name="correct-answer"
+                                            value="2/10" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="my-5">
+                            <h3 class="text-center">Kiến thức</h3>
+                            <div class="row">
+                                <div class="col-6 offset-3">
+                                    <canvas id="exam-statistic-total" width="730" height="730"
+                                        style="display: block; box-sizing: border-box; height: 584px; width: 584px;"></canvas>
+                                </div>
+                                <div class="col-10 offset-1">
+                                    <canvas id="exam-statistic-category-bar" width="1236" height="617"
+                                        style="display: block; box-sizing: border-box; height: 493.6px; width: 988.8px;"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="accordion" id="accordionQuestion">
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4454">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4454" aria-expanded="true"
+                                        aria-controls="collapse-4454">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">1. A company uses AWS Organizations to manage
+                                                    multiple AWS accounts for different departments. The management
+                                                    account has an Amazon S3 bucket that contains project reports. The
+                                                    company wants to limit access to this S3 bucket to only users of
+                                                    accounts within the organization in AWS Organizations. Which
+                                                    solution meets these requirements with the LEAST amount of
+                                                    operational overhead?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Organization</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4454" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4454" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11503"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11503">
+                                                <b>Add the aws PrincipalOrgID global condition key with a reference to
+                                                    the organization ID to the S3 bucket policy.</b>
+
+                                                <br>
+                                                <i>Đây là phương án đơn giản nhất có thể thỏa mãn được yêu cầu. Chúng ta
+                                                    có thể sử dụng Condition trong Bucket Policy với PrincipalOrgID</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11504"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11504">
+                                                Create an organizational unit (OU) for each department. Add the
+                                                aws:PrincipalOrgPaths global condition key to the S3 bucket policy.
+
+                                                <br>
+                                                <i>Việc này có thể làm một cách đơn giản bằng PrincipalOrgID, do không
+                                                    có yêu cầu limit access cho từng OU nên phương án này là không cần
+                                                    thiết</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11505"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11505">
+                                                Use AWS CloudTrail to monitor the CreateAccount,
+                                                InviteAccountToOrganization, LeaveOrganization, and
+                                                RemoveAccountFromOrganization events. Update the S3 bucket policy
+                                                accordingly.
+
+                                                <br>
+                                                <i>CloudTrail không phù hợp để giới hạn access tới các resource, nên
+                                                    dùng IAM hoặc Bucket Policy</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11506"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11506">
+                                                Tag each user that needs access to the S3 bucket. Add the
+                                                aws:PrincipalTag global condition key to the S3 bucket policy.
+
+                                                <br>
+                                                <i>Phương án này gây mất thời gian không cần thiết. Có thể sử dụng
+                                                    phương án khác nhanh hơn mà đỡ phải quản lý nhiều</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4455">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4455" aria-expanded="true"
+                                        aria-controls="collapse-4455">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">2. A company uses Lightweight Directory Access
+                                                    Protocol (LDAP) for its employee authentication and authorization.
+                                                    The company plans to release a mobile app that can be installed on
+                                                    employee’s smartphones. The mobile application will allow users to
+                                                    have federated access to AWS resources. Due to strict security and
+                                                    compliance requirements, the mobile application must use a
+                                                    custom-built solution for user authentication. It must also use IAM
+                                                    roles for granting user permissions to AWS resources. The Solutions
+                                                    Architect was tasked to create a solution that meets these
+                                                    requirements.<br><br>Which of the following options should the
+                                                    Solutions Architect implement to enable authentication and
+                                                    authorization for the application? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Organization</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4455" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4455" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11507"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11507">
+                                                <b>Build a custom SAML-compatible solution to handle authentication and
+                                                    authorization. Configure the solution to use LDAP for user
+                                                    authentication and use SAML assertion to perform authorization to
+                                                    the IAM identity provider</b>
+
+                                                <br>
+                                                <i> The requirement is to use a custom-built solution for user
+                                                    authentication, and this can use the company LDAP system for
+                                                    authentication. The SAML assertion is also needed to get
+                                                    authorization tokens from the IAM identity provider that will grant
+                                                    IAM roles to users that wish to access AWS resources</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11508"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11508">
+                                                <b>Build a custom OpenID Connect-compatible solution for the user
+                                                    authentication functionality. Use Amazon Cognito Identity Pools for
+                                                    authorizing access to AWS resources</b>
+
+                                                <br>
+                                                <i>The custom OpenID Connect-compatible solution will allow users to log
+                                                    in from their mobile application much like a single sign-on
+                                                    functionality. Amazon Cognito Identity Pool will provide temporary
+                                                    tokens to federated users for accessing AWS resources.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11509"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11509">
+                                                Build a custom SAML-compatible solution for user authentication.
+                                                Leverage AWS IAM Identity Center for authorizing access to AWS resources
+
+                                                <br>
+                                                <i>The requirement is to grant federated access from the mobile
+                                                    application. AWS IAM Identity Center supports single sign-on to
+                                                    business applications through web browsers only</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11510"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11510">
+                                                Build a custom LDAP connector using Amazon API Gateway with AWS Lambda
+                                                function for user authentication. Use Amazon DynamoDB to store user
+                                                authorization tokens. Write another Lambda function that will validate
+                                                user authorization requests based on the token stored on DynamoDB
+
+                                                <br>
+                                                <i>It is not recommended to store authorization tokens permanently on
+                                                    DynamoDB tables. These tokens should be generated upon user
+                                                    authentication and then temporarily saved on a DynamoDB for a fixed
+                                                    session length.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11511"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11511">
+                                                Build a custom OpenID Connect-compatible solution in combination with
+                                                AWS IAM Identity Center to create authentication and authorization
+                                                functionality for the application
+
+                                                <br>
+                                                <i>AWS IAM Identity Center supports only SAML 2.0–based applications so
+                                                    an OpenID Connect-compatible solution will not work for this
+                                                    scenario.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4456">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4456" aria-expanded="true"
+                                        aria-controls="collapse-4456">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">3. An IT consulting company has multiple AWS
+                                                    accounts for its teams and departments that have been grouped into
+                                                    several organizational units (OUs) using AWS Organizations. The lead
+                                                    solutions architect received a report from the security team that
+                                                    there was a suspected breach in one of the environments wherein a
+                                                    third-party AWS account was suddenly added to the AWS Organization
+                                                    without any prior approval. The external account has high-level
+                                                    access privileges to the accounts that the company owns.
+                                                    Fortunately, no detrimental action was performed yet.<br><br>Which
+                                                    of the following actions should the solutions architect take to
+                                                    properly set up a monitoring system that notifies for any changes to
+                                                    the company AWS accounts? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Organization</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4456" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4456" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11512"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11512">
+                                                Monitor all changes to your organization using Systems Manager and use
+                                                Amazon EventBridge (Amazon CloudWatch Events) to notify you of any new
+                                                activity to your account
+
+                                                <br>
+                                                <i>AWS Systems Manager is a collection of capabilities for configuring
+                                                    and managing your Amazon EC2 instances, on-premises servers and
+                                                    virtual machines, and other AWS resources at scale. This can't be
+                                                    used to monitor the changes to the setup of AWS Organizations</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11513"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11513">
+                                                Setting up a CloudWatch Dashboard to monitor any changes to your
+                                                organizations and creating an SNS topic that would send you a
+                                                notification
+
+                                                <br>
+                                                <i>a CloudWatch Dashboard is primarily used to monitor your AWS
+                                                    resources and not the configuration of your AWS Organizations.
+                                                    Although you can enable sharing of all CloudWatch Events across all
+                                                    accounts in your organization, this can't be used to monitor if
+                                                    there is a new AWS account added to your AWS Organizations. Most of
+                                                    the time, the Amazon CloudWatch Events service is primarily used to
+                                                    monitor your AWS resources and the applications you run on AWS in
+                                                    real-time</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11514"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11514">
+                                                Configure AWS Control Tower to manage and monitor all child accounts
+                                                under the organization. Use Amazon Inspector to analyze any possible
+                                                breach and notify the administrators using AWS SNS
+
+                                                <br>
+                                                <i>AWS Control Tower can send logs to CloudWatch and CloudTrail for
+                                                    monitoring AWS accounts in the organization. However, Amazon
+                                                    Inspector is used as an automated vulnerability management service
+                                                    that continually scans AWS workloads for software vulnerabilities,
+                                                    not for monitoring events on individual AWS accounts.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11515"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11515">
+                                                <b>Create a trail in Amazon CloudTrail to capture all API calls to your
+                                                    AWS Organizations, including calls from the AWS Organizations
+                                                    console and from code calls to the AWS Organizations APIs. Use
+                                                    Amazon EventBridge (Amazon CloudWatch Events) and SNS to raise
+                                                    events when administrator-specified actions occur in an organization
+                                                    and send a notification to you</b>
+
+                                                <br>
+                                                <i>AWS Organizations can work with CloudWatch Events to raise events
+                                                    when administrator-specified actions occur in an organization. For
+                                                    example, because of the sensitivity of such actions, most
+                                                    administrators would want to be warned every time someone creates a
+                                                    new account in the organization or when an administrator of a member
+                                                    account attempts to leave the organization. You can configure
+                                                    CloudWatch Events rules that look for these actions and then send
+                                                    the generated events to administrator-defined targets. Targets can
+                                                    be an Amazon SNS topic that emails or text messages its subscribers.
+                                                    Combining this with Amazon CloudTrail, you can set an event to
+                                                    trigger whenever a matching API call is
+                                                    received.<br><br>Multi-account, multi-region data aggregation in AWS
+                                                    Config enables you to aggregate AWS Config data from multiple
+                                                    accounts and regions into a single account. Multi-account,
+                                                    multi-region data aggregation is useful for central IT
+                                                    administrators to monitor compliance for multiple AWS accounts in
+                                                    the enterprise. An aggregator is a new resource type in AWS Config
+                                                    that collects AWS Config data from multiple source accounts and
+                                                    regions. Create an aggregator in the Region where you want to see
+                                                    the aggregated AWS Config data. While creating an aggregator, you
+                                                    can choose to add either individual account IDs or your
+                                                    organization.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11516"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11516">
+                                                <b>Use AWS Config to monitor the compliance of your AWS Organizations.
+                                                    Set up an SNS Topic or Amazon EventBridge (Amazon CloudWatch Events)
+                                                    that will send alerts to you for any changes</b>
+
+                                                <br>
+                                                <i></i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4457">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4457" aria-expanded="true"
+                                        aria-controls="collapse-4457">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">4. A company wants to implement a multi-account
+                                                    strategy that will be distributed across its several research
+                                                    facilities. There will be approximately 50 teams in total that will
+                                                    need their own AWS accounts. A solution is needed to simplify the
+                                                    DNS management as there is only one team that manages all the
+                                                    domains and subdomains for the whole organization. This means that
+                                                    the solution should allow private DNS to be shared among virtual
+                                                    private clouds (VPCs) in different AWS accounts.<br><br>Which of the
+                                                    following solutions has the LEAST complex DNS architecture and
+                                                    allows all VPCs to resolve the needed domain names?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">RAM</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4457" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4457" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11517"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11517">
+                                                Set up Direct Connect connections among the VPCs of each account using
+                                                private virtual interfaces. Ensure that each VPC has the attributes
+                                                enableDnsHostnames and enableDnsSupport set to “FALSE”. On Amazon Route
+                                                53, create a private hosted zone associated with the central account’s
+                                                VPC. Manage all domains and subdomains on this hosted zone.
+                                                Programmatically associate the VPCs from other accounts with this hosted
+                                                zone
+
+                                                <br>
+                                                <i>Using AWS Direct Connect is not a suitable service to connect the
+                                                    various VPCs. In addition, attributes enableDnsHostnames and
+                                                    enableDnsSupport are set to “TRUE” by default and are needed for VPC
+                                                    resources to query Route 53 zone entries.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11518"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11518">
+                                                Set up a VPC peering connection among the VPC of each account. Ensure
+                                                that each VPC has the attributes enableDnsHostnames and enableDnsSupport
+                                                set to “TRUE”. On Amazon Route 53, create a private hosted zone
+                                                associated with the central account’s VPC. Manage all domains and
+                                                subdomains on this hosted zone. On each of the other AWS Accounts,
+                                                create a Route 53 private hosted zone and configure the Name Server
+                                                entry to use the DNS of the central account
+
+                                                <br>
+                                                <i>You won't be able to resolve the hosted private zone entries even if
+                                                    you configure your Route 53 zone NS entry to use the central
+                                                    accounts' DNS servers.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11519"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11519">
+                                                On AWS Resource Access Manager (RAM), set up a shared services VPC on
+                                                your central account. Create a peering from this VPC to each VPC on the
+                                                other accounts. On Amazon Route 53, create a private hosted zone
+                                                associated with the shared services VPC. Manage all domains and
+                                                subdomains on this hosted zone. On each of the other AWS Accounts,
+                                                create a Route 53 private hosted zone and configure the Name Server
+                                                entry to use the DNS of the central account
+
+                                                <br>
+                                                <i>Although creating the shared services VPC is a good solution,
+                                                    configuring Route 53 Name Server (NS) records to point to the shared
+                                                    services VPC’s Route 53 is not enough. You need to associate the
+                                                    VPCs from other accounts to the hosted zone on the central
+                                                    account</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11520"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11520">
+                                                <b>On AWS Resource Access Manager (RAM), set up a shared services VPC on
+                                                    your central account. Set up VPC peering from this VPC to each VPC
+                                                    on the other accounts. On Amazon Route 53, create a private hosted
+                                                    zone associated with the shared services VPC. Manage all domains and
+                                                    subdomains on this zone. Programmatically associate the VPCs from
+                                                    other accounts with this hosted zone.</b>
+
+                                                <br>
+                                                <i>VPC sharing allows customers to share subnets with other AWS accounts
+                                                    within the same AWS Organization. In this model, the account that
+                                                    owns the VPC (owner) shares one or more subnets with other accounts
+                                                    (participants) that belong to the same organization from AWS
+                                                    Organizations. After a subnet is shared, the participants can view,
+                                                    create, modify, and delete their application resources in the
+                                                    subnets shared with them. Participants cannot view, modify, or
+                                                    delete resources that belong to other participants or the VPC owner.
+                                                    You can simplify network topologies by interconnecting shared Amazon
+                                                    VPCs using connectivity features, such as AWS PrivateLink, AWS
+                                                    Transit Gateway, and Amazon VPC peering.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4458">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4458" aria-expanded="true"
+                                        aria-controls="collapse-4458">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">5. A company is using AWS Organizations to manage
+                                                    their multi-account and multi-region AWS infrastructure. They are
+                                                    currently doing large-scale automation for their key daily processes
+                                                    to save costs. One of these key processes is sharing specified AWS
+                                                    resources, which an organizational account owns, with other AWS
+                                                    accounts of the company using AWS RAM. There is already an existing
+                                                    service which was previously managed by a separate organization
+                                                    account moderator, who also maintained the specific configuration
+                                                    details.<br><br>In this scenario, what could be a simple and
+                                                    effective solution that would allow the service to perform its tasks
+                                                    on the organization accounts on the moderator's behalf?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">RAM</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4458" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4458" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11521"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11521">
+                                                Attach an IAM role on the service detailing all the allowed actions that
+                                                it will be able to perform. Install an SSM agent in each of the worker
+                                                VMs. Use AWS Systems Manager to build automation workflows that involve
+                                                the daily key processes
+
+                                                <br>
+                                                <i>this is not the simplest way to automate the interaction of AWS RAM
+                                                    with AWS Organizations. AWS Systems Manager is a tool that helps
+                                                    with the automation of EC2 instances, on-premises servers, and other
+                                                    virtual machines. It might not support all the services being used
+                                                    by the key processes</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11522"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11522">
+                                                Configure a service-linked role for AWS RAM and modify the permissions
+                                                policy to specify what the role can and cannot do. Lastly, modify the
+                                                trust policy of the role so that other processes can utilize AWS RAM
+
+                                                <br>
+                                                <i>This is not the simplest solution for integrating AWS RAM and AWS
+                                                    Organizations since using AWS Organization's trusted access will
+                                                    create the service-linked role for you. Also, the trust policy of a
+                                                    service-linked role cannot be modified. Only the linked AWS service
+                                                    can assume a service-linked role, which is why you cannot modify the
+                                                    trust policy of a service-linked role.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11523"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11523">
+                                                Enable cross-account access with AWS Organizations in the Resources
+                                                Access Manager Console. Mirror the configuration changes that was
+                                                performed by the account that previously managed this service
+
+                                                <br>
+                                                <i>you should enable trusted access to AWS RAM, not cross-account
+                                                    access</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11524"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11524">
+                                                <b>Use trusted access by running the
+                                                    enable-sharing-with-aws-organization command in the AWS RAM CLI.
+                                                    Mirror the configuration changes that was performed by the account
+                                                    that previously managed this service</b>
+
+                                                <br>
+                                                <i>You can use trusted access to enable an AWS service that you specify,
+                                                    called the trusted service, to perform tasks in your organization
+                                                    and its accounts on your behalf. This involves granting permissions
+                                                    to the trusted service but does not otherwise affect the permissions
+                                                    for IAM users or roles. When you enable access, the trusted service
+                                                    can create an IAM role called a service-linked role in every account
+                                                    in your organization. That role has a permissions policy that allows
+                                                    the trusted service to do the tasks that are described in that
+                                                    service's documentation. This enables you to specify settings and
+                                                    configuration details that you would like the trusted service to
+                                                    maintain in your organization's accounts on your behalf.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4459">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4459" aria-expanded="true"
+                                        aria-controls="collapse-4459">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">6. A company has several AWS accounts that are
+                                                    managed using AWS Organizations. The company created only one
+                                                    organizational unit (OU) so all child accounts are members of the
+                                                    Production OU. The Solutions Architects control access to certain
+                                                    AWS services using SCPs that define the restricted services. The
+                                                    SCPs are attached at the root of the organization so that they will
+                                                    be applied to all AWS accounts under the organization. The company
+                                                    recently acquired a small business firm and its existing AWS account
+                                                    was invited to join the organization. Upon onboarding, the
+                                                    administrators of the small business firm cannot apply the required
+                                                    AWS Config rules to meet the parent company’s security
+                                                    policies.<br><br>Which of the following options will allow the
+                                                    administrators to update the AWS Config rules on their AWS account
+                                                    without introducing long-term management overhead?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Organization</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4459" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4459" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11525"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11525">
+                                                <b>Remove the SCPs on the organization’s root and apply them to the
+                                                    Production OU instead. Create a temporary Onboarding OU that has an
+                                                    attached SCP allowing changes to AWS Config. Add the new account to
+                                                    this temporary OU and make the required changes before moving it to
+                                                    Production OU</b>
+
+                                                <br>
+                                                <i>It is not recommended to attach the SCPs to the root of the
+                                                    organization, so it is better to move all the SCPs to the Production
+                                                    OU. This way, the temporary Onboarding OU can have an independent
+                                                    SCP to allow the required changes on AWS Config. Then, you can move
+                                                    the new AWS account to the Production OU.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11526"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11526">
+                                                Update the SCPs applied in the root of the AWS organization and remove
+                                                the rule that restricts changes to the AWS Config service. Deploy a new
+                                                AWS Service Catalog to the whole organization containing the company’s
+                                                AWS Config policies
+
+                                                <br>
+                                                <i>Although AWS Service Catalog allows organizations to create and
+                                                    manage catalogs of IT services that are approved for use on AWS,
+                                                    this will cause possible problems in the future for the
+                                                    administrators. Removing the AWS Config restriction on the root of
+                                                    the AWS organization's SCP will allow all Admins on all AWS accounts
+                                                    to manage/change/update their own AWS Config rules.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11527"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11527">
+                                                Add the new account to a temporary Onboarding organization unit (OU)
+                                                that has an attached SCP allowing changes to AWS Config. Perform the
+                                                needed changes while on this temporary OU before moving the new account
+                                                to Production OU
+
+                                                <br>
+                                                <i>If the SCP applied on the organization's root has a "deny"
+                                                    permission, all OUs under the organization will inherit that rule.
+                                                    You cannot override an explicit "deny" permission with an explicit
+                                                    "allow" applied to the temporary Onboarding OU.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11528"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11528">
+                                                Instead of using a “deny list” to AWS services on the organization’s
+                                                root SCPs, use an “allow list” to allow only the required AWS services.
+                                                Temporarily add the AWS Config service on the “allow list” for the
+                                                principals of the new account and make the required changes
+
+                                                <br>
+                                                <i> This is possible, however, it will cause more management problems in
+                                                    the future as you will have to update the "allow list" for any
+                                                    service that users may require in the future.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4460">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4460" aria-expanded="true"
+                                        aria-controls="collapse-4460">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">7. An IT consultancy company has multiple offices
+                                                    located in San Francisco, Frankfurt, Tokyo, and Manila. The company
+                                                    is using AWS Organizations to easily manage its several AWS accounts
+                                                    which are being used by its regional offices and subsidiaries. A new
+                                                    AWS account was recently added to a specific organizational unit
+                                                    (OU) which is responsible for the overall systems administration.
+                                                    The solutions architect noticed that the account is using a
+                                                    root-created Amazon ECS Cluster with an attached service-linked
+                                                    role. For regulatory purposes, the solutions architect created a
+                                                    custom SCP that would deny the new account from performing certain
+                                                    actions in relation to using ECS. However, after applying the
+                                                    policy, the new account could still perform the actions that it was
+                                                    supposed to be restricted from doing.<br><br>Which of the following
+                                                    is the most likely reason for this problem?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Organization</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4460" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4460" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11529"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11529">
+                                                The default SCP grants all permissions attached to every root, OU, and
+                                                account. To apply stricter permissions, this policy is required to be
+                                                modified
+
+                                                <br>
+                                                <i>The scenario already implied that the administrator created a Deny
+                                                    policy. By default, an SCP named FullAWSAccess is attached to every
+                                                    root, OU, and account. This default SCP allows all actions and all
+                                                    services. However, you specify a Deny policy if you want to create a
+                                                    blacklist that blocks all access to the specified services and
+                                                    actions. The explicit Deny on specific actions in the blacklist
+                                                    policy overrides the Allow in any other policy, such as the one in
+                                                    the default SCP.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11530"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11530">
+                                                There is an SCP attached to a higher-level OU that permits the actions
+                                                of the service-linked role. This permission would therefore be inherited
+                                                by the current OU, and override the SCP placed by the administrator
+
+                                                <br>
+                                                <i>even if a higher-level OU has an SCP attached with an Allow policy
+                                                    for the service, the current set up should still have restricted
+                                                    access to the service. Creating and attaching a new Deny SCP to the
+                                                    new account's OU will not be affected by the pre-existing Allow
+                                                    policy in the same OU.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11531"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11531">
+                                                The ECS service is being run outside the jurisdiction of the
+                                                organization. SCPs affect only the principals that are managed by
+                                                accounts that are part of the organization
+
+                                                <br>
+                                                <i>the service-linked role must have been created within the
+                                                    organization, most notably by the root account of the organization.
+                                                    It also does not make sense if we make the assumption that the
+                                                    service is indeed outside of the organization's jurisdiction because
+                                                    the Principal element of a policy specifies which entity will have
+                                                    limited permissions. But the scenario tells us that it should be the
+                                                    new account that is denied certain actions, not the service
+                                                    itself.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11532"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11532">
+                                                <b> SCPs DO NOT affect any service-linked role. Service-linked roles
+                                                    enable other AWS services to integrate with AWS Organizations and
+                                                    can't be restricted by SCPs</b>
+
+                                                <br>
+                                                <i>By default, an SCP named FullAWSAccess is attached to every root, OU,
+                                                    and account. This default SCP allows all actions and all services.
+                                                    So in a new organization, until you start creating or manipulating
+                                                    the SCPs, all of your existing IAM permissions continue to operate
+                                                    as they did. As soon as you apply a new or modified SCP to a root or
+                                                    OU that contains an account, the permissions that your users have in
+                                                    that account become filtered by the SCP. Permissions that used to
+                                                    work might now be denied if they're not allowed by the SCP at every
+                                                    level of the hierarchy down to the specified account.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4461">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4461" aria-expanded="true"
+                                        aria-controls="collapse-4461">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">8. A startup is building a web app that lets users
+                                                    post photos of good deeds in their neighborhood with a 143-character
+                                                    caption/article. The developers decided to write the application in
+                                                    ReactJS, a popular javascript framework so that it would run on the
+                                                    broadest range of browsers, mobile phones, and tablets. The app
+                                                    should provide access to Amazon DynamoDB to store the caption. The
+                                                    initial prototype shows that there aren't large spikes in
+                                                    usage.<br><br>Which option provides the most cost-effective and
+                                                    scalable architecture for this application?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">IAM,
+                                                        STS</span></div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4461" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4461" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11533"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11533">
+                                                Configure the ReactJS client with temporary credentials from the
+                                                Security Token Service using a Token Vending Machine (TVM) on an EC2
+                                                instance. This will provide signed credentials to an IAM user allowing
+                                                GET and PUT operations in the DynamoDB table and the S3 bucket. You
+                                                serve your mobile application out of an S3 bucket enabled as a website
+
+                                                <br>
+                                                <i>The Token Vending Machine (STS Service) is implemented on just a
+                                                    single EC2 instance. This poses a single point of failure which
+                                                    means that the architecture is not highly available and not
+                                                    fault-tolerant. This is not a scalable solution either as the
+                                                    instance can become the performance bottleneck.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11534"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11534">
+                                                Configure the ReactJS client with temporary credentials from the
+                                                Security Token Service using a Token Vending Machine (TVM) to provide
+                                                signed credentials to an IAM user. This will allow GET and PUT
+                                                operations to DynamoDB. Serve your web application from an NGINX server
+                                                hosted in a fleet of EC2 instances that are load-balanced and
+                                                auto-scaled. Your EC2 instances are configured with an IAM role that
+                                                allows GET and PUT operations in DynamoDB
+
+                                                <br>
+                                                <i>Although this solution is highly-available and scalable, deploying
+                                                    EC2 instances in an auto-scaled environment is not as a
+                                                    cost-effective solution as the S3 website.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11535"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11535">
+                                                Register the web application with a Web Identity Provider such as
+                                                Google, Facebook, Amazon, or from any other popular social site. Create
+                                                an IAM role for that web provider and set up permissions for the IAM
+                                                role to allow GET and PUT operations in DynamoDB. Serve your web
+                                                application from an NGINX server hosted on a fleet of EC2 instances,
+                                                with a load balancer and auto-scaling. Add an IAM role to the EC2
+                                                instance to allow GET and PUT operations to DynamoDB tables
+
+                                                <br>
+                                                <i>deploying EC2 instances in an auto-scaled environment, albeit
+                                                    scalable, is not as cost-effective as the S3 website.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11536"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11536">
+                                                <b>Register the web application with a Web Identity Provider such as
+                                                    Google, Facebook, Amazon, or any other popular social sites and use
+                                                    the AssumeRoleWithWebIdentity API of STS to generate temporary
+                                                    credentials. Create an IAM role for that web provider and set up
+                                                    permissions for the IAM role to allow GET and PUT operations in
+                                                    Amazon S3 and DynamoDB. Serve your web app out of an S3 bucket
+                                                    enabled as a website</b>
+
+                                                <br>
+                                                <i>Web Identity Provider authenticates the application via a federated
+                                                    identity provider such as Google, Facebook, Amazon, or other social
+                                                    sites. It sets up proper permission for DynamoDB access and hosts
+                                                    the website in S3. Plus, it also uses STS and
+                                                    AssumeRoleWithWebIdentity API which provides a better
+                                                    authentication.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4462">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4462" aria-expanded="true"
+                                        aria-controls="collapse-4462">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">9. A startup in the fashion industry is building a
+                                                    mobile app that showcases its latest fashion accessories and
+                                                    gadgets. The marketing manager hired a famous model with millions of
+                                                    Instagram followers to promote their new products and hence, it is
+                                                    expected that the app will be a huge hit once it is launched in the
+                                                    market. It must have the ability to automatically scale to handle
+                                                    millions of views of its static contents and to allow users to store
+                                                    their own photos of themselves wearing fashionable accessories with
+                                                    a maximum of 100 characters for captions.
+                                                    <br>
+                                                    <br>In this scenario, which of the following solutions would fulfill
+                                                    this requirement?
+                                                </div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">IAM</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4462" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4462" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11537"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11537">
+                                                <b>1. Use Cognito to handle user authentication and management.
+
+                                                    2. Launch a DynamoDB table to store user data.
+
+                                                    3. Create an S3 bucket to store all of the user photos and other
+                                                    static files.
+
+                                                    4. Distribute the static contents using CloudFront to improve
+                                                    scalability.</b>
+
+                                                <br>
+                                                <i></i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11538"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11538">
+                                                1. Set up a SAML 2.0-based Federation that lets the users sign into the
+                                                app using a third party identity provider such as Amazon, Google or
+                                                Facebook.
+
+                                                2. Set up an RDS database and an S3 bucket to store the photos.
+
+                                                3. Use the AssumeRoleWithWebIdentity API call to assume the IAM role
+                                                containing the proper permissions to communicate with the RDS database.
+
+                                                4. Distribute the static contents using S3 to improve scalability.
+
+                                                <br>
+                                                <i>SAML 2.0-based federation doesn't use social media logins and it is
+                                                    better to use CloudFront to distribute static contents compared to
+                                                    an S3 bucket</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11539"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11539">
+                                                1. Configure an on-premises Active Directory (AD) server utilizing SAML
+                                                2.0 to manage the application users inside of the on-premises AD server.
+
+                                                2. Develop a custom code that authenticates against the LDAP server.
+
+                                                3. Use DynamoDB as the main database of the app and S3 as the scalable
+                                                object storage.
+
+                                                4. Grant an IAM role assigned to the STS token to allow the end-user to
+                                                access the required data in the DynamoDB table.
+
+                                                5. Distribute the static contents using CloudFront to improve
+                                                scalability.
+
+                                                <br>
+                                                <i>on-premise Active Directory server is not a suitable solution</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11540"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11540">
+                                                1. Use Cognito to handle user authentication and management.
+
+                                                2. Use an RDS database to store user data.
+
+                                                3. Create an S3 bucket to store all of the user photos and other static
+                                                files.
+
+                                                4. Distribute the static contents using CloudFront to improve
+                                                scalability.
+
+                                                <br>
+                                                <i>RDS is not as scalable as DynamoDB</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4463">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4463" aria-expanded="true"
+                                        aria-controls="collapse-4463">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">10. A media company hosts its entire
+                                                    infrastructure on the AWS cloud. There is a requirement to copy
+                                                    information to or from the shared resources from another AWS
+                                                    account. The solutions architect has to provide the other account
+                                                    access to several AWS resources such as Amazon S3, AWS KMS, and
+                                                    Amazon ES in the form of a list of AWS account ID numbers. In
+                                                    addition, the user in the other account should still work in the
+                                                    trusted account and there is no need to give up his or her user
+                                                    permissions in place of the role permissions. The solutions
+                                                    architect must also set up a solution that continuously assesses,
+                                                    audits, and monitors the policy configurations.<br><br>Which of the
+                                                    following is the MOST suitable type of policy that you should use in
+                                                    this scenario?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">AWS
+                                                        Config</span></div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-4463" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4463" data-bs-parent="#accordionQuestion">
+
+
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11541"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11541">
+                                                Set up cross-account access with a user-based policy. configuration. Use
+                                                AWS Config rules to periodically audit changes to the IAM policy and
+                                                monitor the compliance of the configuration
+
+                                                <br>
+                                                <i>user-based policy maps the access to a certain IAM user and not to a
+                                                    certain AWS resource</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11542"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11542">
+                                                <b>Set up cross-account access with a resource-based Policy. Use AWS
+                                                    Config rules to periodically audit changes to the IAM policy and
+                                                    monitor the compliance of the configuration</b>
+
+                                                <br>
+                                                <i>AWS Config is a service that enables you to assess, audit, and
+                                                    evaluate the configurations of your AWS resources. Config
+                                                    continuously monitors and records your AWS resource configurations
+                                                    and allows you to automate the evaluation of recorded configurations
+                                                    against desired configurations.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11543"
+                                                disabled="" checked="">
+
+
+                                            <label class="form-check-labelx" for="answers-11543">
+                                                Set up a service-linked role with an identity-based policy. Use AWS
+                                                Systems Manager rules to periodically audit changes to the IAM policy
+                                                and monitor the compliance of the configuration
+
+                                                <br>
+                                                <i>service-linked role is just a unique type of IAM role that is linked
+                                                    directly to an AWS service. In addition, it is the AWS Config
+                                                    service, and not the AWS Systems Manager, that enables you to
+                                                    assess, audit, and evaluate the configurations of your AWS
+                                                    resources.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" value="" id="answers-11544"
+                                                disabled="">
+
+
+                                            <label class="form-check-labelx" for="answers-11544">
+                                                Set up a service-linked role with a service control policy. Use AWS
+                                                Systems Manager rules to periodically audit changes to the IAM policy
+                                                and monitor the compliance of the configuration
+
+                                                <br>
+                                                <i>service control policy is primarily used in AWS Organizations and not
+                                                    for cross-account access. Service-linked roles are predefined by the
+                                                    service and include all the permissions that the service requires to
+                                                    call other AWS services on your behalf. This is not suitable for
+                                                    providing access to your resources to other AWS accounts, unlike
+                                                    cross-account access. You should also use AWS Config, and not AWS
+                                                    Systems Manager, to periodically audit changes to the IAM
+                                                    policy.</i>
+
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tags accordion-body">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

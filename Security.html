@@ -1,0 +1,1253 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="docsearch:language" content="en">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://training.codestar.vn/css/common.css">
+
+
+</head>
+
+<body class="fixed-nav" id="page-top">
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="row mb-3" id="app">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="tab-pane active" id="exam" role="tabpanel" aria-labelledby="exam-tab">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="username">Tài khoản</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="username" name="username"
+                                            value="caoquochuy@gmail.com" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="take-exam-time">Thời gian thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="take-exam-time" name="take-exam-time"
+                                            value="2023-06-18 16:04:55" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-name">Tên đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-name" name="exam-name"
+                                            value="AWS-SA Pro Chương 5" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-type">Loại đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-type" name="exam-type"
+                                            value="Kết quả thi lần đầu" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-time">Thời gian làm bài (phút)</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-time" name="exam-time"
+                                            value="30.016666666667" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-result">Kết quả thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-result" name="exam-result"
+                                            value="Trượt" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="correct-answer">Đáp án chính xác</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="correct-answer" name="correct-answer"
+                                            value="5/10" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-center">Kiến thức</h3>
+                            <div class="row">
+                                <div class="col-6 offset-3">
+                                    <canvas id="exam-statistic-total" width="719" height="718"
+                                        style="display: block; box-sizing: border-box; height: 574.4px; width: 575.2px;"></canvas>
+                                </div>
+                                <div class="col-10 offset-1">
+                                    <canvas id="exam-statistic-category-bar" width="1219" height="608"
+                                        style="display: block; box-sizing: border-box; height: 486.4px; width: 975.2px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionQuestion">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4833">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4833" aria-expanded="true"
+                                        aria-controls="collapse-4833">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">1. A top university has launched its serverless
+                                                    online portal using Lambda and API Gateway in AWS that enables its
+                                                    students to enroll, manage their class schedules, and see their
+                                                    grades online. After a few weeks, the portal abruptly stopped
+                                                    working and lost all of its data. The university hired an external
+                                                    cybersecurity consultant and based on the investigation, the outage
+                                                    was due to an SQL injection vulnerability on the portal's login page
+                                                    in which the attacker simply injected the malicious SQL code. You
+                                                    also need to track historical changes to the rules and metrics
+                                                    associated with your firewall.<br><br>Which of the following is the
+                                                    most suitable and cost-effective solution to avoid another SQL
+                                                    Injection attack against their infrastructure in AWS?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4833" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4833" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13014"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13014">
+                                                <b>Use AWS WAF to add a web access control list (web ACL) in front of
+                                                    the API Gateway to block requests that contain malicious SQL code.
+                                                    Use AWS Config to track changes to your web access control lists
+                                                    (web ACLs) such as the creation and deletion of rules including the
+                                                    updates to the WAF rule configurations</b>
+                                                <br>
+                                                <i>AWS WAF gives you control over which traffic to allow or block to
+                                                    your web applications by defining customizable web security rules.
+                                                    You can use AWS WAF to create custom rules that block common attack
+                                                    patterns, such as SQL injection or cross-site scripting, and rules
+                                                    that are designed for your specific application. New rules can be
+                                                    deployed within minutes, letting you respond quickly to changing
+                                                    traffic patterns. Also, AWS WAF includes a full-featured API that
+                                                    you can use to automate the creation, deployment, and maintenance of
+                                                    web security rules.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13015"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13015">
+                                                Use AWS WAF to add a web access control list (web ACL) in front of the
+                                                Lambda functions to block requests that contain malicious SQL code. Use
+                                                AWS Firewall Manager, to track changes to your web access control lists
+                                                (web ACLs) such as the creation and deletion of rules including the
+                                                updates to the WAF rule configurations
+                                                <br>
+                                                <i>AWS Firewall Manager is primarily used to manage your Firewall across
+                                                    multiple AWS accounts under your AWS Organizations and hence, it is
+                                                    not suitable for tracking changes to WAF web access control lists.
+                                                    You should use AWS Config instead.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13016"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13016">
+                                                Block the IP address of the attacker in the Network Access Control List
+                                                of your VPC and then set up a CloudFront distribution. Set up AWS WAF to
+                                                add a web access control list (web ACL) in front of the CloudFront
+                                                distribution to block requests that contain malicious SQL code. Use AWS
+                                                Config to track changes to your web access control lists (web ACLs) such
+                                                as the creation and deletion of rules including the updates to the WAF
+                                                rule configurations
+                                                <br>
+                                                <i>Launching a CloudFront distribution is unneccessary for this
+                                                    scenario. There is no requirement that the serverless online portal
+                                                    should be scalable and be accessible around the globe hence, a
+                                                    CloudFront distribution is not necessary.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13017"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13017">
+                                                Create a new Application Load Balancer (ALB) and set up AWS WAF in the
+                                                load balancer. Place the API Gateway behind the ALB and configure a web
+                                                access control list (web ACL) in front of the ALB to block requests that
+                                                contain malicious SQL code. Use AWS Firewall Manager to track changes to
+                                                your web access control lists (web ACLs) such as the creation and
+                                                deletion of rules including the updates to the WAF rule configurations
+                                                <br>
+                                                <i>Launching a new Application Load Balancer entails additional cost and
+                                                    is not cost-effective. In addition, AWS Firewall manager is
+                                                    primarily used to manage your Firewall across multiple AWS accounts
+                                                    under your AWS Organizations. Using AWS Config is much more suitable
+                                                    for tracking changes to WAF web access control lists.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4834">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4834" aria-expanded="true"
+                                        aria-controls="collapse-4834">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">2. A telecommunications company is planning to
+                                                    host a WordPress website on an Amazon ECS Cluster which uses the
+                                                    Fargate launch type. For security purposes, the database credentials
+                                                    should be provided to the WordPress image by using environment
+                                                    variables. Your manager instructed you to ensure that the
+                                                    credentials are secure when passed to the image and that they cannot
+                                                    be viewed on the cluster itself. The credentials must be kept in a
+                                                    dedicated storage with lifecycle management and key
+                                                    rotation.<br><br>Which of the following is the most suitable
+                                                    solution in this scenario that you can implement with the least
+                                                    effort?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4834" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4834" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13018"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13018">
+                                                Store the database credentials using the AWS Systems Manager Parameter
+                                                Store and then encrypt them using AWS KMS. Create an IAM Role for your
+                                                Amazon ECS task execution role and reference it with your task
+                                                definition, which allows access to both KMS and the Parameter Store.
+                                                Within your container definition, specify secrets with the name of the
+                                                environment variable to set in the container and the full ARN of the
+                                                Systems Manager Parameter Store parameter containing the sensitive data
+                                                to present to the container
+                                                <br>
+                                                <i>Systems Manager Parameter Store doesn't provide dedicated storage
+                                                    with lifecycle management and key rotation, unlike Secrets
+                                                    Manager.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13019"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13019">
+                                                <b>Store the database credentials using the AWS Secrets Manager and then
+                                                    encrypt them using AWS KMS. Create an IAM Role for your Amazon ECS
+                                                    task execution role and reference it with your task definition which
+                                                    allows access to both KMS and AWS Secrets Manager. Within your
+                                                    container definition, specify secrets with the name of the
+                                                    environment variable to set in the container and the full ARN of the
+                                                    Secrets Manager secret which contains the sensitive data, to present
+                                                    to the container</b>
+                                                <br>
+                                                <i>AWS Secrets Manager is a secrets management service that helps you
+                                                    protect access to your applications, services, and IT resources.
+                                                    This service enables you to easily rotate, manage, and retrieve
+                                                    database credentials, API keys, and other secrets throughout their
+                                                    lifecycle. Using Secrets Manager, you can secure and manage secrets
+                                                    used to access resources in the AWS Cloud, on third-party services,
+                                                    and on-premises.<br><br></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13020"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13020">
+                                                In the ECS task definition file of the ECS Cluster, store the database
+                                                credentials and encrypt with KMS. Store the task definition JSON file in
+                                                a private S3 bucket and ensure that HTTPS is enabled on the bucket to
+                                                encrypt the data in-flight. Create an IAM role to the ECS task definiton
+                                                script that allows access to the specific S3 bucket and then pass the
+                                                --cli-input-json parameter when calling the ECS
+                                                register-task-definition. Reference the task definition JSON file in the
+                                                S3 bucket which contains the database credentials
+                                                <br>
+                                                <i>It is not recommended to store sensitive credentials in S3. This
+                                                    entails a lot of overhead and manual configuration steps which can
+                                                    be simplified by using the Secrets Manager or Systems Manager
+                                                    Parameter Store</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13021"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13021">
+                                                Migrate the container cluster to Amazon Elastic Kubernetes Service
+                                                (EKS). Create manifest files for deployment and use the Kubernetes
+                                                Secrets objects to store the database credentials. Reference the secrets
+                                                on the manifest file using the secretKeyRef to use them a environment
+                                                variables. Configure EKS to rotate the secret values automatically
+                                                <br>
+                                                <i>It is possible to use EKS to host the container clusters and use the
+                                                    Secrets object to store secret values. However, this approach will
+                                                    entail more effort for the migration from ECS to EKS. Additionally,
+                                                    Kubernetes doesn't natively support the automatic rotation of
+                                                    secrets.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4835">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4835" aria-expanded="true"
+                                        aria-controls="collapse-4835">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">3. A company has launched a company-wide bug
+                                                    bounty program to find and patch up security vulnerabilities in your
+                                                    web applications as well as the underlying cloud resources. As the
+                                                    solutions architect, you are focused on checking system
+                                                    vulnerabilities on AWS resources for DDoS attacks. Due to budget
+                                                    constraints, the company cannot afford to enable AWS Shield Advanced
+                                                    to prevent higher-level attacks.<br><br>Which of the following are
+                                                    the best techniques to help mitigate Distributed Denial of Service
+                                                    (DDoS) attacks for cloud infrastructure hosted in AWS? (Select TWO.)
+                                                </div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4835" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4835" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13022"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13022">
+                                                Use S3 as a POSIX-compliant storage instead of EBS Volumes for storing
+                                                data. Install the SSM agent to all of your instances and use AWS Systems
+                                                Manager Patch Manager to automatically patch your instances
+                                                <br>
+                                                <i>Using S3 instead of EBS Volumes is mainly for addressing scalability
+                                                    to your storage requirements and not for avoiding DDoS attacks. In
+                                                    addition, Amazon S3 is not a POSIX-compliant storage.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13023"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13023">
+                                                <b>Use an Amazon CloudFront distribution for both static and dynamic
+                                                    content of your web applications. Add CloudWatch alerts to
+                                                    automatically look and notify the Operations team for high
+                                                    CPUUtilization and NetworkIn metrics, as well as to trigger Auto
+                                                    Scaling of your EC2 instances.</b>
+                                                <br>
+                                                <i>Amazon CloudFront is a content delivery network (CDN) service that
+                                                    can be used to deliver your entire website, including static,
+                                                    dynamic, streaming, and interactive content. Persistent TCP
+                                                    connections and variable time-to-live (TTL) can be used to
+                                                    accelerate delivery of content, even if it cannot be cached at an
+                                                    edge location. This allows you to use Amazon CloudFront to protect
+                                                    your web application, even if you are not serving static content.
+                                                    Amazon CloudFront only accepts well-formed connections to prevent
+                                                    many common DDoS attacks like SYN floods and UDP reflection attacks
+                                                    from reaching your origin.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13024"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13024">
+                                                Add multiple Elastic Network Interfaces to each EC2 instance and use
+                                                Enhanced Networking to increase the network bandwidth
+                                                <br>
+                                                <i>Even if you add multiple ENIs and are using Enhanced Networking to
+                                                    increase the network throughput of the instances, the CPU of the
+                                                    instance will be saturated with the DDoS requests which will cause
+                                                    the application to be unresponsive.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13025"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13025">
+                                                <b>Use an Application Load Balancer (ALB) to reduce the risk of
+                                                    overloading your application by distributing traffic across many
+                                                    backend instances. Integrate AWS WAF and the ALB to protect your web
+                                                    applications from common web exploits that could affect application
+                                                    availability</b>
+                                                <br>
+                                                <i>Larger DDoS attacks can exceed the size of a single Amazon EC2
+                                                    instance. To mitigate these attacks, you will want to consider
+                                                    options for load balancing excess traffic. With Elastic Load
+                                                    Balancing (ELB), you can reduce the risk of overloading your
+                                                    application by distributing traffic across many backend instances.
+                                                    ELB can scale automatically, allowing you to manage larger volumes
+                                                    of unanticipated traffic, like flash crowds or DDoS attacks using
+                                                    AWS WAF</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13026"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13026">
+                                                Use Reserved EC2 instances to ensure that each instance has the maximum
+                                                performance possible. Use AWS WAF to protect your web applications from
+                                                common web exploits that could affect application availability
+                                                <br>
+                                                <i>Using Reserved EC2 instances does not provide any additional
+                                                    computing performance compared to other EC2 types.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4836">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4836" aria-expanded="true"
+                                        aria-controls="collapse-4836">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">4. A company runs several clusters of Amazon EC2
+                                                    instances in AWS. An unusual API activity and port scanning in the
+                                                    VPC have been identified by the security team. They noticed that
+                                                    there are multiple port scans being triggered to the EC2 instances
+                                                    from a specific IP address. To fix the issue immediately, the
+                                                    solutions architect has decided to simply block the offending IP
+                                                    address. The solutions architect is also instructed to fortify their
+                                                    existing cloud infrastructure security from the most frequently
+                                                    occurring network and transport layer DDoS attacks.<br><br>Which of
+                                                    the following is the most suitable method to satisfy the above
+                                                    requirement in AWS?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4836" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4836" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13027"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13027">
+                                                Block the offending IP address using Route 53. Use Amazon Macie to
+                                                automatically discover, classify, and protect sensitive data in AWS,
+                                                including DDoS attacks
+                                                <br>
+                                                <i>Amazon Macie is just a security service that uses machine learning to
+                                                    automatically discover, classify, and protect sensitive data in AWS.
+                                                    It does not provide security against DDoS attacks. In addition, you
+                                                    cannot block the offending IP address using Route 53. You should use
+                                                    Network ACL for this scenario</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13028"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13028">
+                                                <b>Deny access from the IP Address block in the Network ACL. Use AWS
+                                                    Shield Advanced to protect your cloud resources.</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13029"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13029">
+                                                Change the Windows Firewall settings to deny access from the IP address
+                                                block. Use Amazon GuardDuty to detect potentially compromised instances
+                                                or reconnaissance by attackers, and AWS Systems Manager Patch Manager to
+                                                properly apply the latest security patches to all of your instances
+                                                <br>
+                                                <i>You have to use Network ACL to block the specific IP address to your
+                                                    network and not just change the firewall of your Windows server.
+                                                    Amazon GuardDuty and AWS Systems Manager Patch Manager are not
+                                                    suitable to fortify your AWS Cloud against DDoS attacks.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13030"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13030">
+                                                Deny access from the IP Address block by adding a specific rule to all
+                                                of the Security Groups. Use a combination of AWS WAF and AWS Config to
+                                                protect your cloud resources against common web attacks
+                                                <br>
+                                                <i>It is still better to block the offending IP address on the Network
+                                                    ACL level as you cannot directly deny an IP address in your Security
+                                                    Group. AWS WAF and AWS Config are helpful to improve the security of
+                                                    your cloud infrastructure in AWS but these services are not enough
+                                                    to protect your infrastructure against DDoS attacks. You have to use
+                                                    AWS Shield Advanced in this scenario.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4837">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4837" aria-expanded="true"
+                                        aria-controls="collapse-4837">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">5. A company wants to improve data protection for
+                                                    the sensitive information stored on its AWS account - both in
+                                                    transit and at rest. Data protection in transit simply means that
+                                                    the data should be secured while it travels to and from Amazon S3.
+                                                    Data protection at rest means that the stored data on disk must be
+                                                    secured in Amazon S3 data centers. You can protect data in transit
+                                                    by using SSL or by using client-side encryption. To secure data at
+                                                    rest, you can choose from a variety of available Server-Side
+                                                    Encryption in S3.<br><br>Which of the following best describes how
+                                                    Amazon S3-Managed Keys (SSE-S3) encryption method works?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4837" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4837" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13031"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13031">
+                                                In SSE-S3, you will be able to manage the customer master keys (CMKs)
+                                                and Amazon S3 manages the encryption for reading and writing objects in
+                                                your S3 bucket
+                                                <br>
+                                                <i>Customer master keys (CMKs) are being used in SSE-KMS and not in
+                                                    SSE-S3.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13032"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13032">
+                                                In SSE-S3, a randomly generated data encryption key is returned which is
+                                                used by the client to encrypt the object data
+                                                <br>
+                                                <i>SSE-S3 does not use a randomly generated data encryption key.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13033"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13033">
+                                                SSE-S3 provides separate permissions to use an API key that provides
+                                                added protection against unauthorized access of your objects in S3
+                                                <br>
+                                                <i>SSE-S3 does not use API keys but rather encryption keys.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13034"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13034">
+                                                <b>SSE-S3 provides strong multi-factor encryption in which each object
+                                                    is encrypted with a unique key. It also encrypts the key itself with
+                                                    a master key that it rotates regularly</b>
+                                                <br>
+                                                <i>Server-side encryption with Amazon S3-managed encryption keys
+                                                    (SSE-S3) uses strong multi-factor encryption. Amazon S3 encrypts
+                                                    each object with a unique key. As an additional safeguard, it
+                                                    encrypts the key itself with a master key that it rotates regularly.
+                                                    Amazon S3 server-side encryption uses one of the strongest block
+                                                    ciphers available, 256-bit Advanced Encryption Standard (AES-256),
+                                                    to encrypt your data.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4838">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4838" aria-expanded="true"
+                                        aria-controls="collapse-4838">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">6. A company is building a new cryptocurrency
+                                                    trading platform that will be hosted on the AWS cloud. The solutions
+                                                    architect needs to set up the designed architecture in a single VPC.
+                                                    The solution should mitigate distributed denial-of-service (DDoS)
+                                                    attacks to secure the company’s applications and systems. The
+                                                    solution should also include a notification for incoming Layer 3 or
+                                                    Layer 4 attacks such as SYN floods and UDP reflection attacks. The
+                                                    system should also be protected against SQL injection, cross-site
+                                                    scripting, and other Layer 7 attacks.<br><br>Which of the following
+                                                    solutions should the solutions architect implement together to meet
+                                                    the above requirement? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4838" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4838" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13035"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13035">
+                                                Send network logs to Amazon Fraud Detector to detect DDoS attacks and
+                                                send notifications to security teams
+                                                <br>
+                                                <i>Amazon Fraud Detector uses machine learning that automates the
+                                                    detection of potentially fraudulent activities online. It is
+                                                    designed to predict fraudulent transactions based on previous data
+                                                    sets that were used to create a model. It is not designed to detect
+                                                    and mitigate DDoS attacks. AWS Shield is a more suitable service for
+                                                    this scenario.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13036"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13036">
+                                                Place your servers behind a CloudFront web distribution and improve your
+                                                cache hit ratio
+                                                <br>
+                                                <i>Although CloudFront can help mitigate DDoS attacks, improving the
+                                                    cache hit ratio of your CloudFront distribution is still not enough
+                                                    to totally protect your infrastructure. This option also fails to
+                                                    mention the geoblocking and HTTPS protocol support features of
+                                                    CloudFront. Using AWS Shield Advanced and AWS WAF will provide more
+                                                    effective protection against DdoS.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13037"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13037">
+                                                Set up rule-based filtering using the AWS Network Firewall service
+                                                <br>
+                                                <i>AWS Network Firewall is primarily used to manage multiple firewall
+                                                    rules across hundreds of Amazon VPCs and AWS Accounts that are
+                                                    usually under a single AWS Organization. It is explicitly mentioned
+                                                    in the scenario that the company is using its sole AWS account, and
+                                                    the solution is only running on a single Amazon VPC. Hence, using
+                                                    the AWS Network Firewall service is not suitable for this case.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13038"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13038">
+                                                <b>Use AWS Shield Advanced which provides enhanced DDoS attack detection
+                                                    and monitoring for application-layer traffic to your AWS
+                                                    resources.</b>
+                                                <br>
+                                                <i>A Distributed Denial of Service (DDoS) attack is a malicious attempt
+                                                    to make a targeted system, such as a website or application,
+                                                    unavailable to end users. To achieve this, attackers use a variety
+                                                    of techniques that consume network or other resources, interrupting
+                                                    access for legitimate end-users.<br><br><br><br>AWS provides
+                                                    flexible infrastructure and services that help customers implement
+                                                    strong DDoS mitigations and create highly available application
+                                                    architectures that follow AWS Best Practices for DDoS Resiliency.
+                                                    These include services such as Amazon Route 53, Amazon CloudFront,
+                                                    Elastic Load Balancing, and AWS WAF to control and absorb traffic
+                                                    and deflect unwanted requests. These services integrate with AWS
+                                                    Shield, a managed DDoS protection service that provides always-on
+                                                    detection and automatic inline mitigations to safeguard web
+                                                    applications running on AWS.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13039"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13039">
+                                                <b>Use AWS WAF to define customizable web security rules that control
+                                                    which traffic can access your web applications.</b>
+                                                <br>
+                                                <i>AWS WAF is a web application firewall that helps protect your web
+                                                    applications from common web exploits that could affect application
+                                                    availability, compromise security, or consume excessive resources.
+                                                    AWS WAF gives you control over which traffic to allow or block to
+                                                    your web applications by defining customizable web security rules.
+                                                    You can use AWS WAF to create custom rules that block common attack
+                                                    patterns, such as SQL injection or cross-site scripting, and rules
+                                                    that are designed for your specific application. New rules can be
+                                                    deployed within minutes, letting you respond quickly to changing
+                                                    traffic patterns. Also, AWS WAF includes a full-featured API that
+                                                    you can use to automate the creation, deployment, and maintenance of
+                                                    web security rules.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4839">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4839" aria-expanded="true"
+                                        aria-controls="collapse-4839">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">7. A company wants to migrate its on-premises
+                                                    application to the AWS cloud. Due to limited manpower, the company
+                                                    wants to utilize fully managed AWS services as much as possible.
+                                                    This way, there will be less maintenance work after the migration.
+                                                    The application processes large files containing sensitive
+                                                    information so the company has the following requirements:<br><br>-
+                                                    Data encryption at rest and in transit are both required on all
+                                                    files that will be processed by the application.<br><br>- The
+                                                    storage solution must be highly durable and available.<br><br>- The
+                                                    company must be able to use its own encryption key and then
+                                                    periodically rotated for improved security.<br><br>- Amazon Redshift
+                                                    Spectrum will be used to analyze the migrated data.<br><br>Which of
+                                                    the following should the Solutions Architect implement to achieve
+                                                    these requirements?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4839" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4839" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13040"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13040">
+                                                Provision an AWS Storage Gateway – File Gateway device in the
+                                                on-premises data center. Enable encryption on the file share with AWS
+                                                KMS. The data will be transferred securely to an Amazon S3 bucket with
+                                                SSE-S3 encryption
+                                                <br>
+                                                <i>Although this is possible, the encryption key on the S3 with SSE-S3
+                                                    is managed by AWS and not the customer. This also entails more
+                                                    management overhead because you need to manage your file gateway.
+                                                    Less maintenance is needed if data is just sent directly to an
+                                                    encrypted S3 bucket.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13041"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13041">
+                                                Store the data files on an Amazon DynamoDB table. Leverage on the
+                                                default SSL connection settings of the DynamoDB table. Use AWS KMS to
+                                                encrypt the table and enable automatic key rotation
+                                                <br>
+                                                <i>The application processes large documents that may not fit on an
+                                                    Amazon DynamoDB table in which each entry is limited to 400 KB
+                                                    only.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13042"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13042">
+                                                Store the data files in an Amazon EC2 instance with an encrypted EBS
+                                                volume. Use AWS KMS to encrypt the EBS volume and enable automatic key
+                                                rotation
+                                                <br>
+                                                <i>Amazon S3 is more durable compared to a single Amazon EC2 instance
+                                                    with EBS volume</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13043"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13043">
+                                                <b>Create an Amazon S3 bucket to store all data. Enable server-side
+                                                    encryption with AWS KMS (SSE-KMS). Apply a bucket policy that
+                                                    enforces HTTPS only connections to the S3 bucket.</b>
+                                                <br>
+                                                <i>SSE-S3 requires that Amazon S3 manage the data and the encryption
+                                                    keys.<br><br>SSE-C requires that you manage the encryption
+                                                    key.<br><br>SSE-KMS requires that AWS manage the data key but you
+                                                    manage the customer master key (CMK) in AWS KMS.<br><br>When you
+                                                    configure your bucket to use default encryption with SSE-KMS, you
+                                                    can also enable an S3 Bucket Key to decrease request traffic from
+                                                    Amazon S3 to AWS Key Management Service (AWS KMS) and reduce the
+                                                    cost of encryption. When you configure your bucket to use an S3
+                                                    Bucket Key for SSE-KMS on new objects, AWS KMS generates a
+                                                    bucket-level key that is used to create a unique data key for
+                                                    objects in the bucket. This bucket key is used for a time-limited
+                                                    period within Amazon S3, reducing the need for Amazon S3 to make
+                                                    requests to AWS KMS to complete encryption operations.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4840">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4840" aria-expanded="true"
+                                        aria-controls="collapse-4840">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">8. A financial services company uses hardware
+                                                    security modules (HSMs) to generate encryption master keys. Since
+                                                    the company application logs include personally identifiable
+                                                    information, encryption is required as part of regulatory
+                                                    compliance. The application logs are going to be stored on a central
+                                                    Amazon S3 bucket and should be encrypted at rest. The security team
+                                                    wants to use the company HSMs to generate the CMK material for
+                                                    encryption on the S3 bucket.<br><br>Which of the following options
+                                                    should the solutions architect implement to meet the company
+                                                    requirements?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4840" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4840" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13044"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13044">
+                                                Create a new AWS CloudHSM cluster and set it as the key material source
+                                                in AWS Key Management Service (KMS) when you generate a new CMK. Set a
+                                                1-year duration for the CMK automatic key rotation. Apply an Amazon S3
+                                                bucket policy on the central logging bucket to require AWS KMS as the
+                                                encryption source and deny unencrypted object uploads
+                                                <br>
+                                                <i>You must use the on-premises HSMs as the source for the CMKs so you
+                                                    should not create your own AWS CloudHSM cluster and generate a
+                                                    CMK.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13045"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13045">
+                                                Request to provision an AWS Direct Connect connection from the
+                                                on-premises data center to AWS VPC. Ensure that the network addresses do
+                                                not overlap. Apply an Amazon S3 bucket policy on the central logging
+                                                bucket to allow only encrypted object uploads. Configure the application
+                                                to generate a unique CMK for each logging event by querying the
+                                                on-premises HSMs through the Direct Connection network
+                                                <br>
+                                                <i>This is not a practical solution as using a Direct Connect connection
+                                                    for minimal traffic is not recommended. Additionally, this requires
+                                                    you to reconfigure the logging application.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13046"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13046">
+                                                <b>Using AWS CLI, create a new CMK with no key material and use EXTERNAL
+                                                    as the origin of the key. Generate a key from the on-premises HSMs
+                                                    and import it as CMK using the public key and import token from AWS.
+                                                    Apply an Amazon S3 bucket policy on the central logging bucket to
+                                                    require AWS KMS as the encryption source and deny unencrypted object
+                                                    uploads.</b>
+                                                <br>
+                                                <i>Creating your own customer managed CMK gives you more flexibility and
+                                                    control. For example, you can create, rotate, and disable customer
+                                                    managed CMKs. You can also define access controls and audit the
+                                                    customer managed CMKs that you use to protect your data.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13047"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13047">
+                                                Using AWS CLI, create a new CMK with AWS-provided key material and use
+                                                AWS_KMS as the origin of the key. Overwrite this CMK with a generated
+                                                key from the on-premises HSMs by using the public key and import token
+                                                provided by AWS. Set a 1-year duration for the CMK automatic key
+                                                rotation. Apply an Amazon S3 bucket policy on the central logging bucket
+                                                to require AWS KMS as the encryption source and deny unencrypted object
+                                                uploads
+                                                <br>
+                                                <i>You should create a CMK with no key materials with EXTERNAL origin to
+                                                    be able to import your keys from the on-premises HSMs. If you use
+                                                    AWS-provided key material and AWS_KMS as origin, you won't be able
+                                                    to import and overwrite the CMK.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4841">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4841" aria-expanded="true"
+                                        aria-controls="collapse-4841">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">9. As a Solutions Architect, you are responsible
+                                                    for the security of your AWS resources as well as securing your web
+                                                    applications from common web vulnerabilities and cyber attacks. One
+                                                    example is a Distributed Denial of Service attack (DDoS) in which
+                                                    there are numerous incoming traffic coming from many different
+                                                    locations that simultaneously goes in to your web application and
+                                                    floods your network.<br><br>Which of the following can be a part of
+                                                    your DDoS attack surface reduction strategy to minimize the blast
+                                                    radius in your cloud infrastructure? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4841" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4841" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13048"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13048">
+                                                Add Elastic Load Balancing and Auto Scaling to your EC2 instances to
+                                                improve availability and scalability. Use extra large EC2 instances to
+                                                accommodate a surge of incoming traffic caused by a DDoS attack and
+                                                utilize AWS Systems Manager Session Manager to filter all client-side
+                                                web sessions to your instances
+                                                <br>
+                                                <i>Although it improves the scalability of your network in case of an
+                                                    ongoing DDoS attack, it simply absorbs the heavy application layer
+                                                    traffic and doesn't minimize the attack surface in your cloud
+                                                    architecture. In addition, AWS Systems Manager Session Manager is
+                                                    primarily used to provide secure and auditable instance management
+                                                    without the need to open inbound ports, maintain bastion hosts, or
+                                                    manage SSH keys, but not to filter client-side web sessions.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13049"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13049">
+                                                Allow versioning in your S3 bucket. Ensure that the OS of all of your
+                                                EC2 instances are properly patched using Systems Manager Patch Manager
+                                                and strictly implement Multi-Factor Authentication (MFA) in AWS. Use a
+                                                combination of AWS Systems Manager State Manager, AWS Config, and
+                                                Trusted Advisor to fortify your AWS resources
+                                                <br>
+                                                <i>MFA, as well as the Versioning feature in S3, don't minimize the DDoS
+                                                    attack surface area. Although it is recommended that all of your
+                                                    instances are properly patched using the Systems Manager Patch
+                                                    Manager, it is still not enough to protect your cloud infrastructure
+                                                    against DDoS attacks. In addition, the AWS Systems Manager State
+                                                    Manager is just a configuration management service that automates
+                                                    the process of keeping your Amazon EC2 and hybrid infrastructure in
+                                                    a state that you define. This service will not help you minimize the
+                                                    blast radius of a security attack.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13050"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13050">
+                                                <b>Always add a security group that only allows certain ports and
+                                                    authorized servers and protect your origin servers by putting it
+                                                    behind a CloudFront distribution. Enable AWS Shield Advanced which
+                                                    provides enhanced DDoS attack detection and monitoring for
+                                                    application-layer traffic to your AWS resources.</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-13051"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13051">
+                                                <b>Configure the Network Access Control Lists (ACLs) to only allow the
+                                                    required ports to your network. Identify and block common DDoS
+                                                    request patterns to effectively mitigate a DDoS attack by using AWS
+                                                    WAF.</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4842">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4842" aria-expanded="true"
+                                        aria-controls="collapse-4842">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">10. A retail company runs its two-tier e-commerce
+                                                    website on its on-premises data center. The application runs on a
+                                                    LAMP stack behind a load balancing appliance. The operations team
+                                                    uses SSH to login to the application servers to deploy software
+                                                    updates and install patches on the system. The website has been a
+                                                    target of multiple cyber-attacks recently such as:<br><br>-
+                                                    Distributed Denial of Service (DDoS) attacks<br><br>- SQL Injection
+                                                    attacks<br><br>- Dictionary attacks to SSH accounts on the web
+                                                    servers<br><br>The solutions architect plans to migrate the whole
+                                                    system to AWS to improve its security and availability. The
+                                                    following approaches are laid out to address the company
+                                                    concerns:<br><br>- Fix SQL injection attacks by reviewing existing
+                                                    application code and logic.<br><br>- Use the latest Amazon Linux
+                                                    AMIs to ensure that initial security patches are installed.<br><br>-
+                                                    Install the AWS Systems Manager agent on the instances to manage OS
+                                                    patching.<br><br>Which of the following are additional recommended
+                                                    actions to address the identified attacks while maintaining high
+                                                    availability and security for the application?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Security</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4842" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4842" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13052"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13052">
+                                                <b>Use an Application Load Balancer to spread the load on a cluster of
+                                                    Amazon EC2 instances. Disable remote SSH login to the EC2 instances
+                                                    and use AWS SSM Session Manager instead. Migrate the on-premises
+                                                    MySQL server to an Amazon RDS Multi-AZ instance. Create a CloudFront
+                                                    distribution in front of the application servers, and apply AWS WAF
+                                                    rules for the distribution. Enable AWS Shield Advanced for added
+                                                    protection</b>
+                                                <br>
+                                                <i>AWS SSM Session manager allows secure remote access to your instances
+                                                    without using SSH login. AWS WAF rules can block common web exploits
+                                                    like SQL injection attacks and AWS Shield Advanced provides added
+                                                    protection for DDoS attacks.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13053"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13053">
+                                                Use an Application Load Balancer to spread the load on a cluster of
+                                                Amazon EC2 instances. Enable remote SSH login only on a bastion host
+                                                with limited access from the company IP address. Migrate the on-premises
+                                                MySQL server to an Amazon RDS Multi-AZ instance. Create a CloudFront
+                                                distribution in front of the application servers and enable AWS Shield
+                                                Standard for DDoS protection
+                                                <br>
+                                                <i>You don't need to use a bastion host if you have AWS SSM agent
+                                                    installed on the instances. You can use SSM Session Manager to login
+                                                    to the servers. AWS Shield Standard is already enabled by default
+                                                    but you should enable AWS Shield Advanced for a higher level of
+                                                    protection.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13054"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-13054">
+                                                Use an Application Load Balancer to spread the load on a cluster of
+                                                Amazon EC2 instances. Enable remote SSH login on the EC2 instances but
+                                                with limited access from the company IP address only. Migrate the
+                                                on-premises MySQL server to an Amazon RDS Single-AZ instance. Enable AWS
+                                                Shield Standard to protect the instances from DDoS attacks
+                                                <br>
+                                                <i>You don't need to use a bastion host if you have AWS SSM agent
+                                                    installed on the instances. Using a Single-AZ RDS instance is not
+                                                    recommended if you require a highly available database.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-13055"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-13055">
+                                                Use an Application Load Balancer to spread the load on a cluster of
+                                                Amazon EC2 instances. Disable remote SSH login to the EC2 instances and
+                                                use AWS SSM Session Manager instead. Migrate the on-premises MySQL
+                                                server to an Amazon RDS Single-AZ instance. Create a CloudFront
+                                                distribution in front of the application servers, and apply AWS WAF
+                                                rules for the distribution
+                                                <br>
+                                                <i>AWS WAF may protect you from common web attacks, but you still need
+                                                    to enable AWS Shield Advanced for a higher level of protection
+                                                    against DDoS attacks. Using a Single-AZ RDS instance is not
+                                                    recommended if you require a highly available database.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

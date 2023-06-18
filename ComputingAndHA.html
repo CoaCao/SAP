@@ -1,0 +1,1230 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="docsearch:language" content="en">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://training.codestar.vn/css/common.css">
+
+
+</head>
+
+<body class="fixed-nav" id="page-top">
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="row mb-3" id="app">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="tab-pane active" id="exam" role="tabpanel" aria-labelledby="exam-tab">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="username">Tài khoản</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="username" name="username"
+                                            value="caoquochuy@gmail.com" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="take-exam-time">Thời gian thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="take-exam-time" name="take-exam-time"
+                                            value="2023-06-05 22:10:11" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-name">Tên đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-name" name="exam-name"
+                                            value="AWS-SA Pro Chương 2" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-type">Loại đề thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-type" name="exam-type"
+                                            value="Kết quả thi lần đầu" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-time">Thời gian làm bài (phút)</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-time" name="exam-time"
+                                            value="30.016666666667" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="exam-result">Kết quả thi</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="exam-result" name="exam-result"
+                                            value="Trượt" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="">
+                                    <div style="display: flex" class="col-sm-4 col-form-label">
+                                        <label for="correct-answer">Đáp án chính xác</label>
+                                        <p id="star-required"></p>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <input style="border-width: 0; background: #ffffff00;" type="text"
+                                            class="form-control default-input" id="correct-answer" name="correct-answer"
+                                            value="1/6" placeholder="" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-center">Kiến thức</h3>
+                            <div class="row">
+                                <div class="col-6 offset-3">
+                                    <canvas id="exam-statistic-total" width="719" height="718"
+                                        style="display: block; box-sizing: border-box; height: 574.4px; width: 575.2px;"></canvas>
+                                </div>
+                                <div class="col-10 offset-1">
+                                    <canvas id="exam-statistic-category-bar" width="1219" height="608"
+                                        style="display: block; box-sizing: border-box; height: 486.4px; width: 975.2px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionQuestion">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4544">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4544" aria-expanded="true"
+                                        aria-controls="collapse-4544">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">1. A company wants to host its internal web
+                                                    application in AWS. The front-end uses Docker containers and it
+                                                    connects to a MySQL instance as the backend database. The company
+                                                    plans to use AWS-managed container services to reduce the overhead
+                                                    in managing the servers. The application should allow employees to
+                                                    access company documents, which are accessed frequently for the
+                                                    first 3 months and then rarely after that. As part of the company
+                                                    policy, these documents must be retained for at least five years.
+                                                    Because this is an internal web application, the company wants to
+                                                    have the lowest possible cost.<br><br>Which of the following
+                                                    implementations is the most cost-effective solution</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Container</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4544" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4544" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11873"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11873">
+                                                Deploy the Docker containers using Amazon Elastic Container Service
+                                                (ECS) with Amazon EC2 Spot Instances. Use Spot instances for the Amazon
+                                                RDS database and its read replicas. Create an encrypted ECS volume on
+                                                the EC2 hosts that is shared with the containers to store the company
+                                                documents. Set up a cron job that will delete the files after five years
+                                                <br>
+                                                <i>This option uses EC2 Spot Instance for ECS, RDS and save documents on
+                                                    ECS volume. For storage, ECS Volume is not optimize for this case,
+                                                    S3 is better in this case.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11874"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11874">
+                                                Deploy the Docker containers using Amazon Elastic Container Service
+                                                (ECS) with Amazon EC2 On-Demand instances. Use On-Demand instances as
+                                                well for the Amazon RDS database and its read replicas. Create an Amazon
+                                                EFS volume that is mounted on the EC2 instances to store the company
+                                                documents. Create a cron job that will copy the documents to Amazon S3
+                                                Glacier after three months and then create a bucket lifecycle policy
+                                                that will delete objects older than five years
+                                                <br>
+                                                <i>This option uses On Demand Instance for ECS and RDS database
+                                                    instances. Because this is an internal web application, using Spot
+                                                    instance will have lower cost. We should use it for ECS Workload and
+                                                    use Reserved Instance for RDS.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11875"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11875">
+                                                Deploy the Docker containers using Amazon Elastic Kubernetes Service
+                                                (EKS)with auto-scaling enabled. Use Amazon EC2 Spot instances for the
+                                                EKS cluster to further reduce costs. Use On-Demand instances for the
+                                                Amazon RDS database and its read replicas. Create an encrypted Amazon S3
+                                                bucket to store the company documents. Create a bucket lifecycle policy
+                                                that will move the documents to Amazon S3 Glacier after three months and
+                                                will delete objects older than five years
+                                                <br>
+                                                <i>Using on-demand instances for continuously running RDS instances. You
+                                                    can save costs by using Reserved instances for Amazon RDS.
+                                                    Furthemore, EKS is more expensive than ECS in general. If the
+                                                    workload is similar, ECS will have lower price than EKS.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11876"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11876">
+                                                <b>Deploy the Docker containers using Amazon Elastic Container Service
+                                                    (ECS) with Amazon EC2 Spot Instances. Ensure that Spot Instance
+                                                    draining is enabled on the ECS agent config. Use Reserved instance
+                                                    for the Amazon RDS database and its read replicas. Create an
+                                                    encrypted Amazon S3 bucket to store the company documents. Create a
+                                                    bucket lifecycle policy that will move the documents to Amazon S3
+                                                    Glacier after three months and will delete objects older than five
+                                                    years</b>
+                                                <br>
+                                                <i>Using Spot instance is good for this case, you can allow your ECS
+                                                    cluster to spawn other EC2 instance types automatically to handle
+                                                    the load at a very low cost. Reserved instances are recommended
+                                                    cost-saving to RDS instances that will be running continuously for
+                                                    years</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4545">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4545" aria-expanded="true"
+                                        aria-controls="collapse-4545">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">2. A company processes several petabytes of images
+                                                    submitted by users on their photo hosting site every month. Each
+                                                    month, the images are processed in its on-premises data center by a
+                                                    High-Performance Computing (HPC) cluster with a capacity of 5,000
+                                                    cores and 10 petabytes of data. Processing a month’s worth of images
+                                                    by thousands of jobs running in parallel takes about a week and the
+                                                    processed images are stored on a network file server, which also
+                                                    backups the data to a disaster recovery site.<br><br>The current
+                                                    data center is nearing its capacity so the users are forced to
+                                                    spread the jobs within the course of the month. This is not ideal
+                                                    for the requirement of the jobs, so the Solutions Architect was
+                                                    tasked to design a scalable solution that can exceed the current
+                                                    capacity with the least amount of management overhead while
+                                                    maintaining the current level of durability.<br><br>Which of the
+                                                    following solutions will meet the company's requirements while being
+                                                    cost-effective?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Computing,
+                                                        Cost Optimization</span></div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4545" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4545" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11877"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11877">
+                                                <b>Utilize AWS Batch with Managed Compute Environments to create a fleet
+                                                    using Spot Instances. Store the raw data on an Amazon S3 bucket.
+                                                    Create jobs on AWS Batch Job Queues that will pull objects from the
+                                                    Amazon S3 bucket and temporarily store them to the EC2 EBS volumes
+                                                    for processing. Send the processed images back to another Amazon S3
+                                                    bucket</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11878"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11878">
+                                                Package the executable file for the job in a Docker image stored on
+                                                Amazon Elastic Container Registry (Amazon ECR). Run the Docker images on
+                                                Amazon Elastic Kubernetes Service (Amazon EKS). Auto Scaling can be
+                                                handled automatically by EKS. Store the raw data temporarily on Amazon
+                                                EBS SC1 volumes and then send the images to an Amazon S3 bucket after
+                                                processing
+                                                <br>
+                                                <i>Although this is possible, converting the application to a container
+                                                    and deploying it to an EKS cluster will entail a lot of changes for
+                                                    the application. Additionally, since you can’t quickly
+                                                    increase/decrease SC1 EBS volumes, creating a large volume to handle
+                                                    petabytes of data is not cost-effective.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11879"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11879">
+                                                Using a combination of On-demand and Reserved Instances as Task Nodes,
+                                                create an EMR cluster that will use Apache Spark to pull the raw data
+                                                from an Amazon S3 bucket. List the jobs that need to be processed by the
+                                                EMR cluster on a DynamoDB table. Store the processed images on a
+                                                separate Amazon S3 bucket
+                                                <br>
+                                                <i>Managing the EMR cluster and Apache Spark adds significant management
+                                                    overhead for this solution. There is also an additional cost for the
+                                                    EC2 instances that are constantly running even if there are only a
+                                                    few jobs that need to be run.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11880"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11880">
+                                                Create an Amazon SQS queue and submit the list of jobs to be processed.
+                                                Create an Auto Scaling Group of Amazon EC2 Spot Instances that will
+                                                process the jobs from the SQS queue. Share the raw data across all the
+                                                instances using Amazon EFS. Store the processed images in an Amazon S3
+                                                bucket for long term storage
+                                                <br>
+                                                <i>Amazon EFS is more expensive than storing the raw data on S3 buckets.
+                                                    This is also not efficient as listing the jobs on SQS Queue can
+                                                    cause some to be processed twice, depending on the state of your
+                                                    Spot instances</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4546">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4546" aria-expanded="true"
+                                        aria-controls="collapse-4546">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">3. A company uses computer simulations for
+                                                    modeling weather patterns in a certain country. The simulations
+                                                    generate terabytes of data, which is stored in a MySQL 5.6 database
+                                                    that runs in an Amazon EC2 instance. A Ruby on Rails application is
+                                                    hosted on a separate EC2 instance to process the data. The current
+                                                    database size is 16 TiB and is expected to grow as more complex
+                                                    simulations are created continuously. The facility wants to
+                                                    re-architect its infrastructure to be highly scalable and highly
+                                                    available as they need to run the application reliably
+                                                    24x7.<br><br>Which of the following is the MOST cost-effective
+                                                    solution that can satisfy the above requirements?</div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4546" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4546" data-bs-parent="#accordionQuestion">
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4547">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4547" aria-expanded="true"
+                                        aria-controls="collapse-4547">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">4. A suite of web applications is hosted in an
+                                                    Auto Scaling group of On-Demand EC2 instances behind an Application
+                                                    Load Balancer that handles traffic from various web domains. You are
+                                                    responsible for securing the system by allowing multiple domains to
+                                                    serve SSL traffic without the need to re-authenticate and
+                                                    re-provision your certificate whenever you add a new domain name.
+                                                    This change of architecture from HTTP to HTTPS will help improve the
+                                                    SEO and Google search ranking of the web application.<br><br>Which
+                                                    of the following are valid solutions to meet the above requirement?
+                                                    (Select TWO.)</div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4547" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4547" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11881"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11881">
+                                                Use a Classic Load Balancer instead of an Application Load Balancer.
+                                                Upload all SSL certificates of the domains and use Server Name
+                                                Indication (SNI)
+                                                <br>
+                                                <i>Classic Load Balancer does not support SNI</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11882"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11882">
+                                                <b>Upload all SSL certificates of the domains in the ALB using the
+                                                    console and bind multiple certificates to the same secure listener
+                                                    on your load balancer. ALB will automatically choose the optimal TLS
+                                                    certificate for each client using Server Name Indication (SNI)</b>
+                                                <br>
+                                                <i>You can upload all SSL certificates of the domains in the ALB using
+                                                    the console and bind multiple certificates to the same secure
+                                                    listener on your load balancer. ALB will automatically choose the
+                                                    optimal TLS certificate for each client using Server Name Indication
+                                                    (SNI).</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11883"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11883">
+                                                <b> Create a new CloudFront web distribution and configure it to serve
+                                                    HTTPS requests using dedicated IP addresses in order to associate
+                                                    your alternate domain names with a dedicated IP address in each
+                                                    CloudFront edge location</b>
+                                                <br>
+                                                <i>You can configure Amazon CloudFront to require viewers to interact
+                                                    with your content over an HTTPS connection using the HTTP to HTTPS
+                                                    Redirect feature. If you configure CloudFront to serve HTTPS
+                                                    requests using SNI, CloudFront associates your alternate domain name
+                                                    with an IP address for each edge location. The IP address to your
+                                                    domain name is determined during the SSL/TLS handshake negotiation
+                                                    and isn’t dedicated to your distribution.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11884"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11884">
+                                                Use a wildcard certificate to handle multiple sub-domains and different
+                                                domains
+                                                <br>
+                                                <i>A wildcard certificate can only handle multiple sub-domains but not
+                                                    different domain names</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11885"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11885">
+                                                Add a Subject Alternative Name (SAN) for each additional domain to your
+                                                certificate
+                                                <br>
+                                                <i>You will have to reauthenticate and reprovision your certificate
+                                                    every time you add a new domain. One of the requirements in the
+                                                    scenario is that you should not have to reauthenticate and
+                                                    reprovision your certificate hence, this solution is incorrect</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4548">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4548" aria-expanded="true"
+                                        aria-controls="collapse-4548">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">5. A company has a multi-tier web application
+                                                    hosted in AWS. It leverages Amazon CloudFront to reliably scale and
+                                                    quickly serve requests from users around the world. After several
+                                                    months in operation, the company received user complaints of slow
+                                                    response time from the web application. The monitoring team reported
+                                                    that the CloudFront cache hit ratio metric is steadily dropping for
+                                                    the past months. This metric indicates that there are inconsistent
+                                                    query strings on user requests and queries that contain upper-case
+                                                    or mixed-case letters. These requests cause CloudFront to send
+                                                    unnecessary origin queries.<br><br>Which of the following actions
+                                                    will increase the cache hit ratio of the CloudFront distribution?
+                                                </div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">CloudFront</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4548" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4548" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11886"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11886">
+                                                Reconfigure the CloudFront distribution to remove the caching behavior
+                                                based on query string parameters. This will cache the requests
+                                                regardless of the order or case of the query parameters
+                                                <br>
+                                                <i>This will ignore any query parameters and will cache all requests
+                                                    which will cause CloudFront to return incorrect cached items to
+                                                    users.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11887"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11887">
+                                                Launch a reverse proxy inside the application VPC to intercept the
+                                                requests going to the origin instances. Process the query parameters to
+                                                sort them by name and convert them to lowercase letters before
+                                                forwarding them to the instances
+                                                <br>
+                                                <i>This will not increase the cache hit ratio because CloudFront already
+                                                    forwarded the request to the origin as the proxy processes it which
+                                                    defeats the purpose of having a CloudFront cache.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11888"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11888">
+                                                <b>Write a Lamda@Edge function that will normalize the query parameters
+                                                    by sorting them in alphabetical order and converting them into lower
+                                                    case. Deploy this function with the CloudFront distribution and set
+                                                    “viewer request” as the trigger to invoke the function</b>
+                                                <br>
+                                                <i>With the "viewer request" set as the trigger, the Lambda@Edge
+                                                    function will normalize the query string before CloudFront processes
+                                                    it. CloudFront will then see the matching cache item for the
+                                                    normalized request, thus increasing the cache hit ratio.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11889"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11889">
+                                                Reconfigure the CloudFront distribution to ensure that the “case
+                                                insensitive” option is enabled for processing query string parameters
+                                                <br>
+                                                <i>CloudFront is case-sensitive when caching objects. There is no
+                                                    "case-insensitive" option in CloudFront.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4549">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4549" aria-expanded="true"
+                                        aria-controls="collapse-4549">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">6. An international foreign exchange company has a
+                                                    serverless forex trading application that was built using AWS SAM
+                                                    and is hosted on AWS Serverless Application Repository. They have
+                                                    millions of users worldwide who use their online portal 24/7 to
+                                                    trade currencies. However, they are receiving a lot of complaints
+                                                    that it takes a few minutes for their users to log in to their
+                                                    portal lately, including occasional HTTP 504 errors. As the
+                                                    Solutions Architect, you are tasked to optimize the system and to
+                                                    significantly reduce the time to log in to improve the customers'
+                                                    satisfaction.<br><br>Which of the following should you implement in
+                                                    order to improve the performance of the application with minimal
+                                                    cost? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">CloudFront,
+                                                        Lambda</span></div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4549" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4549" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11890"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11890">
+                                                <b>use Lambda@Edge to allow your Lambda functions to customize the
+                                                    content that CloudFront delivers and to execute the authentication
+                                                    process in AWS locations closer to the users</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11891"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11891">
+                                                Deploy your application to multiple AWS regions to accommodate your
+                                                users around the world. Set up a Route 53 record with latency routing
+                                                policy to route incoming traffic to the region that provides the best
+                                                latency to the user
+                                                <br>
+                                                <i>Although this may resolve the performance issue, this solution
+                                                    entails a significant implementation cost since you have to deploy
+                                                    your application to multiple AWS regions. Remember that the scenario
+                                                    asks for a solution that will improve the performance of the
+                                                    application with minimal cost.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11892"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11892">
+                                                Increase the cache hit ratio of your CloudFront distribution by
+                                                configuring your origin to add a Cache-Control max-age directive to your
+                                                objects, and specify the longest practical value for max-age
+                                                <br>
+                                                <i>Improving the cache hit ratio for the CloudFront distribution is
+                                                    irrelevant in this scenario</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11893"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11893">
+                                                <b>set up an origin failover by creating an origin group with two
+                                                    origins with one as the primary origin and the other as the second
+                                                    origin which CloudFront automatically switches to when the primary
+                                                    origin fails</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11894"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11894">
+                                                Set up multiple and geographically disperse VPCs to various AWS regions
+                                                then create a transit VPC to connect all of your resources. Deploy the
+                                                Lambda function in each region using AWS SAM, in order to handle the
+                                                requests faster.
+                                                <br>
+                                                <i>Transit VPC is not a cost optimize solution for this scenario</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4550">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4550" aria-expanded="true"
+                                        aria-controls="collapse-4550">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">7. A company has a hybrid cloud architecture where
+                                                    their on-premises data center and VPC are connected via multiple AWS
+                                                    Direct Connect ports in a single Link Aggregation Group (LAG). They
+                                                    have an on-premises patch management system that automatically
+                                                    applies the patches to the operating systems of their servers and
+                                                    file systems. You were given a task to synchronize the patch
+                                                    baselines being used on-premises to all of the EC2 instances in your
+                                                    VPC, as well as to automate the patching schedule.<br><br>Which of
+                                                    the following methods should you implement to meet the above
+                                                    requirement with the LEAST amount of effort?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">System
+                                                        Manager</span></div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4550" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4550" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11895"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11895">
+                                                Use AWS Systems Manager Session Manager to manage and deploy the
+                                                security patches of your EC2 instances based on the patch baselines from
+                                                your on-premises data center. Automate the patching schedule by using
+                                                the AWS Systems Manager Maintenance Windows
+                                                <br>
+                                                <i>The Session Manager is primarily used to comply with corporate
+                                                    policies that require controlled access to instances, strict
+                                                    security practices, and fully auditable logs with instance access
+                                                    details, but not for applying OS patches. Using the AWS Systems
+                                                    Manager Patch Manager is a more appropriate solution to
+                                                    implement.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11896"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11896">
+                                                Use AWS Systems Manager Patch Manager to manage and deploy the security
+                                                patches of your EC2 instances based on the patch baselines from your
+                                                on-premises data center. Automate the patching schedule by setting up
+                                                scheduled jobs using AWS Lambda and AWS Systems Manager Run Command
+                                                <br>
+                                                <i>Although it properly uses AWS Systems Manager Patch Manager, it is
+                                                    still better to use AWS Systems Manager Maintenance Windows instead
+                                                    of manually creating scheduled jobs using AWS Lambda and AWS Systems
+                                                    Manager Run Command. Take note that the scenario specifies that you
+                                                    have to meet the requirement with the LEAST amount of effort, which
+                                                    can be met by using the AWS Systems Manager Maintenance Windows
+                                                    feature. In addition, installing the SSM Agent to all of your
+                                                    instances is also required when using the AWS Systems Manager Patch
+                                                    Manager, which is not mentioned in this option.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11897"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11897">
+                                                <b>Use AWS Systems Manager Patch Manager to manage and deploy the
+                                                    security patches of your EC2 instances based on the patch baselines
+                                                    from your on-premises data center. Install the SSM Agent to all of
+                                                    your instances and automate the patching schedule by using AWS
+                                                    Systems Manager Maintenance Windows</b>
+                                                <br>
+                                                <i>AWS Systems Manager Patch Manager automates the process of patching
+                                                    managed instances with security-related updates. For Linux-based
+                                                    instances, you can also install patches for non-security
+                                                    updates.<br>AWS Systems Manager Maintenance Windows let you define a
+                                                    schedule for when to perform potentially disruptive actions on your
+                                                    instances such as patching an operating system, updating drivers, or
+                                                    installing software or patches.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11898"
+                                                disabled="" checked="">
+                                            <label class="form-check-labelx" for="answers-11898">
+                                                Use the AWS Systems Manager State Manager to automate the process of
+                                                keeping your Amazon EC2 and hybrid infrastructure in a state that you
+                                                define, which includes the OS patches that should be applied in each EC2
+                                                instance. Automate the patching schedule by using AWS Systems Manager
+                                                Distributor, to package and distribute the required patches to your
+                                                instances
+                                                <br>
+                                                <i>The AWS Systems Manager State Manager is primarily used as a secure
+                                                    and scalable configuration management service that automates the
+                                                    process of keeping your Amazon EC2 and hybrid infrastructure in a
+                                                    state that you define. This does not handle patch management, unlike
+                                                    AWS Systems Manager Patch Manager. With the State Manager, you can
+                                                    configure your instances to boot with a specific software at
+                                                    start-up; download and update agents on a defined schedule;
+                                                    configure network settings and many others, but not the patching of
+                                                    your EC2 instances.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4551">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4551" aria-expanded="true"
+                                        aria-controls="collapse-4551">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">8. An online gambling site is hosted in two
+                                                    Elastic Compute Cloud (EC2) instances inside a Virtual Private Cloud
+                                                    (VPC) in the same Availability Zone (AZ) but in different subnets.
+                                                    The first EC2 instance is running a database and the other EC2
+                                                    instance is a web application that fetches data from the database.
+                                                    You are required to ensure that the two EC2 instances can connect
+                                                    with each other in order for your application to work properly. You
+                                                    also need to track historical changes to the security configurations
+                                                    associated to your instances.<br><br>Which of the following options
+                                                    below can meet this requirement? (Select TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">EC2</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4551" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4551" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11899"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11899">
+                                                Use Route 53 to ensure that there is proper routing between the two
+                                                subnets
+                                                <br>
+                                                <i>Route 53 can't be used to connect two subnets. You should use Network
+                                                    ACLs and Security Groups instead</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11900"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11900">
+                                                <b> Check and configure the network ACL to allow communication between
+                                                    the two subnets. Ensure that the security groups allow the
+                                                    application host to talk to the database on the right port and
+                                                    protocol</b>
+                                                <br>
+                                                <i>NACLs and security groups act like firewalls for communication within
+                                                    your instances and subnets</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11901"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11901">
+                                                Ensure that the default route is set to NAT instance or Internet Gateway
+                                                (IGW)
+                                                <br>
+                                                <i>Neither a NAT instance nor an Internet gateway is needed for the two
+                                                    EC2 instances to communicate.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11902"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11902">
+                                                <b>Use AWS Config to track historical changes to the security
+                                                    configurations associated to your instances</b>
+                                                <br>
+                                                <i>AWS Config can help you maintain compliance with your security
+                                                    setting by monitoring and detecting violations on your security
+                                                    groups depending on the rules you have specified</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11903"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11903">
+                                                Use AWS Systems Manager to track historical changes to the security
+                                                configurations associated to your instances
+                                                <br>
+                                                <i>AWS Systems Manager is not suitable to track historical changes to
+                                                    the security configurations associated to your instances. You have
+                                                    to use AWS Config instead</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4552">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4552" aria-expanded="true"
+                                        aria-controls="collapse-4552">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">9. A company is running hundreds of Linux-based
+                                                    Amazon EC2 instances launched with custom AMIs that are dedicated to
+                                                    specific products and services. As part of the security compliance
+                                                    requirements, vulnerability scanning must be done on all EC2
+                                                    instances wherein each instance must be scanned and pass a Common
+                                                    Vulnerabilities and Exposures (CVE) assessment. Since the
+                                                    development team relies heavily on the custom AMIs for their
+                                                    deployments, the company wants to have an automated process to run
+                                                    the security assessment on any new AMIs and properly tag them before
+                                                    they can be used by the developers. To ensure continuous compliance,
+                                                    the security-approved AMIs must also be scanned every 30 days to
+                                                    check for new vulnerabilities and apply the necessary
+                                                    patches.<br><br>Which of the following steps should the Solutions
+                                                    Architect implement to achieve the security requirements? (Select
+                                                    TWO.)</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">Compute</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4552" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4552" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11904"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11904">
+                                                Install the AWS Systems Manager (SSM) agent on all EC2 instances. With
+                                                the agent running, run a detailed CVE assessment scan on the EC2
+                                                instances launched from the AMIs that need scanning
+                                                <br>
+                                                <i>The SSM agent cannot run a detailed CVE assessment scan on EC2
+                                                    instances. You have to use Amazon Inspector to satisfy the given
+                                                    requirement</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11905"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11905">
+                                                <b>Develop a Lambda function that will create automatic approval rules.
+                                                    Create a parameter on AWS SSM Parameter Store to save the list of
+                                                    all security-approved AMI. Set up a 30-day interval cron rule on
+                                                    Amazon EventBridge to trigger an AWS SSM Automation document run on
+                                                    all EC2 instances</b>
+                                                <br>
+                                                <i>This option satisfies the requirement for updating the
+                                                    security-approved AMI, along with scheduled patches every 30-days
+                                                    using SSM Automation document. AWS SSM Automation can automatically
+                                                    pack AMIs after patches are applied</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11906"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11906">
+                                                <b>Create an Assessment template on Amazon Inspector to target the EC2
+                                                    instances. Run a detailed CVE assessment scan on all running Amazon
+                                                    EC2 instances launched from the AMIs that need scanning</b>
+                                                <br>
+                                                <i>Amazon Inspector can run assessments on target EC2 instances to check
+                                                    if they are exposed to common vulnerabilities and exposures
+                                                    (CVEs)</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11907"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11907">
+                                                Write a Lambda function that will create automatic approval rules.
+                                                Create a parameter on AWS SSM Parameter Store to save the list of all
+                                                security-approved AMI. Set up a managed rule on AWS Config to
+                                                continuously scan all running EC2 instances. For any detected
+                                                vulnerability, run the designated SSM Automation document
+                                                <br>
+                                                <i>AWS Config cannot automatically run checks on the operating system of
+                                                    your Amazon EC2 instances. The requirement is to run the assessment
+                                                    every 30-days only and not continuously</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="answers-11908"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11908">
+                                                Check AWS CloudTrail logs to determine the Amazon EC2 instance IDs that
+                                                were launched from the AMIs that need scanning. Use AWS Config managed
+                                                rule to run CVE assessment and remediation on the instances
+                                                <br>
+                                                <i>Although it is possible to parse the EC2 instance IDs from CloudTrail
+                                                    and determine the vulnerable instances, you still cannot run the CVE
+                                                    assessment in AWS Config for your Amazon EC2 instances. Using Amazon
+                                                    Inspector is the most suitable service to use in running the CVE
+                                                    assessment</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4553">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4553" aria-expanded="true"
+                                        aria-controls="collapse-4553">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">10. A pharmaceutical company has a hybrid cloud
+                                                    architecture in AWS. It has three different accounts for its
+                                                    environments: DEV, UAT, and PROD, which are all part of the
+                                                    consolidated billing account. The PROD account has purchased 10
+                                                    r4.16xlarge Reserved EC2 Instances in the us-west-2a Availability
+                                                    Zone. Currently, there is no running EC2 instance in the PROD
+                                                    account because the application is not live yet but in the DEV
+                                                    account, there are 5 r4.16xlarge EC2 instances running in the
+                                                    us-west-2a Availability Zone. In the UAT account, there are also 5
+                                                    r4.16xlarge EC2 instances running in the us-west-1a Availability
+                                                    Zone.<br><br>In this scenario, which account benefits the most out
+                                                    of the Reserved Instance pricing?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">EC2</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4553" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4553" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11909"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11909">
+                                                <b>Currently, only the DEV account benefits from the Reserved
+                                                    Pricing.</b>
+                                                <br>
+                                                <i>The PROD account has bought the Reserved Instance in the us-west-2a
+                                                    Availability Zone which means that only the DEV account exactly
+                                                    matches the criteria. UAT is running the same instance type
+                                                    (r4.16xlarge) in us-west-1a, and does not matches the criteria.</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11910"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11910">
+                                                Since both DEV and UAT accounts are running an EC2 instance type which
+                                                exactly matches the Reserved Instance type (r4.16xlarge), then the
+                                                Reserved instance pricing will be applied to all EC2 instances in those
+                                                two member accounts
+                                                <br>
+                                                <i>The UAT account can only benefit from the Reserved Instances of the
+                                                    PROD account if they were launched in the same Availability Zone
+                                                    where the PROD account purchased the Reserved Instances</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11911"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11911">
+                                                None. Considering that the PROD account is the one that purchased the
+                                                Reserved Instance and it does not have any running EC2 instance, there
+                                                is currently no other member account that benefits from the Reserved
+                                                Instance pricing
+                                                <br>
+                                                <i>The DEV account benefits from the Reserved Instances pricing because
+                                                    the instances are launched on the same AZ where the PROD account
+                                                    purchased the Reserved Instances</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11912"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11912">
+                                                Currently, only the UAT account benefits from the Reserved Pricing
+                                                <br>
+                                                <i> The UAT account can only benefit from the Reserved Instances of the
+                                                    PROD account if they were launched in the same Availability Zone
+                                                    where the PROD account purchased the Reserved Instances</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="heading-4554">
+                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4554" aria-expanded="true"
+                                        aria-controls="collapse-4554">
+                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                            <div class="row">
+                                                <div class="col-auto">11. A digital media publishing company hired a
+                                                    solutions architect to manage its online portal that is composed of
+                                                    a Classic Load Balancer and Amazon EC2 instances deployed across
+                                                    multiple Availability Zones. The architecture is using a combination
+                                                    of Reserved EC2 Instances to handle the steady-state load and
+                                                    On-Demand EC2 Instances to handle the peak load. Currently, the web
+                                                    servers operate at 90% utilization during peak load.<br><br>Which of
+                                                    the following is the most cost-effective option to enable the online
+                                                    portal to quickly recover in the event that one of the Availability
+                                                    Zones is unavailable during peak load?</div>
+                                                <div class="col-auto"><span
+                                                        class="btn btn-sm btn-primary button-category mb-1">EC2</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapse-4554" class="accordion-collapse collapse accordion-content show "
+                                    aria-labelledby="heading-4554" data-bs-parent="#accordionQuestion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11913"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11913">
+                                                To handle the peak load more effectively, use a combination of Reserved
+                                                and On-Demand instances on all Availability Zones
+                                                <br>
+                                                <i>The scenario requires a highly available and cost-effective
+                                                    architecture to allow the application to recover quickly, hence,
+                                                    using an Auto Scaling group is a must to handle the peak load and
+                                                    improve both the availability and scalability of the application</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11914"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11914">
+                                                To handle the peak load more effectively, use a combination of Spot and
+                                                On-Demand instances on all Availability Zones
+                                                <br>
+                                                <i>the scenario requires a highly available and cost-effective
+                                                    architecture to allow the application to recover quickly, hence,
+                                                    using an Auto Scaling group is a must to handle the peak load and
+                                                    improve both the availability and scalability of the application</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11915"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11915">
+                                                <b>To handle the peak load in the most cost-effective manner, launch a
+                                                    Spot Fleet of EC2 instances with a diversified allocation strategy
+                                                    on all Availability Zones instead of On-Demand instances</b>
+                                                <br>
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="" id="answers-11916"
+                                                disabled="">
+                                            <label class="form-check-labelx" for="answers-11916">
+                                                To handle the peak load, launch an Auto Scaling group of Reserved
+                                                instances on all Availability Zones
+                                                <br>
+                                                <i>Reserved Instances cost more than Spot instances so it is more
+                                                    suitable to use the latter to handle the peak load</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tags accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
