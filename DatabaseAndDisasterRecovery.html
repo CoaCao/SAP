@@ -1,0 +1,1071 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="docsearch:language" content="en">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://training.codestar.vn/css/common.css">
+
+
+</head>
+
+<body class="fixed-nav" id="page-top">
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="row mb-3" id="app">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="accordion" id="accordionQuestion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4843">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4843" aria-expanded="true"
+                                    aria-controls="collapse-4843">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">1. A supermarket chain is planning to launch an online
+                                                shopping website to allow its loyal shoppers to buy their groceries
+                                                online. Since there are a lot of online shoppers at any time of the day,
+                                                the website should be highly available 24/7 and fault tolerant. Which of
+                                                the following options provides the best architecture that meets the
+                                                above requirement?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">RDS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4843" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4843" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13056"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13056">
+                                            Deploy the website across 2 Availability Zones with Auto Scaled EC2
+                                            instances each and an RDS instance deployed with Read Replicas in two
+                                            separate Availability Zones
+                                            <br>
+                                            <i>Read Replica is primarily used to improve the scalability of the
+                                                database. This architecture will neither be highly available 24/7 nor
+                                                fault-tolerant in the event of an AZ outage.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13057"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13057">
+                                            <b>Deploy the website across 3 Availability Zones with Auto Scaled EC2
+                                                instances behind an Application Load Balancer and an RDS configured with
+                                                Multi-AZ Deployments.</b>
+                                            <br>
+                                            <i>For high availability, it is best to always choose an RDS instance
+                                                configured with Multi-AZ deployments. You should also deploy your
+                                                application across multiple Availability Zones to improve fault
+                                                tolerance. AWS Auto Scaling monitors your applications and automatically
+                                                adjusts capacity to maintain steady, predictable performance at the
+                                                lowest possible cost. Using AWS Auto Scaling, it’s easy to set up
+                                                application scaling for multiple resources across multiple services in
+                                                minutes.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13058"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13058">
+                                            Deploy the website across 3 Availability Zones with Auto Scaled EC2
+                                            instances behind an Application Load Balancer and one RDS instance deployed
+                                            with Read Replicas in the two separate Availability Zones
+                                            <br>
+                                            <i>DB Tier is not HA in this option You have to use an Amazon RDS database
+                                                with Multi-AZ configuration.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13059"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13059">
+                                            Deploy the website across 2 Availability Zones with Auto Scaled EC2
+                                            instances behind an Application Load Balancer and an Amazon RDS database
+                                            running in a single Reserved EC2 Instance
+                                            <br>
+                                            <i>With this architecture, the single Reserved Instance is only deployed in
+                                                a single AZ. In the event of an AZ outage, the entire database will be
+                                                unavailable.<br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4844">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4844" aria-expanded="true"
+                                    aria-controls="collapse-4844">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">2. A company has released a new mobile game and its
+                                                backend servers are hosted on the company’s on-premises data center. The
+                                                game logic is exposed using REST APIs that have multiple functions
+                                                depending on the user state. Access to the backend services is
+                                                controlled with an API key, while any test traffic is distinguished by a
+                                                different key. A central file server stores player session data. User
+                                                traffic is variable throughout the day but the on-premises servers
+                                                cannot handle traffic during peak hours. The game also has latency
+                                                issues caused by the slow fetching of player session data. The
+                                                management tasked the solutions architect to migrate this infrastructure
+                                                to AWS in order to improve scalability and reduce the latency for data
+                                                access while keeping the backend API model unchanged.<br><br>Which of
+                                                the following is the recommended solution to meet the company
+                                                requirements?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Database,
+                                                    Serverless</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4844" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4844" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13060"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13060">
+                                            Create a fleet of Amazon EC2 instances to host the backend services. Expose
+                                            the REST APIs by placing the instances behind a Network Load Balancer (NLB).
+                                            Use Amazon Aurora Serverless to store the player session data
+                                            <br>
+                                            <i>Aurora Serverless is an on-demand, auto-scaling configuration for Amazon
+                                                Aurora. It is recommended to use Aurora Serverless for lightly-used
+                                                applications, with peaks of 30 minutes to several hours a few times each
+                                                day or several times per year, such as human resources, budgeting, or
+                                                operational reporting application.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13061"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13061">
+                                            Use AWS Lambda functions to run the backend game logic. Expose the REST APIs
+                                            by placing the Lambda functions behind an Application Load Balancer (ALB).
+                                            Use Amazon DynamoDB with auto-scaling to store the player session data
+                                            <br>
+                                            <i>Although you can use an ALB with Lambda as the backend service, it is
+                                                still recommended to use API Gateway to expose your APIs. You have a lot
+                                                more options and flexibility on API Gateway including the ability to use
+                                                API keys and add custom headers to each request.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13062"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13062">
+                                            <b>Use AWS Lambda functions to run the backend game logic. Expose the REST
+                                                APIs by using Amazon API Gateway. Use Amazon DynamoDB with auto-scaling
+                                                to store the player session data.</b>
+                                            <br>
+                                            <i>API Gateway tightly integrates with AWS Lambda which enables you to
+                                                quickly build REST compliant serverless applications. DynamoDB is
+                                                well-suited for scalability to handle fast access to player session
+                                                data.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13063"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13063">
+                                            Use AWS Lambda functions to run the backend game logic. Expose the REST APIs
+                                            by using AWS AppSync. Use Amazon Aurora Serverless to store the player
+                                            session data
+                                            <br>
+                                            <i>AWS AppSync is recommended for applications that are written for GraphQL
+                                                APIs, not REST APIs.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4845">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4845" aria-expanded="true"
+                                    aria-controls="collapse-4845">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">3. A company is running its new web application on a
+                                                test environment in its on-premises data center. The stateful
+                                                application is running on a single web server and it connects to a MySQL
+                                                database that is hosted on a separate server. In a few weeks, the web
+                                                application is scheduled to be released to the general public and the
+                                                company is worried about its scalability. The user traffic will be
+                                                unpredictable so it has been decided to migrate the web application and
+                                                database to AWS. The company wants to use the Amazon EC2 service for
+                                                hosting the web application, Amazon Aurora for the database, and Elastic
+                                                Load Balancing for load distribution.<br><br>Which of the following
+                                                solutions will allow the web and database tier to scale along with user
+                                                traffic?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Database,
+                                                    Aurora</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4845" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4845" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13064"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13064">
+                                            Create an Amazon Aurora MySQL database instance. Create an Aurora Replica
+                                            and enable Aurora Auto Scaling for the replica. Create an Auto Scaling group
+                                            of Amazon EC2 instances placed behind a Network Load Balancer with the least
+                                            outstanding request (LOR) routing algorithm. Ensure that the sticky sessions
+                                            feature is enabled for the NLB
+                                            <br>
+                                            <i>Network Load Balancer is only recommended if your application expects
+                                                millions of requests per second. Since there is no mention of this
+                                                strict requirement on the question, the Application Load Balancer is the
+                                                recommended choice as it is less expensive and supports Layer 7 features
+                                                that are suitable for web applications.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13065"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13065">
+                                            Create an Amazon Aurora MySQL database instance and enable Aurora Auto
+                                            Scaling for the master database. Create an Auto Scaling group of Amazon EC2
+                                            instances placed behind an Application Load Balancer with the round-robin
+                                            routing algorithm. Ensure that the sticky sessions feature is enabled for
+                                            the ALB
+                                            <br>
+                                            <i>You cannot set Auto Scaling for the master database on Amazon Aurora. You
+                                                can only manually resize the instance size of the master
+                                                node.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13066"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13066">
+                                            <b>Create an Amazon Aurora MySQL database instance. Create an Aurora Replica
+                                                and enable Aurora Auto Scaling for the replica. Create an Auto Scaling
+                                                group of Amazon EC2 instances placed behind an Application Load Balancer
+                                                with the round-robin routing algorithm. Ensure that the sticky sessions
+                                                feature is enabled for the ALB.</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13067"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13067">
+                                            Create an Amazon Aurora MySQL database instance and enable Aurora Auto
+                                            Scaling for the master database. Create an Auto Scaling group of Amazon EC2
+                                            instances placed behind a Network Load Balancer with the least outstanding
+                                            request (LOR) routing algorithm. Ensure that the sticky sessions feature is
+                                            enabled for the NLB
+                                            <br>
+                                            <i>It is not possible to set Auto Scaling for the master database on Amazon
+                                                Aurora. You can only manually resize the instance size of the master
+                                                node. Take note that a Network Load Balancer doesn't fully support the
+                                                least outstanding request (LOR) routing algorithm as this is commonly
+                                                used in Application Load Balancers instead.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4846">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4846" aria-expanded="true"
+                                    aria-controls="collapse-4846">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">4. A company recently launched its new e-commerce
+                                                platform that is hosted on its on-premises data center. The webservers
+                                                connect to a MySQL database. The e-commerce platform is quickly gaining
+                                                popularity and the management is worried that the on-premises servers
+                                                won’t be able to keep up with user traffic in the coming months. They
+                                                decided to migrate the entire application to AWS to take advantage of
+                                                the scalability of the cloud. The following are required for this
+                                                migration:<br><br>- Improve the security of the application.<br><br>-
+                                                Increase the reliability and availability of the application.<br><br>-
+                                                Reduce the latency between the users and the application.<br><br>-
+                                                Reduce the maintenance overhead after the migration to the
+                                                cloud.<br><br>Which of the following options should the Solutions
+                                                Architect implement to meet the company's requirements? (Select TWO.)
+                                            </div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Database,
+                                                    RDS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4846" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4846" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13068"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13068">
+                                            Create an Auto Scaling of Amazon EC2 instances spread in two Availability
+                                            Zones to host the web servers and the highly available MySQL database
+                                            cluster in a master and slave configuration
+                                            <br>
+                                            <i>Spreading EC2 instances in multiple AZ is good for availability however,
+                                                hosting the database on the EC2 instances requires a lot of management
+                                                overhead. It is recommended to use Amazon Aurora for the database.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13069"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13069">
+                                            Create an Amazon S3 bucket to store the static contents and enable website
+                                            hosting. To reduce the latency when serving content, enable S3 Transfer
+                                            Acceleration. Create AWS WAF rules to block common web exploits
+                                            <br>
+                                            <i>Amazon S3 can serve static content, but S3 Transfer Acceleration is used
+                                                for accelerating transfers going to and from the S3 bucket. Caching with
+                                                CloudFront would be even faster since the user doesn't need to go to the
+                                                S3 bucket for their cached requests.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13070"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13070">
+                                            <b>Create an Auto Scaling of Amazon EC2 instances spread in two Availability
+                                                Zones to host the web servers. Use an Amazon Aurora for MySQL with
+                                                Multi-AZ enabled as the database</b>
+                                            <br>
+                                            <i>The Auto Scaling group ensures there are enough web servers to answer
+                                                user requests. Spreading the instances on at least two AZ and enabling
+                                                Multi-AZ on the database ensure that your application is protected if
+                                                one AZ in AWS goes down.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13071"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13071">
+                                            Create an Auto Scaling of Amazon EC2 instances spread in two Availability
+                                            Zones to host the web servers. To reduce the latency when serving content,
+                                            create an AWS Global Accelerator endpoint. Migrate the database to an Amazon
+                                            RDS MySQL instance
+                                            <br>
+                                            <i>Without enabling Multi-AZ, your RDS is not protected in the event of a
+                                                crash or failure. When you promote read-replicas to become master, a
+                                                small downtime is required. This reduces the application
+                                                availability.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13072"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13072">
+                                            <b>Create an Amazon S3 bucket to store the static contents and enable
+                                                website hosting. To reduce the latency when serving content, set this
+                                                bucket as the origin for an Amazon CloudFront distribution. Create AWS
+                                                WAF rules to block common web exploits </b>
+                                            <br>
+                                            <i>mazon S3 can serve static content and Amazon CloudFront can cache
+                                                frequently requested content, which greatly improves latency. AWS WAF
+                                                has default rules that you can enable to block common web exploits to
+                                                improve your application security in AWS.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4847">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4847" aria-expanded="true"
+                                    aria-controls="collapse-4847">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">5. A stock trading company is running its application
+                                                on the AWS cloud. The mission-critical database is hosted on an Amazon
+                                                RDS for MySQL instance deployed in a Multi-AZ configuration. An AWS
+                                                Backup rule is in place to take automated snapshots hourly. The
+                                                operations team recently performed an RDS database failover test and
+                                                found that it caused an outage of approximately 40 seconds.<br><br>The
+                                                management has asked the solutions architect to implement a solution
+                                                that will reduce the outage to less than 20 seconds. Most connections
+                                                should stay alive during failovers except for the ones that are in the
+                                                middle of a transaction or SQL statement. New database connections
+                                                should still be accepted, and the incoming write requests should be
+                                                queued until the failover completes.<br><br>Which of the following
+                                                options should the solutions architect implement to meet the company's
+                                                requirements? (Choose THREE.)</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">RDS Proxy</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4847" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4847" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13073"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13073">
+                                            <b>Set up an Amazon RDS Proxy in front of the database layer to
+                                                automatically route traffic to healthy RDS instances.</b>
+                                            <br>
+                                            <i>With RDS Proxy, you can build applications that can transparently
+                                                tolerate database failures without needing to write complex
+                                                failure-handling code. The proxy automatically routes traffic to a new
+                                                database instance while preserving application connections. It also
+                                                bypasses Domain Name System (DNS) caches to reduce failover times by up
+                                                to 66% for Aurora Multi-AZ databases</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13074"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13074">
+                                            <b>Migrate the Amazon RDS for MySQL cluster to an Amazon Aurora for MySQL
+                                                cluster.</b>
+                                            <br>
+                                            <i>Amazon Aurora is a modern relational database service offering
+                                                performance and high availability at scale, fully open-source MySQL and
+                                                PostgreSQL-compatible editions. Unlike other databases, after a database
+                                                crash, Amazon Aurora does not need to replay the redo log from the last
+                                                database checkpoint (typically five minutes) and confirm that all
+                                                changes have been applied before making the database available for
+                                                operations. Amazon Aurora moves the buffer cache out of the database
+                                                process and makes it available immediately at restart time. This
+                                                prevents you from having to throttle access until the cache is
+                                                repopulated to avoid brownouts. This reduces database restart times to
+                                                less than 60 seconds in most cases.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13075"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13075">
+                                            <b>Ensure that Multi-AZ is enabled on Amazon Aurora and create one or more
+                                                Aurora Replicas.</b>
+                                            <br>
+                                            <i>With properly configured Multi-AZ and Aurora replicas, Amazon Aurora can
+                                                quickly recover from failures. Amazon Aurora does not need to replay the
+                                                redo log from the last database checkpoint (typically five minutes) and
+                                                confirm that all changes have been applied before making the database
+                                                available for operations.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13076"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13076">
+                                            Enable the Amazon RDS Optimized Writes feature and create an Amazon
+                                            ElastiCache for Memcached cluster in front of the database layer to cache
+                                            any frequently requested queries
+                                            <br>
+                                            <i>Memcached is used for database caching only and not as a database proxy.
+                                                Although it can respond to frequently queried data, it can't queue any
+                                                write request to the database while the failover process is in place.
+                                                The Amazon RDS Optimized Writes feature is not useful in this scenario
+                                                as it only provides you with up to 2x improvement in write transaction
+                                                throughput on RDS for MySQL by writing only once while protecting you
+                                                from data loss.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13077"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13077">
+                                            Enable the Amazon RDS Optimized Reads feature and launch an Amazon
+                                            ElastiCache for Redis cluster in front of the database layer to temporarily
+                                            serve database queries in case of RDS failure
+                                            <br>
+                                            <i>Although Redis can store data to some extent similar to a database, it is
+                                                still no substitute for a real database storage system. Moreover, the
+                                                Amazon RDS Optimized Reads feature is commonly used to achieve faster
+                                                query processing by placing temporary tables generated by MySQL on
+                                                NVMe-based SSD block storage that is physically connected to the host
+                                                server. This feature cannot make most DB connections stay alive during
+                                                failovers.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13078"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13078">
+                                            Ensure that Multi-AZ is enabled on Amazon RDS for MySQL and create one or
+                                            more read replicas to ensure quick failover
+                                            <br>
+                                            <i>RDS automatic database failover can take up to 60 seconds for one standby
+                                                instance and up to 35 seconds for two readable standby instances. A
+                                                better option is to use RDS Proxy to fulfill the aforementioned
+                                                requirements.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4848">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4848" aria-expanded="true"
+                                    aria-controls="collapse-4848">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">6. A credit company deployed its online load
+                                                application system in an Auto Scaling group across multiple Availability
+                                                Zones in the ap-southeast-2 region. As part of the Disaster Recovery
+                                                Plan of the company, the target RTO must be less than 2 hours and the
+                                                target RPO must be 10 minutes. At 12:00 PM, there was a production
+                                                incident in the main database and the operations team found out that
+                                                they cannot recover the transactions made from 10:30 AM onwards or 1.5
+                                                hours ago.<br><br>How can the solutions architect change the current
+                                                architecture to achieve the required RTO and RPO in case a similar
+                                                system failure occurred in the future?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Disaster
+                                                    Recovery</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4848" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4848" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13079"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13079">
+                                            Improve data redundancy by implementing a synchronous database
+                                            "source-replica" replication between two Availability Zones
+                                            <br>
+                                            <i>It will not be able to provide the needed data redundancy in the event of
+                                                a region-wide outage. If one Availability Zone goes down, then there is
+                                                another Availability Zone that contains the data. However, if the whole
+                                                AWS region is down, then the data will be totally unreachable. A better
+                                                solution is to use S3 and enable Cross-Region Replication (CRR).</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13080"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13080">
+                                            erform database backups every hour and store the result to EBS volumes.
+                                            Backup the transaction logs every 5 minutes to an S3 bucket with
+                                            Cross-Region Replication enabled
+                                            <br>
+                                            <i>EBS Volumes are not durable enough to store the database backups every
+                                                hour for this scenario. If there is an AZ or an AWS Region-wide outage,
+                                                then the data in the EBS Volume could potentially be unavailable.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13081"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13081">
+                                            <b> Create database backups every hour and store it in an S3 bucket with
+                                                Cross-Region Replication enabled. Store the transaction logs in the same
+                                                S3 bucket every 5 minutes.</b>
+                                            <br>
+                                            <i>Cross-region replication (CRR) enables automatic, asynchronous copying of
+                                                objects across buckets in different AWS Regions. Buckets configured for
+                                                cross-region replication can be owned by the same AWS account or by
+                                                different accounts. This is also helpful to durably store your data and
+                                                for disaster recovery in the event of a region-wide outage.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13082"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13082">
+                                            Create database backups every hour and store it to Glacier for archiving.
+                                            Store the transaction logs in an S3 bucket every 5 minutes
+                                            <br>
+                                            <i>Glacier is primarily used for long term data archiving</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4849">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4849" aria-expanded="true"
+                                    aria-controls="collapse-4849">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">7. A company has a CRM application that uses a MySQL
+                                                database hosted in Amazon RDS, and a central data warehouse that runs on
+                                                Amazon Redshift. There is a batch analytics process that runs every day
+                                                that reads data from RDS. During the execution of the batch analytics,
+                                                the RDS utilization spikes up, which results in the CRM application
+                                                being unresponsive. The top management dashboard must also be updated
+                                                with new data right after the batch analytics processing completes.
+                                                However, the dashboard is on another system running on-premises and
+                                                cannot be modified directly. The only way to update the dashboard is to
+                                                send an email with the new data to the dashboard system via SMTP, which
+                                                will then be parsed and processed to update the dashboard with the
+                                                latest data.<br><br>How would you optimize this scenario to solve
+                                                performance issues and automate the process as much as possible?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Database,
+                                                    RDS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4849" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4849" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13083"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13083">
+                                            Consider using Amazon Redshift as the main OLTP transactional database
+                                            instead of RDS for the batch analytics and use Redshift Spectrum to run SQL
+                                            queries directly against Exabytes of structured or unstructured data in S3
+                                            without the need for unnecessary data movement. Utilize Amazon SNS to notify
+                                            the on-premises system to update the dashboard
+                                            <br>
+                                            <i>Redshift is primarily used for OLAP scenarios whereas RDS is used for
+                                                OLTP scenarios. Hence, replacing RDS with Redshift is not a valid
+                                                solution. Although using Redshift Spectrum to run SQL queries is valid,
+                                                it is still incorrect to replace RDS with Redshift as your main OLTP
+                                                database.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13084"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13084">
+                                            Consider using Amazon Redshift instead of Amazon RDS as the database for the
+                                            CRM application. Use Amazon SQS to notify the on-premises system to update
+                                            the dashboard
+                                            <br>
+                                            <i>Redshift is used for OLAP scenarios whereas RDS is used for OLTP
+                                                scenarios. Hence, replacing RDS with Redshift is not a solution.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13085"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13085">
+                                            <b>Adding read replicas for the RDS database to speed up batch analytics and
+                                                using Amazon SNS to notify the on-premises system to update the
+                                                dashboard</b>
+                                            <br>
+                                            <i>Read Replicas can improves the read performance, and SNS can automates
+                                                the process of notifying the on-premises system to update the
+                                                dashboard.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13086"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13086">
+                                            Adding read replicas for the RDS database to speed up batch analytics and
+                                            using Amazon SQS to notify the on-premises system to update the dashboard
+                                            <br>
+                                            <i>SQS is not a service to be used for sending the notification</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4850">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4850" aria-expanded="true"
+                                    aria-controls="collapse-4850">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">8. A company is building an innovative AI-powered
+                                                traffic monitoring portal and uses AWS to host its cloud infrastructure.
+                                                For the initial deployment, the application would be used by an entire
+                                                city. The application should be highly available and fault-tolerant to
+                                                avoid unnecessary downtime.<br><br>Which of the following options is the
+                                                MOST suitable architecture that you should implement?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">RDS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4850" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4850" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13087"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13087">
+                                            Launch an Auto Scaling group of EC2 instances on two Availability Zones.
+                                            Attach an application load balancer to the Auto Scaling Group. Use a MySQL
+                                            RDS instance with Multi-AZ deployments configuration. Use Route 53 and
+                                            create an A record to point to the ELB
+                                            <br>
+                                            <i>You need to create an Alias record with the DNS name and not a normal
+                                                A-record that points to an IP address.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13088"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13088">
+                                            Use DynamoDB as the database of the portal. Launch an Auto Scaling group of
+                                            EC2 instances on four Availability Zones. Attach an application load
+                                            balancer to the Auto Scaling Group. Use Route 53 and create an A record to
+                                            point to the ELB
+                                            <br>
+                                            <i> To route domain traffic to an ELB load balancer, use Amazon Route 53 to
+                                                create an alias resource record set that points to your load
+                                                balancer</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13089"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13089">
+                                            Use ElastiCache for the database caching of the portal. Launch an Auto
+                                            Scaling group of EC2 instances on four Availability Zones. Attach an
+                                            application load balancer to the Auto Scaling Group. Use a MySQL RDS
+                                            instance with Multi-AZ deployments configuration and Read Replicas. Use
+                                            Route 53 and create a CNAME to point to the ELB
+                                            <br>
+                                            <i>You have to use an Alias record to route to the ELB and not a CNAME
+                                                record.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13090"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13090">
+                                            <b>Launch an Auto Scaling group of EC2 instances on three Availability
+                                                Zones. Attach an application load balancer to the Auto Scaling Group.
+                                                Use an Amazon Aurora Multi-Master as the database tier. Use Route 53 and
+                                                create an Alias record to point to the ELB</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4851">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4851" aria-expanded="true"
+                                    aria-controls="collapse-4851">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">9. A popular news website that uses an Oracle database
+                                                is currently deployed in the company's on-premises network. Due to its
+                                                growing number of readers, the company decided to move its
+                                                infrastructure to AWS where they can further improve the performance of
+                                                the website. The company earns from the advertisements placed on the
+                                                website so you were instructed to ensure that the website remains
+                                                available in case of database server failures. Their team of content
+                                                writers constantly upload new articles every day including the wee hours
+                                                of the morning to cover breaking news.<br><br>In this scenario, how can
+                                                you implement a highly available architecture to meet the requirement?
+                                            </div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">RDS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4851" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4851" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13091"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13091">
+                                            Create an Oracle database in RDS with Read Replicas
+                                            <br>
+                                            <i>The content writers won't be able to upload their articles to the Read
+                                                Replicas in the event that the primary database goes down.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13092"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13092">
+                                            Create an Oracle database instance in RDS with Recovery Manager (RMAN) which
+                                            performs backup and recovery tasks on your database and automates the
+                                            administration of your backup strategies
+                                            <br>
+                                            <i>Oracle RMAN are not supported in RDS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13093"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13093">
+                                            <b>Create an Oracle database in RDS with Multi-AZ deployments</b>
+                                            <br>
+                                            <i>This ensures high availability even if the primary database instance goes
+                                                down.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13094"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13094">
+                                            Create an Oracle Real Application Clusters (RAC) in RDS which provides a
+                                            shared cache architecture that overcomes the limitations of traditional
+                                            shared-nothing and shared-disk approaches to provide highly scalable and
+                                            available database solutions for the news website.
+                                            <br>
+                                            <i>Oracle RAC are not supported in RDS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4852">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4852" aria-expanded="true"
+                                    aria-controls="collapse-4852">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">10. An e-commerce company is having their annual sale
+                                                event where buyers will be able to purchase goods at a large discount on
+                                                their e-commerce website. The e-commerce site will receive millions of
+                                                visitors in a short period of time when the sale begins. The visitors
+                                                will first login to the site using either their Facebook or Google
+                                                credentials and add items to their cart. After purchasing, a page will
+                                                display the cart items along with the discounted prices. The company
+                                                needs to build a checkout system that can handle the sudden surge of
+                                                incoming traffic.<br><br>Which of the following is the MOST scalable
+                                                solution that they should use?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">DynamoDB</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4852" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4852" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13095"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13095">
+                                            <b>Combine an Elastic Load balancer in front of an Auto Scaling group of web
+                                                servers with CloudFront for fast delivery. The web servers will first
+                                                authenticate the users by logging into their social media accounts which
+                                                are integrated in Amazon Cognito, then process the user's purchases and
+                                                store them into an SQS queue using IAM Roles for EC2 Instances to gain
+                                                permissions to the queue. Finally, the items from the queue are
+                                                retrieved by a set of application servers and stored into a DynamoDB
+                                                table</b>
+                                            <br>
+                                            <i>This is a highly scalable solution and creates an appropriate IAM Role to
+                                                access the DynamoDB database. In addition, it uses SQS which decouples
+                                                the application architecture. This will allow the application servers to
+                                                process the requests.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13096"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13096">
+                                            Combine an Elastic Load balancer in front of an Auto Scaling group of web
+                                            servers with CloudFront for fast delivery. The web servers will first
+                                            authenticate the users by logging into their social media accounts which are
+                                            integrated in Amazon Lex, then process the user's purchases and store the
+                                            cart into a Multi-AZ RDS database
+                                            <br>
+                                            <i>Multi-AZ RDS is a more expensive solution when compared to DynamoDB. In
+                                                addition, Amazon Lex is just a service for building conversational
+                                                interfaces into any application using voice and text. This is not
+                                                utilized for user authentication, unlike Amazon Cognito</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13097"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13097">
+                                            Use the static website hosting feature of Amazon S3 with the Javascript SDK
+                                            to authenticate the user login with Amazon Cognito. Set up AWS Global
+                                            Accelerator to deliver the static content. Store user purchases in a
+                                            DynamoDB table and use an IAM Role for managing permissions
+                                            <br>
+                                            <i>Although this would work, it is not scalable, and storing all the data
+                                                directly in DynamoDB would consume read and write capacity and increase
+                                                the cost. Moreover, you cannot use AWS Global Accelerator to deliver the
+                                                static content stored in the S3 bucket. You have to use Amazon
+                                                CloudFront instead.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13098"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13098">
+                                            Combine an Elastic Load balancer in front of multiple web servers with
+                                            CloudFront for fast delivery. The web servers will first authenticate the
+                                            users by logging into their social media accounts which are integrated in
+                                            Amazon Cognito. The web servers will process the user's purchases and store
+                                            them in a DynamoDB table. Use an IAM Role to gain permissions to the
+                                            DynamoDB table
+                                            <br>
+                                            <i>It is not scalable and storing all the data directly in DynamoDB would
+                                                consume read and write capacity and increase the cost. Moreover, the web
+                                                servers are not placed in an Auto Scaling group, which means that this
+                                                solution is not scalable.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- TODO -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
