@@ -25,7 +25,1028 @@
         <div class="container">
             <div class="row mb-3" id="app">
                 <div class="col-sm-12">
-
+                    <div class="accordion" id="accordionQuestion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4898">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4898" aria-expanded="true"
+                                    aria-controls="collapse-4898">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">1. A telecommunications company is planning to host a
+                                                WordPress website on an Amazon ECS Cluster which uses the Fargate launch
+                                                type. For security purposes, the database credentials should be provided
+                                                to the WordPress image by using environment variables. Your manager
+                                                instructed you to ensure that the credentials are secure when passed to
+                                                the image and that they cannot be viewed on the cluster itself. The
+                                                credentials must be kept in a dedicated storage with lifecycle
+                                                management and key rotation.<br><br>Which of the following is the most
+                                                suitable solution in this scenario that you can implement with the least
+                                                effort?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">ECS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4898" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4898" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13280"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13280">
+                                            Store the database credentials using the AWS Systems Manager Parameter Store
+                                            and then encrypt them using AWS KMS. Create an IAM Role for your Amazon ECS
+                                            task execution role and reference it with your task definition, which allows
+                                            access to both KMS and the Parameter Store. Within your container
+                                            definition, specify secrets with the name of the environment variable to set
+                                            in the container and the full ARN of the Systems Manager Parameter Store
+                                            parameter containing the sensitive data to present to the container
+                                            <br>
+                                            <i>Systems Manager Parameter Store doesn't provide dedicated storage with
+                                                lifecycle management and key rotation, unlike Secrets Manager</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13281"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13281">
+                                            <b>Store the database credentials using the AWS Secrets Manager and then
+                                                encrypt them using AWS KMS. Create an IAM Role for your Amazon ECS task
+                                                execution role and reference it with your task definition which allows
+                                                access to both KMS and AWS Secrets Manager. Within your container
+                                                definition, specify secrets with the name of the environment variable to
+                                                set in the container and the full ARN of the Secrets Manager secret
+                                                which contains the sensitive data, to present to the container</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13282"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13282">
+                                            In the ECS task definition file of the ECS Cluster, store the database
+                                            credentials and encrypt with KMS. Store the task definition JSON file in a
+                                            private S3 bucket and ensure that HTTPS is enabled on the bucket to encrypt
+                                            the data in-flight. Create an IAM role to the ECS task definiton script that
+                                            allows access to the specific S3 bucket and then pass the --cli-input-json
+                                            parameter when calling the ECS register-task-definition. Reference the task
+                                            definition JSON file in the S3 bucket which contains the database
+                                            credentials
+                                            <br>
+                                            <i>It is not recommended to store sensitive credentials in S3</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13283"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13283">
+                                            Migrate the container cluster to Amazon Elastic Kubernetes Service (EKS).
+                                            Create manifest files for deployment and use the Kubernetes Secrets objects
+                                            to store the database credentials. Reference the secrets on the manifest
+                                            file using the secretKeyRef to use them a environment variables. Configure
+                                            EKS to rotate the secret values automatically
+                                            <br>
+                                            <i>Kubernetes doesn't natively support the automatic rotation of secrets.
+                                                Also, the migration process from ECS to EKS may take a lot of effort</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4899">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4899" aria-expanded="true"
+                                    aria-controls="collapse-4899">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">2. A company is hosting its production environment in
+                                                AWS Fargate. To save costs, the Chief Information Officer (CIO) wants to
+                                                deploy its new development environment workloads on its on-premises
+                                                servers as this leverages existing capital investments. As the Solutions
+                                                Architect, you have been tasked by the CIO to provide a solution that
+                                                will:<br><br>1. have both on-premises and Fargate managed in the same
+                                                cluster<br><br>2. easily migrate development environment workloads
+                                                running on-premises to production environment running in AWS
+                                                Fargate<br><br>3. ensure consistent tooling and API experience across
+                                                container-based workloads<br><br>Which of the following is the MOST
+                                                operationally efficient solution that meets these requirements?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">ECS</span></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4899" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4899" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13284"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13284">
+                                            Use EKS Amazon Anywhere to simplify on-premises Kubernetes management with
+                                            default component configurations and automated cluster management tools.
+                                            This makes it easy to migrate the development workloads running on-premises
+                                            to EKS in an AWS region on Fargate
+                                            <br>
+                                            <i>Amazon EKS Anywhere is not designed to run in the AWS cloud. It does not
+                                                integrate with the Kubernetes Cluster API Provider for AWS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13285"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13285">
+                                            Install and configure AWS Outposts in your on-premises data center. Run
+                                            Amazon ECS on AWS Outposts to launch the development environment workloads.
+                                            Migrate development workloads to production that is running on AWS Fargate
+                                            <br>
+                                            <i>AWS Fargate is not available on AWS Outposts</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13286"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13286">
+                                            Install and configure AWS Outposts in your on-premises data center. Run
+                                            Amazon EKS Anywhere on AWS Outposts to launch container-based workloads.
+                                            Migrate development workloads to production that is running on AWS Fargate
+                                            <br>
+                                            <i>Amazon EKS Anywhere isn't designed to run on AWS Outposts</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13287"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13287">
+                                            <b>Utilize Amazon ECS Anywhere to streamline software management on-premises
+                                                and on AWS with a standardized container orchestrator. This makes it
+                                                easy to migrate the development workloads running on-premises to ECS in
+                                                an AWS region on Fargate</b>
+                                            <br>
+                                            <i>Amazon Elastic Container Service (ECS) Anywhere is a feature of Amazon
+                                                ECS that lets you run and manage container workloads on your
+                                                infrastructure. This feature helps you meet compliance requirements and
+                                                scale your business without sacrificing your on-premises
+                                                investments.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4900">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4900" aria-expanded="true"
+                                    aria-controls="collapse-4900">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">3. A company wants to host its internal web
+                                                application in AWS. The front-end uses Docker containers and it connects
+                                                to a MySQL instance as the backend database. The company plans to use
+                                                AWS-managed container services to reduce the overhead in managing the
+                                                servers. The application should allow employees to access company
+                                                documents, which are accessed frequently for the first 3 months and then
+                                                rarely after that. As part of the company policy, these documents must
+                                                be retained for at least five years. Because this is an internal web
+                                                application, the company wants to have the lowest possible
+                                                cost.<br><br>Which of the following implementations is the most
+                                                cost-effective solution?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4900" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4900" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13288"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13288">
+                                            <b>Deploy the Docker containers using Amazon Elastic Container Service (ECS)
+                                                with Amazon EC2 Spot Instances. Ensure that Spot Instance draining is
+                                                enabled on the ECS agent config. Use Reserved instance for the Amazon
+                                                RDS database and its read replicas. Create an encrypted Amazon S3 bucket
+                                                to store the company documents. Create a bucket lifecycle policy that
+                                                will move the documents to Amazon S3 Glacier after three months and will
+                                                delete objects older than five years</b>
+                                            <br>
+                                            <i>With a diversified Spot instance type and Spot instance draining, you can
+                                                allow your ECS cluster to spawn other EC2 instance types automatically
+                                                to handle the load at a very low cost. Reserved instances are
+                                                recommended cost-saving to RDS instances that will be running
+                                                continuously for years</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13289"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13289">
+                                            Deploy the Docker containers using Amazon Elastic Container Service (ECS)
+                                            with Amazon EC2 Spot Instances. Use Spot instances for the Amazon RDS
+                                            database and its read replicas. Create an encrypted ECS volume on the EC2
+                                            hosts that is shared with the containers to store the company documents. Set
+                                            up a cron job that will delete the files after five years
+                                            <br>
+                                            <i>Storing company documents on the EC2 instances will require more disk
+                                                space on instances, which is unnecessary and expensive. Using Spot
+                                                instances for RDS instances is not recommended as this will cause major
+                                                downtime or data loss in case AWS terminates your spot instance.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13290"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13290">
+                                            Deploy the Docker containers using Amazon Elastic Container Service (ECS)
+                                            with Amazon EC2 On-Demand instances. Use On-Demand instances as well for the
+                                            Amazon RDS database and its read replicas. Create an Amazon EFS volume that
+                                            is mounted on the EC2 instances to store the company documents. Create a
+                                            cron job that will copy the documents to Amazon S3 Glacier after three
+                                            months and then create a bucket lifecycle policy that will delete objects
+                                            older than five years
+                                            <br>
+                                            <i>This is possible, however, using EFS volumes is more expensive than just
+                                                storing the files on Amazon S3 in the first place.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13291"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13291">
+                                            Deploy the Docker containers using Amazon Elastic Kubernetes Service
+                                            (EKS)with auto-scaling enabled. Use Amazon EC2 Spot instances for the EKS
+                                            cluster to further reduce costs. Use On-Demand instances for the Amazon RDS
+                                            database and its read replicas. Create an encrypted Amazon S3 bucket to
+                                            store the company documents. Create a bucket lifecycle policy that will move
+                                            the documents to Amazon S3 Glacier after three months and will delete
+                                            objects older than five years
+                                            <br>
+                                            <i>This option is possible, however, using on-demand instances for
+                                                continuously running RDS instances is expensive. You can save costs by
+                                                using Reserved instances for Amazon RDS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4901">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4901" aria-expanded="true"
+                                    aria-controls="collapse-4901">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">4. A retail company is planning to deploy its business
+                                                analytics application on AWS to gather insights on customer behaviors
+                                                and preferences. With a large amount of data that needs to be processed,
+                                                the application requires 10,000 hours of computing time every month.
+                                                Since this is for analytics, the company is flexible when it comes to
+                                                the availability of compute resources and wants the solution to be as
+                                                cost-effective as possible. Supplementing the analytics application, a
+                                                reporting service needs to run continuously to distribute analytical
+                                                reports.<br><br>Which of the following is a cost-effective solution that
+                                                will satisfy the company's requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4901" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4901" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13292"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13292">
+                                            Create a container for the analytics application and run it on Amazon ECS
+                                            with AWS Fargate. Configure a custom metric with Service Auto Scaling to
+                                            scale the analytics application and meet the needed capacity. Deploy the
+                                            reporting service on a fleet of Amazon EC2 Spot instances
+                                            <br>
+                                            <i>The reporting service needs to run continuously so it is not recommended
+                                                to run it on EC2 Spot instances which can be reclaimed by AWS anytime.
+                                                Running thousands of hours of workload on an AWS Fargate cluster is more
+                                                expensive compared to using Spot instances.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13293"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13293">
+                                            <b>Deploy the analytics service on a fleet of Amazon EC2 Spot instances in
+                                                an Auto Scaling group. Configure a custom metric to scale the Spot fleet
+                                                to meet the needed capacity. Create a container for the reporting
+                                                service and run it on Amazon ECS with AWS Fargate</b>
+                                            <br>
+                                            <i>You can save a lot of costs by using Spot Instances. AWS Fargate is
+                                                suitable for running a container continuously. AWS Fargate will
+                                                automatically replace the container if it becomes unhealthy.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13294"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13294">
+                                            Deploy the analytics service on AWS App Runner to reduce operational
+                                            overhead. Configure Auto Scaling to the service to meet the needed capacity.
+                                            Deploy the reporting service on an Amazon EC2 On-Demand instance
+                                            <br>
+                                            <i>AWS App Runner can be used to quickly deploy containerized web
+                                                applications and APIs, at scale and with no prior infrastructure
+                                                experience required. However, the reporting service needs to run
+                                                continuously so it is not cost-effective to run it on an On-Demand
+                                                instance</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13295"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13295">
+                                            Deploy the analytics service on a combination of Amazon EC2 On-Demand
+                                            instances and Reserved Instances with a 3-year term. Configure a custom
+                                            metric in Auto Scaling to scale the fleet to meet the needed capacity.
+                                            Deploy the reporting service container on AWS App Runner to reduce cost and
+                                            operational overhead
+                                            <br>
+                                            <i>Running the reporting service on AWS App Runner is a good choice.
+                                                However, the On-Demand instances and Reserved instances are not
+                                                cost-effective in running the analytics application. Since the workload
+                                                can be flexible and only run once a month, Spot instances are
+                                                recommended for this scenario</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4902">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4902" aria-expanded="true"
+                                    aria-controls="collapse-4902">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">5. A leading telecommunications company is moving all
+                                                of its mission-critical, multi-tier applications to AWS. At present,
+                                                their architecture is composed of desktop client applications and
+                                                several servers that are all located in their on-premises data center.
+                                                The application-tier is using a MySQL database that is hosted on a
+                                                single VM while both the presentation and business logic layers are
+                                                distributed across multiple VMs. There has been a lot of reports that
+                                                their users, who access the applications remotely, are experiencing
+                                                increased connection latency and slow load times.<br><br>Which of the
+                                                following is the MOST cost-effective solution to improve the uptime of
+                                                the application with MINIMAL change and improve the overall user
+                                                experience?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4902" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4902" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13296"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13296">
+                                            Set up a new CloudFront web distribution to improve the overall user
+                                            experience of your desktop applications. Migrate the MySQL database from
+                                            your VM to a Redshift cluster. Host the application and presentation layers
+                                            in ECS containers behind a Network Load Balancer
+                                            <br>
+                                            <i>It is not suitable to migrate your MySQL database to a Redshift
+                                                cluster.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13297"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13297">
+                                            Use Amazon ElastiCache to improve the overall user experience of your
+                                            desktop applications. Directly migrate the MySQL database from your VM to a
+                                            DynamoDB database. Host the application and presentation layers in AWS
+                                            Fargate containers behind an Application Load Balancer
+                                            <br>
+                                            <i>You cannot directly migrate your MySQL database, which is relational in
+                                                type, to DynamoDB which is a NoSQL database or non-relational. The use
+                                                of Amazon ElastiCache alone will not significantly improve the overall
+                                                user experience since this service is primarily used for caching.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13298"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13298">
+                                            <b>Use Amazon AppStream 2.0 to centrally manage your desktop applications
+                                                and improve the overall user experience. Migrate the MySQL database from
+                                                your VM to Amazon Aurora. Host the application and presentation layers
+                                                in an Auto Scaling group on EC2 instances behind an Application Load
+                                                Balancer.</b>
+                                            <br>
+                                            <i>Enterprises can use AppStream 2.0 to simplify application delivery and
+                                                complete their migration to the cloud. Educational institutions can
+                                                provide every student access to the applications they need for class on
+                                                any computer. Software vendors can use AppStream 2.0 to deliver trials,
+                                                demos, and training for their applications with no downloads or
+                                                installations. They can also develop a full software-as-a-service (SaaS)
+                                                solution without rewriting their application.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13299"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13299">
+                                            Using Amazon WorkSpaces, set up and allocate a workspace for each user to
+                                            improve the overall user experience. Migrate the MySQL database from your VM
+                                            to a self-hosted MySQL database in a large EC2 instance. Host the
+                                            application and presentation layers in Amazon ECS containers behind an
+                                            Application Load Balancer
+                                            <br>
+                                            <i>Amazon WorkSpaces is primarily used as a managed, secure
+                                                Desktop-as-a-Service (DaaS) solution and it costs a lot to implement.
+                                                Take note that in the scenario, it was mentioned that they are using
+                                                desktop applications but there was no mention about the need for Windows
+                                                or Linux desktops which is why the use of Amazon WorkSpaces is
+                                                incorrect</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4903">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4903" aria-expanded="true"
+                                    aria-controls="collapse-4903">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">6. A multinational consumer goods company is currently
+                                                using a VMWare vCenter Server to manage their virtual machines, multiple
+                                                ESXi hosts, and all dependent components from a single centralized
+                                                location. To save costs and to avail the benefits of cloud computing,
+                                                the company decided to move its virtual machines to AWS. The Solutions
+                                                Architect is required to generate new AMIs of the existing virtual
+                                                machines which can then be launched as an EC2 instance in the company
+                                                VPC.<br><br>Which combination of steps should the Solutions Architect do
+                                                to properly execute the cloud migration? (Select TWO.)</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4903" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4903" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13300"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13300">
+                                            <b>Use the AWS Application Migration Service to migrate your on-premises
+                                                workloads to the AWS cloud.
+                                            </b>
+                                            <br>
+                                            <i>AWS Application Migration Service (MGN) is a highly automated
+                                                lift-and-shift (rehost) solution that simplifies, expedites, and reduces
+                                                the cost of migrating applications to AWS. It enables companies to lift
+                                                and shift a large number of physical, virtual, or cloud servers without
+                                                compatibility issues, performance disruption, or long cutover
+                                                windows.<br><br>MGN replicates source servers into your AWS account.
+                                                When you’re ready, it automatically converts and launches your servers
+                                                on AWS so you can quickly benefit from the cost savings, productivity,
+                                                resilience, and agility of the Cloud.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13301"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13301">
+                                            Use Serverless Application Model (SAM) to migrate the virtual machine (VMs)
+                                            to AWS and automatically launch an Amazon ECS Cluster to host the Vms
+                                            <br>
+                                            <i>Serverless Application Model (SAM) service is primarily used to build
+                                                serverless applications on AWS, and not to migrate virtual machines from
+                                                your on-premises data center</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13302"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13302">
+                                            Create an AWS CloudFormation template that mirrors the on-premises
+                                            virtualized environment. Deploy the stack to the AWS cloud
+                                            <br>
+                                            <i>this will create new AMIs that are from AWS, not from the existing VMs.
+                                                CloudFormation is ideal for creating and deploying new environments in
+                                                the AWS Cloud</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13303"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13303">
+                                            Establish a Direct Connect connection between your data center and your VPC.
+                                            Use AWS Service Catalog to centrally manage all your IT services and to
+                                            quickly migrate virtual machines to your virtual private cloud
+                                            <br>
+                                            <i>The AWS Service Catalog is primarily used to allow organizations to
+                                                create and manage catalogs of IT services that are approved for use on
+                                                AWS. It enables you to centrally manage commonly deployed IT services
+                                                and helps you achieve consistent governance and meet your compliance
+                                                requirements while enabling users to quickly deploy only the approved IT
+                                                services they need. However, this service is not suitable for migrating
+                                                your virtual machines</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13304"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13304">
+                                            <b>Install the AWS Replication Agent in your on-premises virtualization
+                                                environment</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4904">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4904" aria-expanded="true"
+                                    aria-controls="collapse-4904">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">7. A company hosts a serverless application on AWS
+                                                using Amazon API Gateway and AWS Lambda with Amazon DynamoDB as the
+                                                backend database. The application has a feature that allows users to
+                                                create posts and reply to comments based on different topics. The API
+                                                model currently uses the following methods:<br><br>- GET /posts/[postid]
+                                                – used to get details about the post<br><br>- GET /users/[userid] – used
+                                                to get details about a user<br><br>- GET /comments/[commentid] – used to
+                                                get details of a comment<br><br>The application does not use API keys
+                                                for request authorization. To increase user engagement on the web app,
+                                                the company wants to reduce comment latency by making the comments
+                                                appear in real-time.<br><br>Which of the following solution should be
+                                                implemented to meet the requirements and improve user experience?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">AppSync</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4904" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4904" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13305"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13305">
+                                            Create a distribution on Amazon CloudFront and use edge-optimized APIs.
+                                            Cache API responses in CloudFront to improve comment latency
+                                            <br>
+                                            <i>Caching API responses can improve the loading of comments, however, this
+                                                may not show the comments in real-time if the new comments are not yet
+                                                on the cache</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13306"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13306">
+                                            Update the application code to call the GET /comments/[commentid] API every
+                                            3 seconds to show comments in real-time without sacrificing performance
+                                            <br>
+                                            <i>This is possible but will heavily put a burden on your Lambda function
+                                                executions. Even if there are no new comments, the API will still be
+                                                called. This will add unnecessary cost to function executions.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13307"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13307">
+                                            Lower the API response time of the Lambda functions by increasing the
+                                            concurrency limit. This allows functions to run in parallel to deliver the
+                                            comments in real-time
+                                            <br>
+                                            <i>Increasing the concurrency limit will not help in showing the comments in
+                                                real-time. If you don't reach the Lambda concurrency limit regularly,
+                                                there is no apparent advantage for this option</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13308"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13308">
+                                            <b>Leverage AWS AppSync by building GraphQL APIs and using Websockets to
+                                                deliver comments in real-time</b>
+                                            <br>
+                                            <i>AWS AppSync is a fully managed service that makes it easy to develop
+                                                GraphQL APIs by handling the heavy lifting of securely connecting to
+                                                data sources like Amazon DynamoDB, Lambda, and more. Adding caches to
+                                                improve performance, subscriptions to support real-time updates, and
+                                                client-side data stores that keep offline clients in sync are just as
+                                                easy. Once deployed, AWS AppSync automatically scales your GraphQL API
+                                                execution engine up and down to meet API request volumes.<br><br>With
+                                                managed GraphQL subscriptions, AWS AppSync can push real-time data
+                                                updates over Websockets to millions of clients. For mobile and web
+                                                applications, AppSync also provides local data access when devices go
+                                                offline, and data synchronization with customizable conflict resolution,
+                                                when they are back online.<br><br>AppSync supports real-time chat
+                                                applications. You can build conversational mobile or web applications
+                                                that support multiple private chat rooms, offer access to conversation
+                                                history, and queue outbound messages, even when a device is offline</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4905">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4905" aria-expanded="true"
+                                    aria-controls="collapse-4905">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">8. A company has released a new mobile game and its
+                                                backend servers are hosted on the company’s on-premises data center. The
+                                                game logic is exposed using REST APIs that have multiple functions
+                                                depending on the user state. Access to the backend services is
+                                                controlled with an API key, while any test traffic is distinguished by a
+                                                different key. A central file server stores player session data. User
+                                                traffic is variable throughout the day but the on-premises servers
+                                                cannot handle traffic during peak hours. The game also has latency
+                                                issues caused by the slow fetching of player session data. The
+                                                management tasked the solutions architect to migrate this infrastructure
+                                                to AWS in order to improve scalability and reduce the latency for data
+                                                access while keeping the backend API model unchanged.<br><br>Which of
+                                                the following is the recommended solution to meet the company
+                                                requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4905" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4905" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13309"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13309">
+                                            <b>Use AWS Lambda functions to run the backend game logic. Expose the REST
+                                                APIs by using Amazon API Gateway. Use Amazon DynamoDB with auto-scaling
+                                                to store the player session data</b>
+                                            <br>
+                                            <i>API Gateway tightly integrates with AWS Lambda which enables you to
+                                                quickly build REST compliant serverless applications. DynamoDB is
+                                                well-suited for scalability to handle fast access to player session
+                                                data.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13310"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13310">
+                                            Create a fleet of Amazon EC2 instances to host the backend services. Expose
+                                            the REST APIs by placing the instances behind a Network Load Balancer (NLB).
+                                            Use Amazon Aurora Serverless to store the player session data
+                                            <br>
+                                            <i>Aurora Serverless is an on-demand, auto-scaling configuration for Amazon
+                                                Aurora. It is recommended to use Aurora Serverless for lightly-used
+                                                applications, with peaks of 30 minutes to several hours a few times each
+                                                day or several times per year, such as human resources, budgeting, or
+                                                operational reporting application</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13311"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13311">
+                                            Use AWS Lambda functions to run the backend game logic. Expose the REST APIs
+                                            by placing the Lambda functions behind an Application Load Balancer (ALB).
+                                            Use Amazon DynamoDB with auto-scaling to store the player session data
+                                            <br>
+                                            <i>Although you can use an ALB with Lambda as the backend service, it is
+                                                still recommended to use API Gateway to expose your APIs. You have a lot
+                                                more options and flexibility on API Gateway including the ability to use
+                                                API keys and add custom headers to each request</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13312"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13312">
+                                            Use AWS Lambda functions to run the backend game logic. Expose the REST APIs
+                                            by using AWS AppSync. Use Amazon Aurora Serverless to store the player
+                                            session data
+                                            <br>
+                                            <i>AWS AppSync is recommended for applications that are written for GraphQL
+                                                APIs, not REST APIs.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4906">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4906" aria-expanded="true"
+                                    aria-controls="collapse-4906">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">9. A company is running a serverless backend API
+                                                service on AWS. It has several AWS Lambda functions written in Python
+                                                and an Amazon API Gateway that is configured to invoke the functions.
+                                                The company wants to secure the API endpoint by ensuring that only
+                                                authorized IAM users or roles can access the Amazon API Gateway
+                                                endpoint. The Solutions Architect was also tasked to provide the ability
+                                                to inspect each request end-to-end to check the latency of the request
+                                                and to generate service maps.<br><br>Which of the following
+                                                implementation will fulfill the above company
+                                                requirements?<br><br><br><br><br><br></div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4906" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4906" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13313"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13313">
+                                            <b>Configure authorization to use AWS_IAM for the API Gateway method. Create
+                                                the IAM users or roles that have the execute-api:Invoke permission to
+                                                the ARN of the API resource. Enable request signing with AWS Signature
+                                                for every call to the API endpoint. Trace and analyze each user request
+                                                on API Gateway by using AWS X-Ray</b>
+                                            <br>
+                                            <i>Attach policy allow the execute-api:Invoke action and the resource is set
+                                                to the ARN of the API gateway method. to the required IAM users or IAM
+                                                roles.<br>AWS X-Ray also helps developers analyze and debug production,
+                                                distributed applications, such as those built using a microservices
+                                                architecture. AWS X-Ray provides an end-to-end view of requests as they
+                                                travel through your application, and shows a map of your application’s
+                                                underlying components. You can use X-Ray to analyze both applications in
+                                                development and in production, from simple three-tier applications to
+                                                complex microservices applications consisting of thousands of
+                                                services.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13314"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13314">
+                                            Ensure that the API Gateway resource is secured by only returning the
+                                            company’s domain in Access-Control-Allow-Origin headers and enabling
+                                            Cross-origin resource sharing (CORS). Create the IAM users or roles that
+                                            have the execute-api:Invoke permission to the ARN of the API resource. Trace
+                                            and analyze each user request on API Gateway using Amazon CloudWatch Logs
+                                            <br>
+                                            <i>CORS does not provide any IAM authentication capability</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13315"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13315">
+                                            Write a separate AWS Lambda function that will act as a custom authorizer.
+                                            For every call to the API gateway, require the client to pass the access key
+                                            and secret key. Use the Lambda function to validate the key/secret pair
+                                            against a valid IAM user. Trace and analyze each user request on API Gateway
+                                            by using AWS X-Ray
+                                            <br>
+                                            <i>Creating a custom Lambda authorizer will require more work compared to
+                                                just using the AWS_IAM authorizer. Sending AWS access and secret key as
+                                                part of each HTTPS call is not recommended from a security standpoint
+                                                since these are sensitive security credentials.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13316"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13316">
+                                            Generate a new client certificate on Amazon API Gateway. Distribute this
+                                            certificate to all AWS users or roles that require access to the API
+                                            endpoint. Ensure that each user will pass the client certification for every
+                                            request made to the API endpoint. Trace and analyze each user request on API
+                                            Gateway using Amazon CloudWatch Logs
+                                            <br>
+                                            <i>Using client certificates for authentication does not provide any IAM
+                                                authentication capability and although API Gateway can send execution
+                                                logs to CloudWatch Logs, the logs do not provide end-to-end tracing or
+                                                inspection for request.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4907">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4907" aria-expanded="true"
+                                    aria-controls="collapse-4907">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">10. A company runs its internal tool on AWS. It is
+                                                used for logistics and shipment tracking for the company’s warehouse.
+                                                With the current system process, the application receives an order and
+                                                it sends an email to the employees with the information needed for the
+                                                package shipment. After the employees prepare the order and ship the
+                                                package, they reply to the email so that the application can mark the
+                                                order as shipped. The company wants to migrate to a serverless
+                                                application model to stop relying on emails and minimize the operational
+                                                overhead for the application.<br><br>Which of the following options
+                                                should the Solutions Architect implement to meet the company
+                                                requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4907" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4907" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13317"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13317">
+                                            Create AWS Batch jobs corresponding to different tasks needed to ship a
+                                            package. Write an AWS Lambda function with AWS Batch as the trigger to
+                                            create and print the shipping label for the package. Once the package is
+                                            scanned and leaves the warehouse, trigger another Lambda function to move
+                                            the AWS Batch job to the next stage of the shipping process
+                                            <br>
+                                            <i>AWS Batch is not designed to orchestrate a workflow. AWS Batch is used to
+                                                run batch jobs such as transaction reporting or analysis reporting,
+                                                which usually run as stand-alone jobs</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13318"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13318">
+                                            Store order information on an Amazon SQS queue when a new order is created.
+                                            Schedule an AWS Lambda function to poll the queue every 5 minutes and start
+                                            processing if any orders are found. Use another Lambda function to print the
+                                            shipping labels for the package. Once the package is scanned and leaves the
+                                            warehouse, use Amazon Pinpoint to send a notification to customers regarding
+                                            the status of their order
+                                            <br>
+                                            <i>Polling the SQS every 5 minutes is not efficient compared to writing to
+                                                the DynamoDB table. If there are no orders for the past 5 minutes, the
+                                                Lambda function will still run.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13319"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13319">
+                                            Use an Amazon EFS volume to store the new order information. Configure an
+                                            instance to pull the order information from the EFS share and print the
+                                            shipping label for the package. Once the package is scanned and leaves the
+                                            warehouse, remove the order information on the EFS share by using an Amazon
+                                            API Gateway call to the instances
+                                            <br>
+                                            <i>Using an EFS share will require EC2 instances and will increase the
+                                                operational overhead needed to manage the infrastructure. This is not a
+                                                serverless solution</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13320"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13320">
+                                            <b> Store the order information on an Amazon DynamoDB table. Create an AWS
+                                                Step Functions workflow that will be triggered for every new order. Have
+                                                the workflow mark the order as “in progress” and print the shipping
+                                                label for the package. Once the package is scanned and leaves the
+                                                warehouse, trigger an AWS Lambda function to mark the order as “shipped”
+                                                and complete the Step Functions workflow</b>
+                                            <br>
+                                            <i>Step Functions is suitable to orchestrate this workflow to update a
+                                                DynamoDB table for the order progress as well trigger AWS Lambda
+                                                functions for various actions</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
                 </div>
             </div>
         </div>

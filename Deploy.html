@@ -1,0 +1,917 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="docsearch:language" content="en">
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://training.codestar.vn/css/common.css">
+
+
+</head>
+
+<body class="fixed-nav" id="page-top">
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="row mb-3" id="app">
+                <div class="col-sm-12">
+                    <br>
+
+                    <div class="accordion" id="accordionQuestion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4925">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4925" aria-expanded="true"
+                                    aria-controls="collapse-4925">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">1. A company uses an AWS CodeCommit repository. The
+                                                company must store a backup copy of the data that is in the repository
+                                                in a second AWS Region.<br>Which solution will meet these requirements?
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4925" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4925" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13389"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13389">
+                                            Configure AWS Elastic Disaster Recovery to replicate the CodeCommit
+                                            repository data to the second Region.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13390"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13390">
+                                            Use AWS Backup to back up the CodeCommit repository on an hourly schedule.
+                                            Create a cross-Region copy in the second Region.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13391"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13391">
+                                            <b>Create an Amazon EventBridge rule to invoke AWS CodeBuild when the
+                                                company pushes code to the repository. Use CodeBuild to clone the
+                                                repository. Create a .zip file of the content. Copy the file to an S3
+                                                bucket in the second Region</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13392"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13392">
+                                            Create an AWS Step Functions workflow on an hourly schedule to take a
+                                            snapshot of the CodeCommit repository. Configure the workflow to copy the
+                                            snapshot to an S3 bucket in the second Region
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4926">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4926" aria-expanded="true"
+                                    aria-controls="collapse-4926">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">2. A company has a serverless application comprised of
+                                                Amazon CloudFront, Amazon API Gateway, and AWS Lambda functions. The
+                                                current deployment process of the application code is to create a new
+                                                version number of the Lambda function and run an AWS CLI script to
+                                                update. If the new function version has errors, another CLI script
+                                                reverts by deploying the previous working version of the function. The
+                                                company would like to decrease the time to deploy new versions of the
+                                                application logic provided by the Lambda functions, and also reduce the
+                                                time to detect and revert when errors are identified.<br>How can this be
+                                                accomplished?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4926" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4926" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13393"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13393">
+                                            Create and deploy nested AWS CloudFormation stacks with the parent stack
+                                            consisting of the AWS CloudFront distribution and API Gateway, and the child
+                                            stack containing the Lambda function. For changes to Lambda, create an AWS
+                                            CloudFormation change set and deploy; if errors are triggered, revert the
+                                            AWS CloudFormation change set to the previous version.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13394"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13394">
+                                            <b>Use AWS SAM and built-in AWS CodeDeploy to deploy the new Lambda version,
+                                                gradually shift traffic to the new version, and use pre-traffic and
+                                                post-traffic test functions to verify code. Rollback if Amazon
+                                                CloudWatch alarms are triggered.</b>
+                                            <br>
+                                            <i>AWS Serverless Application Model (SAM) is a framework that helps you
+                                                build, test and deploy your serverless applications. It
+                                                uses<br>CloudFormation under the hood, so it is a way to simplify the
+                                                process of creating, updating, and deploying CloudFormation templates.
+                                                CodeDeploy<br>is a service that automates code deployments to any
+                                                instance, including on-premises instances and Lambda functions.<br>With
+                                                AWS SAM you can use the built-in CodeDeploy to deploy new versions of
+                                                the Lambda function, gradually shift traffic to the new version,
+                                                and<br>use pre-traffic and post-traffic test functions to verify
+                                                code.<br>You can also define CloudWatch Alarms to trigger a rollback in
+                                                case of any issues.<br>This allows for a faster and more efficient
+                                                deployment process, as well as a more reliable rollback process when
+                                                errors are identified. This way you<br>can increase the speed of
+                                                deployment and reduce the time to detect and revert when errors are
+                                                identified</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13395"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13395">
+                                            Refactor the AWS CLI scripts into a single script that deploys the new
+                                            Lambda version. When deployment is completed, the script tests execute. If
+                                            errors are detected, revert to the previous Lambda version.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13396"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13396">
+                                            Create and deploy an AWS CloudFormation stack that consists of a new API
+                                            Gateway endpoint that references the new Lambda version. Change the
+                                            CloudFront origin to the new API Gateway endpoint, monitor errors and if
+                                            detected, change the AWS CloudFront origin to the previous API Gateway
+                                            endpoint.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4927">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4927" aria-expanded="true"
+                                    aria-controls="collapse-4927">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">3. A security engineer determined that an existing
+                                                application retrieves credentials to an Amazon RDS for MySQL database
+                                                from an encrypted file in Amazon S3. For the next version of the
+                                                application, the security engineer wants to implement the following
+                                                application design changes to improve security:<br><br>- The database
+                                                must use strong, randomly generated passwords stored in a secure AWS
+                                                managed service.<br><br>- The application resources must be deployed
+                                                through AWS CloudFormation.<br><br>- The application must rotate
+                                                credentials for the database every 90 days.<br><br>- A solutions
+                                                architect will generate a CloudFormation template to deploy the
+                                                application.<br><br>Which resources specified in the CloudFormation
+                                                template will meet the security engineer’s requirements with the LEAST
+                                                amount of operational<br>Overhead?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4927" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4927" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13397"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13397">
+                                            <b>Generate the database password as a secret resource using AWS Secrets
+                                                Manager. Create an AWS Lambda function resource to rotate the database
+                                                password. Specify a Secrets Manager RotationSchedule resource to rotate
+                                                the database password every 90 days</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13398"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13398">
+                                            Generate the database password as a SecureString parameter type using AWS
+                                            Systems Manager Parameter Store. Create an AWS Lambda function resource to
+                                            rotate the database password. Specify a Parameter Store RotationSchedule
+                                            resource to rotate the database password every 90 days.
+                                            <br>
+                                            <i>There is no RotationSchedule resource in Parameter Store</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13399"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13399">
+                                            Generate the database password as a secret resource using AWS Secrets
+                                            Manager. Create an AWS Lambda function resource to rotate the database
+                                            password. Create an Amazon EventBridge scheduled rule resource to trigger
+                                            the Lambda function password rotation every 90 days.
+                                            <br>
+                                            <i>This option will not fulfill the requirement LEAST opeartional
+                                                overhead</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13400"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13400">
+                                            Generate the database password as a SecureString parameter type using AWS
+                                            Systems Manager Parameter Store. Specify an AWS AppSync DataSource resource
+                                            to automatically rotate the database password every 90 days.
+                                            <br>
+                                            <i>This option will not fulfill the requirement LEAST opeartional
+                                                overhead</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4928">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4928" aria-expanded="true"
+                                    aria-controls="collapse-4928">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">4. A company has 50 AWS accounts that are members of
+                                                an organization in AWS Organizations. Each account contains multiple
+                                                VPCs. The company wants to use AWS Transit Gateway to establish
+                                                connectivity between the VPCs in each member account. Each time a new
+                                                member account is created, the company wants to automate the process of
+                                                creating a new VPC and a transit gateway attachment.<br>Which
+                                                combination of steps will meet these requirements? (Choose two.)</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4928" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4928" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13401"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13401">
+                                            <b>From the management account, share the transit gateway with member
+                                                accounts by using AWS Resource Access Manager.</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13402"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13402">
+                                            From the management account, share the transit gateway with member accounts
+                                            by using an AWS Organizations SCP
+                                            <br>
+                                            <i>You can only share TGW with Organization SCP</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13403"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13403">
+                                            <b>Launch an AWS CloudFormation stack set from the management account that
+                                                automatically creates a new VPC and a VPC transit gateway attachment in
+                                                a member account. Associate the attachment with the transit gateway in
+                                                the management account by using the transit gateway ID.</b>
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13404"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13404">
+                                            Launch an AWS CloudFormation stack set from the management account that
+                                            automatically creates a new VPC and a peering transit gateway attachment in
+                                            a member account. Share the attachment with the transit gateway in the
+                                            management account by using a transit gateway service-linked role
+                                            <br>
+                                            <i>You can only attach VPC TGW attachment in member account, cannot share
+                                                attachment with TGW in management account.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-13405"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13405">
+                                            From the management account, share the transit gateway with member accounts
+                                            by using AWS Service Catalog
+                                            <br>
+                                            <i>Service Catalog cannot be used to share TGW</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4929">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4929" aria-expanded="true"
+                                    aria-controls="collapse-4929">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">5. A company is hosting a three-tier web application
+                                                in an on-premises environment. Due to a recent surge in traffic that
+                                                resulted in downtime and a significant financial impact, company
+                                                management has ordered that the application be moved to AWS. The
+                                                application is written in .NET and has a dependency on a MySQL database.
+                                                A solutions architect must design a scalable and highly available
+                                                solution to meet the demand of 200,000 daily users.<br>Which steps
+                                                should the solutions architect take to design an appropriate solution?
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4929" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4929" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13406"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13406">
+                                            Use AWS Elastic Beanstalk to create a new application with a web server
+                                            environment and an Amazon RDS MySQL Multi-AZ DB instance. The environment
+                                            should launch a Network Load Balancer (NLB) in front of an Amazon EC2 Auto
+                                            Scaling group in multiple Availability Zones. Use an Amazon Route 53 alias
+                                            record to route traffic from the company’s domain to the NLB.
+                                            <br>
+                                            <i>This option can work. However, NLB is not the best option compare to ALB,
+                                                also, RDS MySQL Multi-AZ</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13407"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13407">
+                                            <b>Use AWS CloudFormation to launch a stack containing an Application Load
+                                                Balancer (ALB) in front of an Amazon EC2 Auto Scaling group spanning
+                                                three Availability Zones. The stack should launch a Multi-AZ deployment
+                                                of an Amazon Aurora MySQL DB cluster with a Retain deletion policy. Use
+                                                an Amazon Route 53 alias record to route traffic from the company’s
+                                                domain to the ALB</b>
+                                            <br>
+                                            <i>This is the correct option. CloudFormation can launch a stack including
+                                                ALB, EC2 Auto Scaling group and Aurora MySQL DB</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13408"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13408">
+                                            Use AWS Elastic Beanstalk to create an automatically scaling web server
+                                            environment that spans two separate Regions with an Application Load
+                                            Balancer (ALB) in each Region. Create a Multi-AZ deployment of an Amazon
+                                            Aurora MySQL DB cluster with a cross-Region read replica. Use Amazon Route
+                                            53 with a geoproximity routing policy to route traffic between the two
+                                            Regions
+                                            <br>
+                                            <i>Beanstalk cannot create an auto scaling web server environment that spans
+                                                2 separate Regions.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13409"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13409">
+                                            Use AWS CloudFormation to launch a stack containing an Application Load
+                                            Balancer (ALB) in front of an Amazon ECS cluster of Spot instances spanning
+                                            three Availability Zones. The stack should launch an Amazon RDS MySQL DB
+                                            instance with a Snapshot deletion policy. Use an Amazon Route 53 alias
+                                            record to route traffic from the company’s domain to the ALB.
+                                            <br>
+                                            <i>ECS cluster of Spot instances is not a good option in this case.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4930">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4930" aria-expanded="true"
+                                    aria-controls="collapse-4930">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">6. A company is using AWS Organizations to manage
+                                                multiple AWS accounts. For security purposes, the company requires the
+                                                creation of an Amazon Simple Notification Service (Amazon SNS) topic
+                                                that enables integration with a third-party alerting system in all the
+                                                Organizations member accounts.<br>A solutions architect used an AWS
+                                                CloudFormation template to create the SNS topic and stack sets to
+                                                automate the deployment of CloudFormation stacks. Trusted access has
+                                                been enabled in Organizations.<br>What should the solutions architect do
+                                                to deploy the CloudFormation StackSets in all AWS accounts?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4930" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4930" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13410"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13410">
+                                            Create a stack set in the Organizations member accounts. Use service-managed
+                                            permissions. Set deployment options to deploy to an
+                                            organization. Use CloudFormation StackSets drift detection
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13411"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13411">
+                                            Create stacks in the Organizations member accounts. Use self-service
+                                            permissions. Set deployment options to deploy to an organization.
+                                            Enable the CloudFormation StackSets automatic deployment
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13412"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13412">
+                                            <b>Create a stack set in the Organizations management account. Use
+                                                service-managed permissions. Set deployment options to deploy to the
+                                                organization. Enable CloudFormation StackSets automatic deployment</b>
+                                            <br>
+                                            <i>For this requirement, we need to create a stack set in the Organizations
+                                                management account. Also, when you enable CFN StackSets automatic
+                                                deployment, the stack in other accounts will be updated accordingly with
+                                                management account.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13413"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13413">
+                                            Create stacks in the Organizations management account. Use service-managed
+                                            permissions. Set deployment options to deploy to the
+                                            organization. Enable CloudFormation StackSets drift detection
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4931">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4931" aria-expanded="true"
+                                    aria-controls="collapse-4931">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">7. A company built an application based on AWS Lambda
+                                                deployed in an AWS CloudFormation stack. The last production release of
+                                                the web application introduced an issue that resulted in an outage
+                                                lasting several minutes. A solutions architect must adjust the
+                                                deployment process to<br>support a canary release.<br>Which solution
+                                                will meet these requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4931" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4931" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13414"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13414">
+                                            <b>Create an alias for every new deployed version of the Lambda function.
+                                                Use the AWS CLI update-alias command with the routing-config parameter
+                                                to distribute the load.</b>
+                                            <br>
+                                            <i>This is the correct answer for this scenario.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13415"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13415">
+                                            Deploy the application into a new CloudFormation stack. Use an Amazon Route
+                                            53 weighted routing policy to distribute the load
+                                            <br>
+                                            <i>This is not suitable for canary deployment</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13416"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13416">
+                                            Create a version for every new deployed Lambda function. Use the AWS CLI
+                                            update-function-configuration command with the routing-config parameter to
+                                            distribute the load.
+                                            <br>
+                                            <i>You don’t need to create a version for every Lambda funcition</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13417"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13417">
+                                            Configure AWS CodeDeploy and use CodeDeployDefault.OneAtATime in the
+                                            Deployment configuration to distribute the load.
+                                            <br>
+                                            <i>Deploy OneAtATime in CodeDeploy does not support Canary setting like
+                                                route configuration</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4932">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4932" aria-expanded="true"
+                                    aria-controls="collapse-4932">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">8. A company is running several workloads in a single
+                                                AWS account. A new company policy states that engineers can provision
+                                                only approved resources and that engineers must use AWS CloudFormation
+                                                to provision these resources. A solutions architect needs to create a
+                                                solution to enforce the new restriction on the IAM role that the
+                                                engineers use for access.<br>What should the solutions architect do to
+                                                create the solution?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4932" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4932" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13418"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13418">
+                                            Upload AWS CloudFormation templates that contain approved resources to an
+                                            Amazon S3 bucket. Update the IAM policy for the engineers’ IAM role to only
+                                            allow access to Amazon S3 and AWS CloudFormation. Use AWS CloudFormation
+                                            templates to provision resources.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13419"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13419">
+                                            Update the IAM policy for the engineers’ IAM role with permissions to only
+                                            allow provisioning of approved resources and AWS CloudFormation. Use AWS
+                                            CloudFormation templates to create stacks with approved resources.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13420"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13420">
+                                            <b>Update the IAM policy for the engineers’ IAM role with permissions to
+                                                only allow AWS CloudFormation actions. Create a new IAM policy
+                                                with permission to provision approved resources, and assign the policy
+                                                to a new IAM service role. Assign the IAM service role to AWS
+                                                CloudFormation during stack creation.</b>
+                                            <br>
+                                            <i>This is a best practice of using CloudFormation</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13421"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13421">
+                                            Provision resources in AWS CloudFormation stacks. Update the IAM policy for
+                                            the engineers’ IAM role to only allow access to their own
+                                            AWS CloudFormation stack.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4933">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4933" aria-expanded="true"
+                                    aria-controls="collapse-4933">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">9. A company has its cloud infrastructure on AWS. A
+                                                solutions architect needs to define the infrastructure as code. The
+                                                infrastructure is currently deployed in one AWS Region. The company’s
+                                                business expansion plan includes deployments in multiple Regions across
+                                                multiple AWS accounts.<br>What should the solutions architect do to meet
+                                                these requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4933" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4933" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13422"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13422">
+                                            Use AWS CloudFormation templates. Add IAM policies to control the various
+                                            accounts, Deploy the templates across the multiple Regions.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13423"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13423">
+                                            Use AWS Organizations. Deploy AWS CloudFormation templates from the
+                                            management account Use AWS Control Tower to manage deployments across
+                                            accounts.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13424"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13424">
+                                            <b>Use AWS Organizations and AWS CloudFormation StackSets. Deploy a Cloud
+                                                Formation template from an account that has the necessary IAM
+                                                permissions</b>
+                                            <br>
+                                            <i>AWS Organizations allows the management of multiple AWS accounts as a
+                                                single entity and AWS CloudFormation StackSets allows creating,
+                                                updating, and deleting stacks across multiple accounts and regions in an
+                                                organization. This solution allows creating a single CloudFormation
+                                                template that can be deployed across multiple accounts and regions, and
+                                                also allows for the management of access and permissions for the
+                                                different accounts through the use of IAM roles and policies in the
+                                                management account.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13425"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13425">
+                                            Use nested stacks with AWS CloudFormation templates. Change the Region by
+                                            using nested stacks
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4934">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4934" aria-expanded="true"
+                                    aria-controls="collapse-4934">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">10. A company is building a call center by using
+                                                Amazon Connect. The company’s operations team is defining a disaster
+                                                recovery (DR) strategy across AWS Regions. The contact center has dozens
+                                                of contact flows, hundreds of users, and dozens of claimed phone
+                                                numbers.<br>Which solution will provide DR with the LOWEST RTO?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4934" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4934" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13426"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13426">
+                                            Create an AWS Lambda function to check the availability of the Amazon
+                                            Connect instance and to send a notification to the operations team in case
+                                            of unavailability. Create an Amazon EventBridge rule to invoke the Lambda
+                                            function every 5 minutes. After notification, instruct the operations team
+                                            to use the AWS Management Console to provision a new Amazon Connect instance
+                                            in a second Region. Deploy the contact flows, users, and claimed phone
+                                            numbers by using an AWS CloudFormation template.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13427"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13427">
+                                            Provision a new Amazon Connect instance with all existing users in a second
+                                            Region. Create an AWS Lambda function to check the availability of the
+                                            Amazon Connect instance. Create an Amazon EventBridge rule to invoke the
+                                            Lambda function every 5 minutes. In the event of an issue, configure the
+                                            Lambda function to deploy an AWS CloudFormation template that provisions
+                                            contact flows and claimed numbers in the second Region.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13428"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13428">
+                                            Provision a new Amazon Connect instance with all existing contact flows and
+                                            claimed phone numbers in a second Region. Create an Amazon Route 53 health
+                                            check for the URL of the Amazon Connect instance. Create an Amazon
+                                            CloudWatch alarm for failed health checks. Create an AWS Lambda function to
+                                            deploy an AWS CloudFormation template that provisions all users. Configure
+                                            the alarm to invoke the Lambda function.
+                                            <br>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13429"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13429">
+                                            <b>Provision a new Amazon Connect instance with all existing users and
+                                                contact flows in a second Region. Create an Amazon Route 53 health check
+                                                for the URL of the Amazon Connect instance. Create an Amazon CloudWatch
+                                                alarm for failed health checks. Create an AWS Lambda function to deploy
+                                                an AWS CloudFormation template that provisions claimed phone numbers.
+                                                Configure the alarm to invoke the Lambda function.</b>
+                                            <br>
+                                            <i>Option D provisions a new Amazon Connect instance with all existing users
+                                                and contact flows in a second Region. It also sets up an Amazon Route 53
+                                                health check for the URL of the Amazon Connect instance, an Amazon
+                                                CloudWatch alarm for failed health checks, and an AWS Lambda function to
+                                                deploy an AWS CloudFormation template that provisions claimed phone
+                                                numbers. This option allows for the fastest recovery time because all
+                                                the necessary components are already provisioned and ready to go in the
+                                                second Region. In the event of a disaster, the failed health check will
+                                                trigger the AWS Lambda function to deploy the CloudFormation template to
+                                                provision the claimed phone numbers, which is the only missing
+                                                component.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
