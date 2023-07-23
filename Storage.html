@@ -16,1127 +16,1127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/common.css">
 
-    
+
 </head>
 
 <body class="fixed-nav" id="page-top">
     <div class="page-content-wrapper">
         <div class="container">
-            <div class="row mb-3" id="app">
-                <div class="col-sm-12">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
                     <br>
-                    <div class="tab-pane" id="exam" role="tabpanel" aria-labelledby="exam-tab">
-                        <div class="accordion" id="accordionQuestion">
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4820">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4820" aria-expanded="true"
-                                        aria-controls="collapse-4820">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;">
-                                            <div class="row">
-                                                <div class="col-auto">1. A company runs a mission-critical application
-                                                    on a fixed set of Amazon EC2 instances behind an Application Load
-                                                    Balancer. The application responds to user requests by querying a
-                                                    120GB dataset. The application requires high throughput and low
-                                                    latency storage so the dataset is stored on Provisioned IOPS (PIOPS)
-                                                    Amazon EBS volumes with 3000 IOPS provisioned. The Amazon EC2 launch
-                                                    template has been configured to allocate and attach this 120GB size
-                                                    Provisioned IOPS EBS volume for the fleet of EC2 instances. After a
-                                                    few months of operation, the company noticed the high cost of EBS
-                                                    volumes in the billing section. The Solutions Architect has been
-                                                    tasked to design a solution that will reduce the costs without a
-                                                    negative impact on the application performance and data
-                                                    durability.<br><br>Which of the following solutions will meet the
-                                                    company requirements?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
+                    <div class="accordion" id="accordionQuestion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4820">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4820" aria-expanded="true"
+                                    aria-controls="collapse-4820">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                                        <div class="row">
+                                            <div class="col-auto">1. A company runs a mission-critical application
+                                                on a fixed set of Amazon EC2 instances behind an Application Load
+                                                Balancer. The application responds to user requests by querying a
+                                                120GB dataset. The application requires high throughput and low
+                                                latency storage so the dataset is stored on Provisioned IOPS (PIOPS)
+                                                Amazon EBS volumes with 3000 IOPS provisioned. The Amazon EC2 launch
+                                                template has been configured to allocate and attach this 120GB size
+                                                Provisioned IOPS EBS volume for the fleet of EC2 instances. After a
+                                                few months of operation, the company noticed the high cost of EBS
+                                                volumes in the billing section. The Solutions Architect has been
+                                                tasked to design a solution that will reduce the costs without a
+                                                negative impact on the application performance and data
+                                                durability.<br><br>Which of the following solutions will meet the
+                                                company requirements?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4820" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4820" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12960"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12960">
-                                                Create an Amazon EFS volume and mount it across all the Amazon EC2
-                                                instances. Use Max I/O performance mode on the EFS volume to ensure the
-                                                application can reach the required IOPS
-                                                <br>
-                                                <i>File systems in the Max I/O mode can scale to higher levels of
-                                                    aggregate throughput and operations per second. However, this
-                                                    scaling is done with a tradeoff of slightly higher latencies for
-                                                    file metadata operations.</i>
-                                            </label>
+                                        <div>
                                         </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12961"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12961">
-                                                Use the cheaper General Purpose SSD (gp2) EBS volumes instead of PIOPS
-                                                EBS volumes. Allocating 1TB EBS volumes (gp2) will have a throughput of
-                                                3000 IOPS. Update the EC2 launch template to allocate this type of
-                                                volume
-                                                <br>
-                                                <i>Although this may look cheaper at first, creating several 1TB volumes
-                                                    for each EC2 instance entails higher costs. The Amazon EFS volume
-                                                    solution will be cheaper for sharing storage across all EC2
-                                                    instances. Although you can use EBS Multi-Attach to attach EBS
-                                                    volumes to multiple EC2 instances, this is limited only to
-                                                    Provisioned IOPS SSD (io1 or io2) volumes that are attached to
-                                                    Nitro-based EC2 instances in the same Availability Zone</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12962"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12962">
-                                                Remove the PIOPS EBS volume allocation on the EC2 launch template.
-                                                Attach a 120GB instance store volume on the EC2 instance to ensure that
-                                                the application will have enough IOPS for its operation
-                                                <br>
-                                                <i>Instance store volumes are ephemeral which means that you will lose
-                                                    all data in the volume when you stop/start the instance. This is not
-                                                    recommended for this mission-critical application</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12963"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12963">
-                                                <b>Create an Amazon EFS volume and mount it across all the Amazon EC2
-                                                    instances. Use the Provisioned Throughput mode on the EFS volume to
-                                                    ensure that the application can reach the required IOPS.</b>
-                                                <br>
-                                                <i>If your file system is in the Provisioned Throughput mode, you can
-                                                    increase the Provisioned Throughput of your file system as often as
-                                                    you want. You can decrease your file system throughput in
-                                                    Provisioned Throughput mode as long as it's been more than 24 hours
-                                                    since the last decrease.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
                                     </div>
                                 </div>
                             </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4821">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4821" aria-expanded="true"
-                                        aria-controls="collapse-4821">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">2. A leading aerospace engineering company has
-                                                    over 1 TB of aeronautical data stored on the corporate file server
-                                                    of their on-premises network. This data is used by a lot of their
-                                                    in-house analytical and engineering applications. The aeronautical
-                                                    data consists of technical files which can have a file size of a few
-                                                    megabytes to multiple gigabytes. The data scientists typically
-                                                    modify an average of 10 percent of these files every day. Recently,
-                                                    the management decided to adopt a hybrid cloud architecture to
-                                                    better serve their clients around the globe. The management
-                                                    requested to migrate its applications to AWS over the weekend to
-                                                    minimize any business impact and system downtime. The on-premises
-                                                    data center has a 50-Mbps Internet connection which can be used to
-                                                    transfer all of the 1 TB of data in AWS but based on the
-                                                    calculations, it will take at least 48 hours to complete this
-                                                    task.<br><br>Which of the following options will allow the solutions
-                                                    architect to move all of the aeronautical data to AWS to meet the
-                                                    above requirement?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
+                            <div id="collapse-4820" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4820" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12960"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12960">
+                                            Create an Amazon EFS volume and mount it across all the Amazon EC2
+                                            instances. Use Max I/O performance mode on the EFS volume to ensure the
+                                            application can reach the required IOPS
+                                            <br>
+                                            <i>File systems in the Max I/O mode can scale to higher levels of
+                                                aggregate throughput and operations per second. However, this
+                                                scaling is done with a tradeoff of slightly higher latencies for
+                                                file metadata operations.</i>
+                                        </label>
                                     </div>
                                 </div>
-                                <div id="collapse-4821" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4821" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12964"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12964">
-                                                <b>1. Synchronize the on-premise data to an S3 bucket one week before
-                                                    the migration schedule using the AWS CLI's S3 sync command.
-                                                    2. Perform a final synchronization task on Friday after the end of
-                                                    business hours.
-                                                    3. Set up your application hosted in a large EC2 instance in your
-                                                    VPC to use the S3 bucket.</b>
-                                                <br>
-                                                <i>The most effective choice here is to use the S3 sync feature that is
-                                                    available in AWS CLI. In this way, you can comfortably synchronize
-                                                    the data in your on-premises server and in AWS a week before the
-                                                    migration. And on Friday, just do another sync to complete the task.
-                                                    Remember that the sync feature of S3 only uploads the "delta" or in
-                                                    other words, the "difference" in the subset. Therefore, it will only
-                                                    take just a fraction of the time to complete the data
-                                                    synchronization compared to the other methods.</i>
-                                            </label>
-                                        </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12961"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12961">
+                                            Use the cheaper General Purpose SSD (gp2) EBS volumes instead of PIOPS
+                                            EBS volumes. Allocating 1TB EBS volumes (gp2) will have a throughput of
+                                            3000 IOPS. Update the EC2 launch template to allocate this type of
+                                            volume
+                                            <br>
+                                            <i>Although this may look cheaper at first, creating several 1TB volumes
+                                                for each EC2 instance entails higher costs. The Amazon EFS volume
+                                                solution will be cheaper for sharing storage across all EC2
+                                                instances. Although you can use EBS Multi-Attach to attach EBS
+                                                volumes to multiple EC2 instances, this is limited only to
+                                                Provisioned IOPS SSD (io1 or io2) volumes that are attached to
+                                                Nitro-based EC2 instances in the same Availability Zone</i>
+                                        </label>
                                     </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12965"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12965">
-                                                1. Set up a Gateway-Stored volume gateway using the AWS Storage Gateway
-                                                service.
-                                                2. Establish an iSCSI connection between your on-premise data center and
-                                                your AWS Cloud then copy the data to the Storage Gateway volume.
-                                                3. After all of your data has been successfully copied, create an EBS
-                                                snapshot of the volume.
-                                                4. Restore the snapshots as EBS volumes and attach them to your EC2
-                                                instances on Sunday.
-                                                <br>
-                                                <i>In this scenario, you have to create storage volumes in the AWS Cloud
-                                                    that your on-premises applications can access as Internet Small
-                                                    Computer System Interface (iSCSI) targets, which is not mentioned in
-                                                    the option. This is not a cost-effective solution considering that
-                                                    you only have to migrate 1 TB of data and the fact that you can just
-                                                    use the S3 sync command via AWS CLI.</i>
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12962"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12962">
+                                            Remove the PIOPS EBS volume allocation on the EC2 launch template.
+                                            Attach a 120GB instance store volume on the EC2 instance to ensure that
+                                            the application will have enough IOPS for its operation
+                                            <br>
+                                            <i>Instance store volumes are ephemeral which means that you will lose
+                                                all data in the volume when you stop/start the instance. This is not
+                                                recommended for this mission-critical application</i>
+                                        </label>
                                     </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12966"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12966">
-                                                1. At the end of business hours on Friday, start copying the data to a
-                                                Snowball Edge device.
-                                                2. When the Snowball Edge have completely transferred your data to your
-                                                AWS Cloud, copy all of the data to multiple EBS Volumes.
-                                                3. On Sunday afternoon, mount the generated EBS volume to your EC2
-                                                instances.
-                                                <br>
-                                                <i>Although using a Snowball appliance is a valid option, there is a
-                                                    risk that your data won't make it on time on Monday. Remember that
-                                                    you have to consider the time it takes to transfer the data to
-                                                    Snowball including the process of shipping it back to AWS, which may
-                                                    take a day or two. Factoring all of these considerations, it is
-                                                    clear that this is not the best option as the risk is just too high
-                                                    that the Snowball delivery might not make it in time.</i>
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12963"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12963">
+                                            <b>Create an Amazon EFS volume and mount it across all the Amazon EC2
+                                                instances. Use the Provisioned Throughput mode on the EFS volume to
+                                                ensure that the application can reach the required IOPS.</b>
+                                            <br>
+                                            <i>If your file system is in the Provisioned Throughput mode, you can
+                                                increase the Provisioned Throughput of your file system as often as
+                                                you want. You can decrease your file system throughput in
+                                                Provisioned Throughput mode as long as it's been more than 24 hours
+                                                since the last decrease.</i>
+                                        </label>
                                     </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12967"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12967">
-                                                1. Synchronize the data from your on-premise data center to an S3 bucket
-                                                using Multipart upload for large files from Saturday morning to Sunday
-                                                evening.
-                                                2. Configure your application hosted in AWS to use the S3 bucket to
-                                                serve the aeronautical data files.
-                                                <br>
-                                                <i>Although using multi-part upload in S3 is faster than regular S3
-                                                    upload, this method still carries a risk considering that the
-                                                    company only has 50 Mbps internet connection. It is still better to
-                                                    use S3 sync command via AWS CLI days before the actual migration to
-                                                    mitigate the risks.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
                                 </div>
                             </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4822">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4822" aria-expanded="true"
-                                        aria-controls="collapse-4822">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">3. A visual effects studio has over 40-TB worth of
-                                                    video files stored in the company's on-premises tape library. The
-                                                    tape drives are managed by a Media Asset Management (MAM) solution.
-                                                    The video files contain a variety of footage which includes faces,
-                                                    objects, sceneries, cars, and many others. The company wants to
-                                                    automatically build a metadata library for the video files based on
-                                                    these objects. This will then be used as a catalog for the search
-                                                    feature of the MAM solution. The company already has a catalog of
-                                                    people’s photos and names that appeared on the video footage. The
-                                                    company wants to migrate all the video files of the MAM solution to
-                                                    AWS so a Direct Connect connection was provisioned from the
-                                                    on-premises data center to AWS to facilitate this.<br><br>Which of
-                                                    the following is the MOST suitable implementation that will meet the
-                                                    company requirements?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4822" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4822" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12968"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12968">
-                                                Configure the MAM solution to extract the video files from the current
-                                                tape archives and move them to an Amazon S3 bucket using AWS DataSync.
-                                                Use an Amazon SageMaker Jupyter notebook instance to build a collection
-                                                based on the videos by using the catalog of people’s faces and names.
-                                                Create an AWS Lambda function that will invoke Amazon SageMaker to pull
-                                                the video files from the S3 bucket, retrieve the generated metadata and
-                                                then push it to the MAM solution search catalog
-                                                <br>
-                                                <i>Amazon SageMaker notebook instance is simply a machine learning (ML)
-                                                    compute instance running the Jupyter Notebook App. It is not capable
-                                                    of doing image detection or recognition. Jupyter notebooks are
-                                                    primarily used to prepare your data and write code to train models.
-                                                    A better solution for this is to use Amazon Rekognition.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12969"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12969">
-                                                <b>Provision an AWS Storage Gateway – file gateway appliance on the
-                                                    on-premises data center. Configure the MAM solution to extract the
-                                                    video files from the current tape archives and move them to the file
-                                                    gateway share which is then synced to Amazon S3. Use Amazon
-                                                    Rekognition to build a collection based on the videos by using the
-                                                    catalog of people’s faces and names. Create an AWS Lambda function
-                                                    that will invoke Rekognition to pull the video files from the S3
-                                                    bucket, retrieve the generated metadata and then push it to the MAM
-                                                    solution search catalog.</b>
-                                                <br>
-                                                <i>AWS Storage Gateway offers file-based, volume-based, and tape-based
-                                                    storage solutions. A file gateway supports a file interface into
-                                                    Amazon Simple Storage Service (Amazon S3) and combines a service and
-                                                    a virtual software appliance. By using this combination, you can
-                                                    store and retrieve objects in Amazon S3 using industry-standard file
-                                                    protocols such as Network File System (NFS) and Server Message Block
-                                                    (SMB). A file gateway simplifies file storage in Amazon S3,
-                                                    integrates to existing applications through industry-standard file
-                                                    system protocols, and provides a cost-effective alternative to
-                                                    on-premises storage. It also provides low-latency access to data
-                                                    through transparent local caching.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12970"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12970">
-                                                Create a stream in Amazon Kinesis Video Streams that will ingest the
-                                                videos from the MAM system and store the videos to an Amazon S3 bucket.
-                                                Configure the MAM solution to stream the videos into Kinesis Video
-                                                Streams. Use Amazon Rekognition to build a collection based on the
-                                                videos by using the catalog of people’s faces and names. Set up a stream
-                                                consumer that will retrieve the generated metadata and then push it to
-                                                the MAM solution search catalog
-                                                <br>
-                                                <i>This is not cost-effective and will require more changes to the
-                                                    existing MAM solution. In addition, it is not stated in the scenario
-                                                    that the MAM solution supports video streaming directly to Kinesis
-                                                    Video Stream. Most of the time, you need to set up a custom Kinesis
-                                                    Video Streams Producer client in order to send data to a Kinesis
-                                                    Video Stream.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12971"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12971">
-                                                Copy the video files directly to an Amazon S3 bucket. Create an Amazon
-                                                EC2 instance that will run GluonCV libraries to generate metadata
-                                                information from the video files in the S3 bucket. Store the catalog of
-                                                people’s faces and names in the Amazon EBS volume to be used by GluonCV.
-                                                After processing the videos, push the generated metadata to the MAM
-                                                solution search catalog
-                                                <br>
-                                                <i> This is not cost-effective and will require more management overhead
-                                                    in maintaining and configuring the GluonCV libraries on the EC2
-                                                    instance.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4823">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4823" aria-expanded="true"
-                                        aria-controls="collapse-4823">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">4. A data analytics company is running simulations
-                                                    on high-performance computing (HPC) cluster in AWS. The compute node
-                                                    and storage are tightly coupled to achieve the best performance
-                                                    possible. The running simulations on the cluster produce thousands
-                                                    of large files stored on Amazon EFS that is shared across 200 Amazon
-                                                    EC2 instances. Several more simulation jobs need to be run on the
-                                                    cluster so the number of nodes has been increased to 1000 instances.
-                                                    However, the bigger cluster performed below the expectations of the
-                                                    company. The Solutions Architect was tasked to implement a solution
-                                                    that will achieve maximum performance from the HPC
-                                                    cluster.<br><br>Which of the following options are the recommended
-                                                    actions to achieve this? (Select THREE.)</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4823" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4823" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12972"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12972">
-                                                <b>Improve the performance by placing all the compute nodes as close to
-                                                    each other. Re-launch all the Amazon EC2 instances within a single
-                                                    Availability Zone in a cluster placement group.</b>
-                                                <br>
-                                                <i>In this scenario, the shared Amazon EFS storage and the spreading of
-                                                    the compute nodes on multiple AZs cause sluggishness on both the
-                                                    storage and network performance of the HPC cluster. For a
-                                                    tightly-coupled HPC cluster, you want the Amazon EC2 instances to be
-                                                    launched on a single Availability Zone.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12973"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12973">
-                                                Improve the network performance of each node by attaching multiple
-                                                network interfaces to the Amazon EC2 instances. This ensures that the
-                                                network bandwidth is not a bottleneck
-                                                <br>
-                                                <i>Although this may increase the network performance of the individual
-                                                    compute node, the Amazon EFS could still be a bottleneck because
-                                                    there are too many instances accessing the EFS shared storage
-                                                    simultaneously. A better solution is to use Amazon FSx for Lustre
-                                                    which supports multiple GB/s of throughput and hundreds of thousands
-                                                    of IOPS.<br><br></i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12974"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12974">
-                                                Improve the performance and scalability of the HPC cluster by spreading
-                                                the Amazon EC2 instances into multiple Availability Zones
-                                                <br>
-                                                <i>The HPC cluster relies on tight communication between the compute
-                                                    nodes and the storage solution. Spreading the EC2 instances into
-                                                    multiple Availability Zones will lower the performance of the
-                                                    cluster because the underlying physical servers will have to
-                                                    communicate with each other over long distances.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12975"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12975">
-                                                <b>Improve the network performance of each node by using Amazon EC2
-                                                    instances with an Elastic Fabric Adapter (EFA) network interface.
-                                                </b>
-                                                <br>
-                                                <i>Elastic Fabric Adapter (EFA) is a network interface for Amazon EC2
-                                                    instances that enables customers to run applications requiring high
-                                                    levels of inter-node communications at scale on AWS. Its
-                                                    custom-built operating system (OS) bypass hardware interface
-                                                    enhances the performance of inter-instance communications, which is
-                                                    critical to scaling these applications. EFA’s unique OS bypass
-                                                    networking mechanism provides a low-latency, low-jitter channel for
-                                                    inter-instance communications. This enables your tightly-coupled HPC
-                                                    or distributed machine learning applications to scale to thousands
-                                                    of cores, making your applications run faster.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12976"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12976">
-                                                <b>Improve the storage performance by implementing Amazon FSx for Lustre
-                                                    instead of using Amazon EFS.</b>
-                                                <br>
-                                                <i>The open-source Lustre file system is designed for applications that
-                                                    require fast storage—where you want your storage to keep up with
-                                                    your computing capacity. Lustre was built to solve the problem of
-                                                    quickly and cheaply processing the world's ever-growing datasets.
-                                                    It's a widely used file system designed for the fastest computers in
-                                                    the world. It provides submillisecond latencies, up to hundreds of
-                                                    Gbps of throughput, and up to millions of IOPS.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="answers-12977"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12977">
-                                                Improve the storage performance by using Amazon EBS Throughput Optimized
-                                                volumes configured on RAID 0 mode. This allows for much higher IOPS
-                                                compared to Amazon EFS
-                                                <br>
-                                                <i>The cluster relies on shared storage across all the compute nodes. A
-                                                    Throughput Optimized EBS volume cannot be shared between EC2
-                                                    instances. The Amazon EBS Multi-Attach feature is only applicable
-                                                    for Provisioned IOPS SSD volumes.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4824">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4824" aria-expanded="true"
-                                        aria-controls="collapse-4824">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">5. A small telecommunications company has recently
-                                                    adopted a hybrid cloud architecture with AWS. They are storing
-                                                    static files of their on-premises web application on a 5 TB
-                                                    gateway-stored volume in AWS Storage Gateway, which is attached to
-                                                    the application server via an iSCSI interface. As part of their
-                                                    disaster recovery plan, they should be able to run the web
-                                                    application on AWS in case their on-premises network encountered any
-                                                    technical issues.<br><br>Which of the following options is the MOST
-                                                    suitable solution that you should implement?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4824" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4824" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12978"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12978">
-                                                Restore the static content from an AWS Storage Gateway to an S3 bucket
-                                                and linking it on the EC2 instance where the app server is running
-                                                <br>
-                                                <i>Linking the S3 bucket to the EC2 instance is not a suitable option to
-                                                    restore data from AWS Storage Gateway. You should generate a
-                                                    snapshot first and generate an EBS Volume that you can attach to the
-                                                    instance.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12979"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12979">
-                                                <b>Generate an EBS snapshot of the static content from the AWS Storage
-                                                    Gateway service. Afterwards, restore it to an EBS volume that you
-                                                    can then attach to the EC2 instance where the application server is
-                                                    hosted</b>
-                                                <br>
-                                                <i>By using stored volumes, you can store your primary data locally,
-                                                    while asynchronously backing up that data to AWS. Stored volumes
-                                                    provide your on-premises applications with low-latency access to
-                                                    their entire datasets. At the same time, they provide durable,
-                                                    offsite backups. You can create storage volumes and mount them as
-                                                    iSCSI devices from your on-premises application servers. Data
-                                                    written to your stored volumes are stored on your on-premises
-                                                    storage hardware. This data is asynchronously backed up to Amazon S3
-                                                    as Amazon Elastic Block Store (Amazon EBS) snapshots.<br>Since this
-                                                    is using a Volume Storage Gateway, you have to generate an EBS
-                                                    snapshot and generate an EBS Volume to restore the data.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12980"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12980">
-                                                Restore the static content by attaching the AWS Storage Gateway to the
-                                                EC2 instance that hosts the application server
-                                                <br>
-                                                <i>You cannot directly attach the AWS Storage Gateway to a running EC2
-                                                    instance which runs your application server. Although you can deploy
-                                                    and activate a volume or tape gateway on EC2, this instance has a
-                                                    different AMI than your application server which runs on a different
-                                                    EC2 instance. You have to generate an EBS Volume first, based on the
-                                                    generated snapshot from AWS Storage Gateway.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12981"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12981">
-                                                Create an EFS file system from the AWS Storage Gateway service and
-                                                mounting it to the EC2 instance where the application server is hosted
-                                                for the static content
-                                                <br>
-                                                <i>Using EFS in this scenario is not appropriate. You should use EBS
-                                                    Volumes to restore your data from Storage Gateway</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4825">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4825" aria-expanded="true"
-                                        aria-controls="collapse-4825">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">6. You are a Solutions Architect for a global
-                                                    financial company that has a lot of data centers around the globe.
-                                                    Due to the ever-growing data that your company is storing, you were
-                                                    instructed to set up a durable, cost-effective solution to archive
-                                                    your data from your existing tape-based backup infrastructure to AWS
-                                                    Cloud.<br><br>How could you implement this solution in AWS?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4825" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4825" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12982"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12982">
-                                                Set up a Stored Volume Gateway to back up your data in Amazon S3 with
-                                                point-in-time backups as EBS snapshots
-                                                <br>
-                                                <i>Stored Volume Gateway is not recommended for Tape archives, you
-                                                    should use Tape Gateway instead</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12983"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12983">
-                                                <b>Set up a Tape Gateway to back up your data in Amazon S3 and archive
-                                                    it in Amazon Glacier using your existing tape-based processes.</b>
-                                                <br>
-                                                <i>Tape Gateway offers a durable, cost-effective solution to archive
-                                                    your data in the AWS Cloud. With its virtual tape library (VTL)
-                                                    interface, you use your existing tape-based backup infrastructure to
-                                                    store data on virtual tape cartridges that you create on your tape
-                                                    gateway. Each tape gateway is preconfigured with a media changer and
-                                                    tape drives. These are available to your existing client backup
-                                                    applications as iSCSI devices. You add tape cartridges as you need
-                                                    to archive your data.<br><br></i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12984"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12984">
-                                                Set up a Tape Gateway to back up your data in Amazon S3 with
-                                                point-in-time backups as tapes which will be stored in the Virtual Tape
-                                                Shelf
-                                                <br>
-                                                <i>The archival should be on Amazon Glacier for
-                                                    cost-effectiveness.<br><br></i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12985"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12985">
-                                                Set up a File Gateway to back up your data in Amazon S3 and archive in
-                                                Amazon Glacier using your existing tape-based processes
-                                                <br>
-                                                <i>A File Gateway is not recommended for Tape archives, you should use
-                                                    Tape Gateway instead.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4826">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4826" aria-expanded="true"
-                                        aria-controls="collapse-4826">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">7. A leading commercial bank has a hybrid cloud
-                                                    architecture and is using a Volume Gateway under the AWS Storage
-                                                    Gateway service to store their data via the Internet Small Computer
-                                                    Systems Interface (ISCSI). The security team has detected a series
-                                                    of replay attacks to your network, which is basically a form of
-                                                    network attack in which a valid data transmission is maliciously or
-                                                    fraudulently repeated or delayed. After their investigation, they
-                                                    detected that the originator of the attack is trying to intercept
-                                                    the data with an intention to re-transmit it, which is possibly part
-                                                    of a masquerade attack by IP packet substitution.<br><br>As a
-                                                    Solutions Architect of the bank, how can you secure your AWS Storage
-                                                    Gateway from these types of attacks?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4826" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4826" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12986"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12986">
-                                                Replace lSCSl with more secure protocols like Common Internet File
-                                                System (CIFS) Protocol or Server Message Block (SMB)
-                                                <br>
-                                                <i>Replacing ISCSI with CIFS and SMB would be irrelevant since these two
-                                                    do not provide the required security mechanism in the scenario. It
-                                                    is best to use Challenge-Handshake Authentication Protocol (CHAP)
-                                                    instead</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12987"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12987">
-                                                Replace the current lSCSl Block Interface with an lSCSl Virtual Tape
-                                                Library Interface
-                                                <br>
-                                                <i>ISCSI Virtual Tape Library Interface is primarily used for Tape
-                                                    Gateways and not for Volume Gateways. It is better to use
-                                                    Challenge-Handshake Authentication Protocol (CHAP) instead.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12988"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12988">
-                                                <b>Configure a Challenge-Handshake Authentication Protocol (CHAP) to
-                                                    authenticate iSCSl and initiator connections</b>
-                                                <br>
-                                                <i>In AWS Storage Gateway, your iSCSI initiators connect to your volumes
-                                                    as iSCSI targets. Storage Gateway uses Challenge-Handshake
-                                                    Authentication Protocol (CHAP) to authenticate iSCSI and initiator
-                                                    connections. CHAP provides protection against playback attacks by
-                                                    requiring authentication to access storage volume targets. For each
-                                                    volume target, you can define one or more CHAP credentials. You can
-                                                    view and edit these credentials for the different initiators in the
-                                                    Configure CHAP credentials dialog box.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12989"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12989">
-                                                Configure a Challenge-Handshake Authentication Protocol (CHAP) to
-                                                authenticate NFS connections and safeguard your network from replay
-                                                attacks
-                                                <br>
-                                                <i>CHAP is primarily used to authenticate iSCSI and not NFS</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4827">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4827" aria-expanded="true"
-                                        aria-controls="collapse-4827">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">8. A shipping firm runs its web applications on
-                                                    its on-premises data center. The servers have a dependency on
-                                                    non-x86 hardware and the management plans to use AWS to scale its
-                                                    on-premises data storage. However, the backup application is only
-                                                    able to write to POSIX-compatible block-based storage. There is a
-                                                    total of 1,000 TB of data files that need to be mounted to a single
-                                                    folder on the file server. Existing users must also be able to
-                                                    access portions of this data while the backups are taking
-                                                    place.<br><br>Which of the following backup solutions would be most
-                                                    appropriate to meet the above requirements?</div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4827" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4827" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12990"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12990">
-                                                <b>Provision Gateway Cached Volumes from AWS Storage Gateway</b>
-                                                <br>
-                                                <i>Provision Gateway Cached Volumes from AWS Storage Gateway supports
-                                                    volumes of up to 1,024 TB in size, and the frequently accessed data
-                                                    is stored on the on-premises server while the entire data is backed
-                                                    up over AWS</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12991"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12991">
-                                                Use Amazon Glacier as the target for your data backups
-                                                <br>
-                                                <i>The data stored in Amazon Glacier is not available immediately.
-                                                    Retrieval jobs typically require 3-5 hours to complete.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12992"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12992">
-                                                Provision Gateway Stored Volumes from AWS Storage Gateway
-                                                <br>
-                                                <i>Gateway stored volumes can only store up to 512 TB worth of data</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12993"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12993">
-                                                Use Amazon S3 as the target for your data backups
-                                                <br>
-                                                <i>Amazon S3 is designed for object storage and not ideal for POSIX
-                                                    compliant data</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4828">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4828" aria-expanded="true"
-                                        aria-controls="collapse-4828">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">9. An international humanitarian aid organization
-                                                    has a requirement to store 20 TB worth of scanned files for their
-                                                    relief operations which can grow to up to a total of 50 TB of data.
-                                                    There is also a requirement to have a website with a search feature
-                                                    in place that can be used to easily find a certain item through the
-                                                    thousands of scanned files. The new system is expected to run for
-                                                    more than 3 years.<br><br>Which of the following is the most
-                                                    cost-effective option in implementing the search feature in their
-                                                    system?</div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4828" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4828" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12994"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12994">
-                                                Use EFS to store and serve the scanned files. Install a 3rd-party search
-                                                software on an Auto Scaling group of On-Demand EC2 Instances and an
-                                                Elastic Load Balancer
-                                                <br>
-                                                <i>It is stated in the scenario that the new system is expected to run
-                                                    for more than 3 years which means that using Reserved EC2 instances
-                                                    would be a more cost-effective choice than using On-Demand
-                                                    instances. In addition, purchasing and installing a 3rd-party search
-                                                    software might be more expensive than just using Amazon
-                                                    CloudSearch</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12995"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12995">
-                                                Design the new system on a CloudFormation template. Use an EC2 instance
-                                                running NGINX web server and an open source search application. Launch
-                                                multiple standard EBS volumes with RAID configuration to store the
-                                                scanned files with a search index
-                                                <br>
-                                                <i>A system composed of RAID configuration of EBS volumes is not a
-                                                    durable and scalable solution compared to S3.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12996"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-12996">
-                                                <b>Set up a new S3 bucket with standard storage to store and serve the
-                                                    scanned files. Use CloudSearch for query processing and use Elastic
-                                                    Beanstalk to host the website across multiple availability zones</b>
-                                                <br>
-                                                <i>It uses S3 to store the images, which is a durable and scalable
-                                                    solution. It also uses CloudSearch for query processing, and with a
-                                                    multi-AZ implementation, it achieves high availability.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12997"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12997">
-                                                Use S3 for both storing and searching the scanned files by utilizing the
-                                                native search capabilities of S3
-                                                <br>
-                                                <i>As the native search capability of S3 is not effective. It is better
-                                                    to use CloudSearch or another service that provides search
-                                                    functionality.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="accordion-item">
-                                <div class="accordion-header" id="heading-4829">
-                                    <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapse-4829" aria-expanded="true"
-                                        aria-controls="collapse-4829">
-                                        <div style="display: flex;flex-direction: row;justify-content: space-between;}">
-                                            <div class="row">
-                                                <div class="col-auto">10. A company provides big data services to
-                                                    enterprise clients around the globe. One of the clients has 60 TB of
-                                                    raw data from their on-premises Oracle data warehouse. The data is
-                                                    to be migrated to Amazon Redshift. However, the database receives
-                                                    minor updates on a daily basis while major updates are scheduled
-                                                    every end of the month. The migration process must be completed
-                                                    within approximately 30 days before the next major update on the
-                                                    Redshift database. The company can only allocate 50 Mbps of Internet
-                                                    connection for this activity to avoid impacting business
-                                                    operations.<br><br>Which of the following actions will satisfy the
-                                                    migration requirements of the company while keeping the costs low?
-                                                </div>
-                                                <div class="col-auto"><span
-                                                        class="btn btn-sm btn-primary button-category mb-1">Storage</span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="collapse-4829" class="accordion-collapse collapse accordion-content show "
-                                    aria-labelledby="heading-4829" data-bs-parent="#accordionQuestion">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12998"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12998">
-                                                <b>Create an AWS Snowball import job to request for a Snowball Edge
-                                                    device. Use the AWS Schema Conversion Tool (SCT) to process the
-                                                    on-premises data warehouse and load it to the Snowball Edge device.
-                                                    Install the extraction agent on a separate on-premises server and
-                                                    register it with AWS SCT. Once the Snowball Edge imports data to the
-                                                    S3 bucket, use AWS SCT to migrate the data to Amazon Redshift.
-                                                    Configure a local task and AWS DMS task to replicate the ongoing
-                                                    updates to the data warehouse. Monitor and verify that the data
-                                                    migration is complete.</b>
-                                                <br>
-                                                <i>You can use an AWS SCT agent to extract data from your on-premises
-                                                    data warehouse and migrate it to Amazon Redshift. The agent extracts
-                                                    your data and uploads the data to either Amazon S3 or, for
-                                                    large-scale migrations, an AWS Snowball Edge device. You can then
-                                                    use AWS SCT to copy the data to Amazon Redshift.<br><br>Large-scale
-                                                    data migrations can include many terabytes of information and can be
-                                                    slowed by network performance and by the sheer amount of data that
-                                                    has to be moved. AWS Snowball Edge is an AWS service you can use to
-                                                    transfer data to the cloud at faster-than-network speeds using an
-                                                    AWS-owned appliance. An AWS Snowball Edge device can hold up to 100
-                                                    TB of data. It uses 256-bit encryption and an industry-standard
-                                                    Trusted Platform Module (TPM) to ensure both security and full
-                                                    chain-of-custody for your data. AWS SCT works with AWS Snowball Edge
-                                                    devices.<br><br>When you use AWS SCT and an AWS Snowball Edge
-                                                    device, you migrate your data in two stages. First, you use the AWS
-                                                    SCT to process the data locally and then move that data to the AWS
-                                                    Snowball Edge device. You then send the device to AWS using the AWS
-                                                    Snowball Edge process, and then AWS automatically loads the data
-                                                    into an Amazon S3 bucket. Next, when the data is available on Amazon
-                                                    S3, you use AWS SCT to migrate the data to Amazon Redshift. Data
-                                                    extraction agents can work in the background while AWS SCT is
-                                                    closed. You manage your extraction agents by using AWS SCT. The
-                                                    extraction agents act as listeners. When they receive instructions
-                                                    from AWS SCT, they extract data from your data warehouse.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-12999"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-12999">
-                                                Create a new Oracle Database on Amazon RDS. Configure Site-to-Site VPN
-                                                connection from the on-premises data center to the Amazon VPC. Configure
-                                                replication from the on-premises database to Amazon RDS. Once
-                                                replication is complete, create an AWS Schema Conversion Tool (SCT)
-                                                project with AWS DMS task to migrate the Oracle database to Amazon
-                                                Redshift. Monitor and verify if the data migration is complete before
-                                                the cut-over
-                                                <br>
-                                                <i>Replicating 60 TB worth of data over the public Internet will take
-                                                    several days over the 30-day migration window. It is also stated in
-                                                    the scenario that the company can only allocate 50 Mbps of Internet
-                                                    connection for the migration activity. Sending the data over the
-                                                    Internet could potentially affect business operations.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-13000"
-                                                disabled="" checked="">
-                                            <label class="form-check-labelx" for="answers-13000">
-                                                Create an AWS Snowball Edge job using the AWS Snowball console. Export
-                                                all data from the Oracle data warehouse to the Snowball Edge device.
-                                                Once the Snowball device is returned to Amazon and data is imported to
-                                                an S3 bucket, create an Oracle RDS instance to import the data. Create
-                                                an AWS Schema Conversion Tool (SCT) project with AWS DMS task to migrate
-                                                the Oracle database to Amazon Redshift. Copy the missing daily updates
-                                                from Oracle in the data center to the RDS for Oracle database over the
-                                                internet. Monitor and verify if the data migration is complete before
-                                                the cut-over
-                                                <br>
-                                                <i>You need to configure the data extraction agent first on your
-                                                    on-premises server. In addition, you don't need the data to be
-                                                    imported and exported via Amazon RDS. AWS DMS can directly migrate
-                                                    the data to Amazon Redshift.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" value="" id="answers-13001"
-                                                disabled="">
-                                            <label class="form-check-labelx" for="answers-13001">
-                                                Since you have a 30-day window for migration, configure VPN connectivity
-                                                between AWS and the company's data center by provisioning a 1 Gbps AWS
-                                                Direct Connect connection. Install Oracle database on an EC2 instance
-                                                that is configured to synchronize with the on-premises Oracle database.
-                                                Once replication is complete, create an AWS DMS task on an AWS SCT
-                                                project to migrate the Oracle database to Amazon Redshift. Monitor and
-                                                verify if the data migration is complete before the cut-over Since you
-                                                have a 30-day window for migration, configure VPN connectivity between
-                                                AWS and the company's data center by provisioning a 1 Gbps AWS Direct
-                                                Connect connection. Launch an Oracle Real Application Clusters (RAC)
-                                                database on an EC2 instance and set it up to fetch and synchronize the
-                                                data from the on-premises Oracle database. Once replication is complete,
-                                                create an AWS DMS task on an AWS SCT project to migrate the Oracle
-                                                database to Amazon Redshift. Monitor and verify if the data migration is
-                                                complete before the cut-over
-                                                <br>
-                                                <i>Although this is possible, the company wants to keep the cost low.
-                                                    Using a Direct Connect connection for a one-time migration is not a
-                                                    cost-effective solution.</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="tags accordion-body">
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
                         </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4821">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4821" aria-expanded="true"
+                                    aria-controls="collapse-4821">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">2. A leading aerospace engineering company has
+                                                over 1 TB of aeronautical data stored on the corporate file server
+                                                of their on-premises network. This data is used by a lot of their
+                                                in-house analytical and engineering applications. The aeronautical
+                                                data consists of technical files which can have a file size of a few
+                                                megabytes to multiple gigabytes. The data scientists typically
+                                                modify an average of 10 percent of these files every day. Recently,
+                                                the management decided to adopt a hybrid cloud architecture to
+                                                better serve their clients around the globe. The management
+                                                requested to migrate its applications to AWS over the weekend to
+                                                minimize any business impact and system downtime. The on-premises
+                                                data center has a 50-Mbps Internet connection which can be used to
+                                                transfer all of the 1 TB of data in AWS but based on the
+                                                calculations, it will take at least 48 hours to complete this
+                                                task.<br><br>Which of the following options will allow the solutions
+                                                architect to move all of the aeronautical data to AWS to meet the
+                                                above requirement?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4821" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4821" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12964"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12964">
+                                            <b>1. Synchronize the on-premise data to an S3 bucket one week before
+                                                the migration schedule using the AWS CLI's S3 sync command.
+                                                2. Perform a final synchronization task on Friday after the end of
+                                                business hours.
+                                                3. Set up your application hosted in a large EC2 instance in your
+                                                VPC to use the S3 bucket.</b>
+                                            <br>
+                                            <i>The most effective choice here is to use the S3 sync feature that is
+                                                available in AWS CLI. In this way, you can comfortably synchronize
+                                                the data in your on-premises server and in AWS a week before the
+                                                migration. And on Friday, just do another sync to complete the task.
+                                                Remember that the sync feature of S3 only uploads the "delta" or in
+                                                other words, the "difference" in the subset. Therefore, it will only
+                                                take just a fraction of the time to complete the data
+                                                synchronization compared to the other methods.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12965"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12965">
+                                            1. Set up a Gateway-Stored volume gateway using the AWS Storage Gateway
+                                            service.
+                                            2. Establish an iSCSI connection between your on-premise data center and
+                                            your AWS Cloud then copy the data to the Storage Gateway volume.
+                                            3. After all of your data has been successfully copied, create an EBS
+                                            snapshot of the volume.
+                                            4. Restore the snapshots as EBS volumes and attach them to your EC2
+                                            instances on Sunday.
+                                            <br>
+                                            <i>In this scenario, you have to create storage volumes in the AWS Cloud
+                                                that your on-premises applications can access as Internet Small
+                                                Computer System Interface (iSCSI) targets, which is not mentioned in
+                                                the option. This is not a cost-effective solution considering that
+                                                you only have to migrate 1 TB of data and the fact that you can just
+                                                use the S3 sync command via AWS CLI.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12966"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12966">
+                                            1. At the end of business hours on Friday, start copying the data to a
+                                            Snowball Edge device.
+                                            2. When the Snowball Edge have completely transferred your data to your
+                                            AWS Cloud, copy all of the data to multiple EBS Volumes.
+                                            3. On Sunday afternoon, mount the generated EBS volume to your EC2
+                                            instances.
+                                            <br>
+                                            <i>Although using a Snowball appliance is a valid option, there is a
+                                                risk that your data won't make it on time on Monday. Remember that
+                                                you have to consider the time it takes to transfer the data to
+                                                Snowball including the process of shipping it back to AWS, which may
+                                                take a day or two. Factoring all of these considerations, it is
+                                                clear that this is not the best option as the risk is just too high
+                                                that the Snowball delivery might not make it in time.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12967"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12967">
+                                            1. Synchronize the data from your on-premise data center to an S3 bucket
+                                            using Multipart upload for large files from Saturday morning to Sunday
+                                            evening.
+                                            2. Configure your application hosted in AWS to use the S3 bucket to
+                                            serve the aeronautical data files.
+                                            <br>
+                                            <i>Although using multi-part upload in S3 is faster than regular S3
+                                                upload, this method still carries a risk considering that the
+                                                company only has 50 Mbps internet connection. It is still better to
+                                                use S3 sync command via AWS CLI days before the actual migration to
+                                                mitigate the risks.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4822">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4822" aria-expanded="true"
+                                    aria-controls="collapse-4822">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">3. A visual effects studio has over 40-TB worth of
+                                                video files stored in the company's on-premises tape library. The
+                                                tape drives are managed by a Media Asset Management (MAM) solution.
+                                                The video files contain a variety of footage which includes faces,
+                                                objects, sceneries, cars, and many others. The company wants to
+                                                automatically build a metadata library for the video files based on
+                                                these objects. This will then be used as a catalog for the search
+                                                feature of the MAM solution. The company already has a catalog of
+                                                people’s photos and names that appeared on the video footage. The
+                                                company wants to migrate all the video files of the MAM solution to
+                                                AWS so a Direct Connect connection was provisioned from the
+                                                on-premises data center to AWS to facilitate this.<br><br>Which of
+                                                the following is the MOST suitable implementation that will meet the
+                                                company requirements?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4822" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4822" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12968"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12968">
+                                            Configure the MAM solution to extract the video files from the current
+                                            tape archives and move them to an Amazon S3 bucket using AWS DataSync.
+                                            Use an Amazon SageMaker Jupyter notebook instance to build a collection
+                                            based on the videos by using the catalog of people’s faces and names.
+                                            Create an AWS Lambda function that will invoke Amazon SageMaker to pull
+                                            the video files from the S3 bucket, retrieve the generated metadata and
+                                            then push it to the MAM solution search catalog
+                                            <br>
+                                            <i>Amazon SageMaker notebook instance is simply a machine learning (ML)
+                                                compute instance running the Jupyter Notebook App. It is not capable
+                                                of doing image detection or recognition. Jupyter notebooks are
+                                                primarily used to prepare your data and write code to train models.
+                                                A better solution for this is to use Amazon Rekognition.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12969"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12969">
+                                            <b>Provision an AWS Storage Gateway – file gateway appliance on the
+                                                on-premises data center. Configure the MAM solution to extract the
+                                                video files from the current tape archives and move them to the file
+                                                gateway share which is then synced to Amazon S3. Use Amazon
+                                                Rekognition to build a collection based on the videos by using the
+                                                catalog of people’s faces and names. Create an AWS Lambda function
+                                                that will invoke Rekognition to pull the video files from the S3
+                                                bucket, retrieve the generated metadata and then push it to the MAM
+                                                solution search catalog.</b>
+                                            <br>
+                                            <i>AWS Storage Gateway offers file-based, volume-based, and tape-based
+                                                storage solutions. A file gateway supports a file interface into
+                                                Amazon Simple Storage Service (Amazon S3) and combines a service and
+                                                a virtual software appliance. By using this combination, you can
+                                                store and retrieve objects in Amazon S3 using industry-standard file
+                                                protocols such as Network File System (NFS) and Server Message Block
+                                                (SMB). A file gateway simplifies file storage in Amazon S3,
+                                                integrates to existing applications through industry-standard file
+                                                system protocols, and provides a cost-effective alternative to
+                                                on-premises storage. It also provides low-latency access to data
+                                                through transparent local caching.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12970"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12970">
+                                            Create a stream in Amazon Kinesis Video Streams that will ingest the
+                                            videos from the MAM system and store the videos to an Amazon S3 bucket.
+                                            Configure the MAM solution to stream the videos into Kinesis Video
+                                            Streams. Use Amazon Rekognition to build a collection based on the
+                                            videos by using the catalog of people’s faces and names. Set up a stream
+                                            consumer that will retrieve the generated metadata and then push it to
+                                            the MAM solution search catalog
+                                            <br>
+                                            <i>This is not cost-effective and will require more changes to the
+                                                existing MAM solution. In addition, it is not stated in the scenario
+                                                that the MAM solution supports video streaming directly to Kinesis
+                                                Video Stream. Most of the time, you need to set up a custom Kinesis
+                                                Video Streams Producer client in order to send data to a Kinesis
+                                                Video Stream.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12971"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12971">
+                                            Copy the video files directly to an Amazon S3 bucket. Create an Amazon
+                                            EC2 instance that will run GluonCV libraries to generate metadata
+                                            information from the video files in the S3 bucket. Store the catalog of
+                                            people’s faces and names in the Amazon EBS volume to be used by GluonCV.
+                                            After processing the videos, push the generated metadata to the MAM
+                                            solution search catalog
+                                            <br>
+                                            <i> This is not cost-effective and will require more management overhead
+                                                in maintaining and configuring the GluonCV libraries on the EC2
+                                                instance.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4823">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4823" aria-expanded="true"
+                                    aria-controls="collapse-4823">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">4. A data analytics company is running simulations
+                                                on high-performance computing (HPC) cluster in AWS. The compute node
+                                                and storage are tightly coupled to achieve the best performance
+                                                possible. The running simulations on the cluster produce thousands
+                                                of large files stored on Amazon EFS that is shared across 200 Amazon
+                                                EC2 instances. Several more simulation jobs need to be run on the
+                                                cluster so the number of nodes has been increased to 1000 instances.
+                                                However, the bigger cluster performed below the expectations of the
+                                                company. The Solutions Architect was tasked to implement a solution
+                                                that will achieve maximum performance from the HPC
+                                                cluster.<br><br>Which of the following options are the recommended
+                                                actions to achieve this? (Select THREE.)</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4823" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4823" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12972"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12972">
+                                            <b>Improve the performance by placing all the compute nodes as close to
+                                                each other. Re-launch all the Amazon EC2 instances within a single
+                                                Availability Zone in a cluster placement group.</b>
+                                            <br>
+                                            <i>In this scenario, the shared Amazon EFS storage and the spreading of
+                                                the compute nodes on multiple AZs cause sluggishness on both the
+                                                storage and network performance of the HPC cluster. For a
+                                                tightly-coupled HPC cluster, you want the Amazon EC2 instances to be
+                                                launched on a single Availability Zone.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12973"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12973">
+                                            Improve the network performance of each node by attaching multiple
+                                            network interfaces to the Amazon EC2 instances. This ensures that the
+                                            network bandwidth is not a bottleneck
+                                            <br>
+                                            <i>Although this may increase the network performance of the individual
+                                                compute node, the Amazon EFS could still be a bottleneck because
+                                                there are too many instances accessing the EFS shared storage
+                                                simultaneously. A better solution is to use Amazon FSx for Lustre
+                                                which supports multiple GB/s of throughput and hundreds of thousands
+                                                of IOPS.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12974"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12974">
+                                            Improve the performance and scalability of the HPC cluster by spreading
+                                            the Amazon EC2 instances into multiple Availability Zones
+                                            <br>
+                                            <i>The HPC cluster relies on tight communication between the compute
+                                                nodes and the storage solution. Spreading the EC2 instances into
+                                                multiple Availability Zones will lower the performance of the
+                                                cluster because the underlying physical servers will have to
+                                                communicate with each other over long distances.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12975"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12975">
+                                            <b>Improve the network performance of each node by using Amazon EC2
+                                                instances with an Elastic Fabric Adapter (EFA) network interface.
+                                            </b>
+                                            <br>
+                                            <i>Elastic Fabric Adapter (EFA) is a network interface for Amazon EC2
+                                                instances that enables customers to run applications requiring high
+                                                levels of inter-node communications at scale on AWS. Its
+                                                custom-built operating system (OS) bypass hardware interface
+                                                enhances the performance of inter-instance communications, which is
+                                                critical to scaling these applications. EFA’s unique OS bypass
+                                                networking mechanism provides a low-latency, low-jitter channel for
+                                                inter-instance communications. This enables your tightly-coupled HPC
+                                                or distributed machine learning applications to scale to thousands
+                                                of cores, making your applications run faster.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12976"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12976">
+                                            <b>Improve the storage performance by implementing Amazon FSx for Lustre
+                                                instead of using Amazon EFS.</b>
+                                            <br>
+                                            <i>The open-source Lustre file system is designed for applications that
+                                                require fast storage—where you want your storage to keep up with
+                                                your computing capacity. Lustre was built to solve the problem of
+                                                quickly and cheaply processing the world's ever-growing datasets.
+                                                It's a widely used file system designed for the fastest computers in
+                                                the world. It provides submillisecond latencies, up to hundreds of
+                                                Gbps of throughput, and up to millions of IOPS.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="answers-12977"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12977">
+                                            Improve the storage performance by using Amazon EBS Throughput Optimized
+                                            volumes configured on RAID 0 mode. This allows for much higher IOPS
+                                            compared to Amazon EFS
+                                            <br>
+                                            <i>The cluster relies on shared storage across all the compute nodes. A
+                                                Throughput Optimized EBS volume cannot be shared between EC2
+                                                instances. The Amazon EBS Multi-Attach feature is only applicable
+                                                for Provisioned IOPS SSD volumes.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4824">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4824" aria-expanded="true"
+                                    aria-controls="collapse-4824">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">5. A small telecommunications company has recently
+                                                adopted a hybrid cloud architecture with AWS. They are storing
+                                                static files of their on-premises web application on a 5 TB
+                                                gateway-stored volume in AWS Storage Gateway, which is attached to
+                                                the application server via an iSCSI interface. As part of their
+                                                disaster recovery plan, they should be able to run the web
+                                                application on AWS in case their on-premises network encountered any
+                                                technical issues.<br><br>Which of the following options is the MOST
+                                                suitable solution that you should implement?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4824" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4824" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12978"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12978">
+                                            Restore the static content from an AWS Storage Gateway to an S3 bucket
+                                            and linking it on the EC2 instance where the app server is running
+                                            <br>
+                                            <i>Linking the S3 bucket to the EC2 instance is not a suitable option to
+                                                restore data from AWS Storage Gateway. You should generate a
+                                                snapshot first and generate an EBS Volume that you can attach to the
+                                                instance.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12979"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12979">
+                                            <b>Generate an EBS snapshot of the static content from the AWS Storage
+                                                Gateway service. Afterwards, restore it to an EBS volume that you
+                                                can then attach to the EC2 instance where the application server is
+                                                hosted</b>
+                                            <br>
+                                            <i>By using stored volumes, you can store your primary data locally,
+                                                while asynchronously backing up that data to AWS. Stored volumes
+                                                provide your on-premises applications with low-latency access to
+                                                their entire datasets. At the same time, they provide durable,
+                                                offsite backups. You can create storage volumes and mount them as
+                                                iSCSI devices from your on-premises application servers. Data
+                                                written to your stored volumes are stored on your on-premises
+                                                storage hardware. This data is asynchronously backed up to Amazon S3
+                                                as Amazon Elastic Block Store (Amazon EBS) snapshots.<br>Since this
+                                                is using a Volume Storage Gateway, you have to generate an EBS
+                                                snapshot and generate an EBS Volume to restore the data.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12980"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12980">
+                                            Restore the static content by attaching the AWS Storage Gateway to the
+                                            EC2 instance that hosts the application server
+                                            <br>
+                                            <i>You cannot directly attach the AWS Storage Gateway to a running EC2
+                                                instance which runs your application server. Although you can deploy
+                                                and activate a volume or tape gateway on EC2, this instance has a
+                                                different AMI than your application server which runs on a different
+                                                EC2 instance. You have to generate an EBS Volume first, based on the
+                                                generated snapshot from AWS Storage Gateway.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12981"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12981">
+                                            Create an EFS file system from the AWS Storage Gateway service and
+                                            mounting it to the EC2 instance where the application server is hosted
+                                            for the static content
+                                            <br>
+                                            <i>Using EFS in this scenario is not appropriate. You should use EBS
+                                                Volumes to restore your data from Storage Gateway</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4825">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4825" aria-expanded="true"
+                                    aria-controls="collapse-4825">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">6. You are a Solutions Architect for a global
+                                                financial company that has a lot of data centers around the globe.
+                                                Due to the ever-growing data that your company is storing, you were
+                                                instructed to set up a durable, cost-effective solution to archive
+                                                your data from your existing tape-based backup infrastructure to AWS
+                                                Cloud.<br><br>How could you implement this solution in AWS?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4825" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4825" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12982"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12982">
+                                            Set up a Stored Volume Gateway to back up your data in Amazon S3 with
+                                            point-in-time backups as EBS snapshots
+                                            <br>
+                                            <i>Stored Volume Gateway is not recommended for Tape archives, you
+                                                should use Tape Gateway instead</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12983"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12983">
+                                            <b>Set up a Tape Gateway to back up your data in Amazon S3 and archive
+                                                it in Amazon Glacier using your existing tape-based processes.</b>
+                                            <br>
+                                            <i>Tape Gateway offers a durable, cost-effective solution to archive
+                                                your data in the AWS Cloud. With its virtual tape library (VTL)
+                                                interface, you use your existing tape-based backup infrastructure to
+                                                store data on virtual tape cartridges that you create on your tape
+                                                gateway. Each tape gateway is preconfigured with a media changer and
+                                                tape drives. These are available to your existing client backup
+                                                applications as iSCSI devices. You add tape cartridges as you need
+                                                to archive your data.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12984"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12984">
+                                            Set up a Tape Gateway to back up your data in Amazon S3 with
+                                            point-in-time backups as tapes which will be stored in the Virtual Tape
+                                            Shelf
+                                            <br>
+                                            <i>The archival should be on Amazon Glacier for
+                                                cost-effectiveness.<br><br></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12985"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12985">
+                                            Set up a File Gateway to back up your data in Amazon S3 and archive in
+                                            Amazon Glacier using your existing tape-based processes
+                                            <br>
+                                            <i>A File Gateway is not recommended for Tape archives, you should use
+                                                Tape Gateway instead.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4826">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4826" aria-expanded="true"
+                                    aria-controls="collapse-4826">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">7. A leading commercial bank has a hybrid cloud
+                                                architecture and is using a Volume Gateway under the AWS Storage
+                                                Gateway service to store their data via the Internet Small Computer
+                                                Systems Interface (ISCSI). The security team has detected a series
+                                                of replay attacks to your network, which is basically a form of
+                                                network attack in which a valid data transmission is maliciously or
+                                                fraudulently repeated or delayed. After their investigation, they
+                                                detected that the originator of the attack is trying to intercept
+                                                the data with an intention to re-transmit it, which is possibly part
+                                                of a masquerade attack by IP packet substitution.<br><br>As a
+                                                Solutions Architect of the bank, how can you secure your AWS Storage
+                                                Gateway from these types of attacks?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4826" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4826" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12986"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12986">
+                                            Replace lSCSl with more secure protocols like Common Internet File
+                                            System (CIFS) Protocol or Server Message Block (SMB)
+                                            <br>
+                                            <i>Replacing ISCSI with CIFS and SMB would be irrelevant since these two
+                                                do not provide the required security mechanism in the scenario. It
+                                                is best to use Challenge-Handshake Authentication Protocol (CHAP)
+                                                instead</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12987"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12987">
+                                            Replace the current lSCSl Block Interface with an lSCSl Virtual Tape
+                                            Library Interface
+                                            <br>
+                                            <i>ISCSI Virtual Tape Library Interface is primarily used for Tape
+                                                Gateways and not for Volume Gateways. It is better to use
+                                                Challenge-Handshake Authentication Protocol (CHAP) instead.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12988"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12988">
+                                            <b>Configure a Challenge-Handshake Authentication Protocol (CHAP) to
+                                                authenticate iSCSl and initiator connections</b>
+                                            <br>
+                                            <i>In AWS Storage Gateway, your iSCSI initiators connect to your volumes
+                                                as iSCSI targets. Storage Gateway uses Challenge-Handshake
+                                                Authentication Protocol (CHAP) to authenticate iSCSI and initiator
+                                                connections. CHAP provides protection against playback attacks by
+                                                requiring authentication to access storage volume targets. For each
+                                                volume target, you can define one or more CHAP credentials. You can
+                                                view and edit these credentials for the different initiators in the
+                                                Configure CHAP credentials dialog box.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12989"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12989">
+                                            Configure a Challenge-Handshake Authentication Protocol (CHAP) to
+                                            authenticate NFS connections and safeguard your network from replay
+                                            attacks
+                                            <br>
+                                            <i>CHAP is primarily used to authenticate iSCSI and not NFS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4827">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4827" aria-expanded="true"
+                                    aria-controls="collapse-4827">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">8. A shipping firm runs its web applications on
+                                                its on-premises data center. The servers have a dependency on
+                                                non-x86 hardware and the management plans to use AWS to scale its
+                                                on-premises data storage. However, the backup application is only
+                                                able to write to POSIX-compatible block-based storage. There is a
+                                                total of 1,000 TB of data files that need to be mounted to a single
+                                                folder on the file server. Existing users must also be able to
+                                                access portions of this data while the backups are taking
+                                                place.<br><br>Which of the following backup solutions would be most
+                                                appropriate to meet the above requirements?</div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4827" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4827" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12990"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12990">
+                                            <b>Provision Gateway Cached Volumes from AWS Storage Gateway</b>
+                                            <br>
+                                            <i>Provision Gateway Cached Volumes from AWS Storage Gateway supports
+                                                volumes of up to 1,024 TB in size, and the frequently accessed data
+                                                is stored on the on-premises server while the entire data is backed
+                                                up over AWS</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12991"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12991">
+                                            Use Amazon Glacier as the target for your data backups
+                                            <br>
+                                            <i>The data stored in Amazon Glacier is not available immediately.
+                                                Retrieval jobs typically require 3-5 hours to complete.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12992"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12992">
+                                            Provision Gateway Stored Volumes from AWS Storage Gateway
+                                            <br>
+                                            <i>Gateway stored volumes can only store up to 512 TB worth of data</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12993"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12993">
+                                            Use Amazon S3 as the target for your data backups
+                                            <br>
+                                            <i>Amazon S3 is designed for object storage and not ideal for POSIX
+                                                compliant data</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4828">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4828" aria-expanded="true"
+                                    aria-controls="collapse-4828">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">9. An international humanitarian aid organization
+                                                has a requirement to store 20 TB worth of scanned files for their
+                                                relief operations which can grow to up to a total of 50 TB of data.
+                                                There is also a requirement to have a website with a search feature
+                                                in place that can be used to easily find a certain item through the
+                                                thousands of scanned files. The new system is expected to run for
+                                                more than 3 years.<br><br>Which of the following is the most
+                                                cost-effective option in implementing the search feature in their
+                                                system?</div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4828" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4828" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12994"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12994">
+                                            Use EFS to store and serve the scanned files. Install a 3rd-party search
+                                            software on an Auto Scaling group of On-Demand EC2 Instances and an
+                                            Elastic Load Balancer
+                                            <br>
+                                            <i>It is stated in the scenario that the new system is expected to run
+                                                for more than 3 years which means that using Reserved EC2 instances
+                                                would be a more cost-effective choice than using On-Demand
+                                                instances. In addition, purchasing and installing a 3rd-party search
+                                                software might be more expensive than just using Amazon
+                                                CloudSearch</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12995"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12995">
+                                            Design the new system on a CloudFormation template. Use an EC2 instance
+                                            running NGINX web server and an open source search application. Launch
+                                            multiple standard EBS volumes with RAID configuration to store the
+                                            scanned files with a search index
+                                            <br>
+                                            <i>A system composed of RAID configuration of EBS volumes is not a
+                                                durable and scalable solution compared to S3.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12996"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-12996">
+                                            <b>Set up a new S3 bucket with standard storage to store and serve the
+                                                scanned files. Use CloudSearch for query processing and use Elastic
+                                                Beanstalk to host the website across multiple availability zones</b>
+                                            <br>
+                                            <i>It uses S3 to store the images, which is a durable and scalable
+                                                solution. It also uses CloudSearch for query processing, and with a
+                                                multi-AZ implementation, it achieves high availability.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12997"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12997">
+                                            Use S3 for both storing and searching the scanned files by utilizing the
+                                            native search capabilities of S3
+                                            <br>
+                                            <i>As the native search capability of S3 is not effective. It is better
+                                                to use CloudSearch or another service that provides search
+                                                functionality.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="heading-4829">
+                                <div style="color: rgba(0, 0, 0, 0.8);" class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse-4829" aria-expanded="true"
+                                    aria-controls="collapse-4829">
+                                    <div style="display: flex;flex-direction: row;justify-content: space-between;}">
+                                        <div class="row">
+                                            <div class="col-auto">10. A company provides big data services to
+                                                enterprise clients around the globe. One of the clients has 60 TB of
+                                                raw data from their on-premises Oracle data warehouse. The data is
+                                                to be migrated to Amazon Redshift. However, the database receives
+                                                minor updates on a daily basis while major updates are scheduled
+                                                every end of the month. The migration process must be completed
+                                                within approximately 30 days before the next major update on the
+                                                Redshift database. The company can only allocate 50 Mbps of Internet
+                                                connection for this activity to avoid impacting business
+                                                operations.<br><br>Which of the following actions will satisfy the
+                                                migration requirements of the company while keeping the costs low?
+                                            </div>
+                                            <div class="col-auto"><span
+                                                    class="btn btn-sm btn-primary button-category mb-1">Storage</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="collapse-4829" class="accordion-collapse collapse accordion-content show "
+                                aria-labelledby="heading-4829" data-bs-parent="#accordionQuestion">
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12998"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12998">
+                                            <b>Create an AWS Snowball import job to request for a Snowball Edge
+                                                device. Use the AWS Schema Conversion Tool (SCT) to process the
+                                                on-premises data warehouse and load it to the Snowball Edge device.
+                                                Install the extraction agent on a separate on-premises server and
+                                                register it with AWS SCT. Once the Snowball Edge imports data to the
+                                                S3 bucket, use AWS SCT to migrate the data to Amazon Redshift.
+                                                Configure a local task and AWS DMS task to replicate the ongoing
+                                                updates to the data warehouse. Monitor and verify that the data
+                                                migration is complete.</b>
+                                            <br>
+                                            <i>You can use an AWS SCT agent to extract data from your on-premises
+                                                data warehouse and migrate it to Amazon Redshift. The agent extracts
+                                                your data and uploads the data to either Amazon S3 or, for
+                                                large-scale migrations, an AWS Snowball Edge device. You can then
+                                                use AWS SCT to copy the data to Amazon Redshift.<br><br>Large-scale
+                                                data migrations can include many terabytes of information and can be
+                                                slowed by network performance and by the sheer amount of data that
+                                                has to be moved. AWS Snowball Edge is an AWS service you can use to
+                                                transfer data to the cloud at faster-than-network speeds using an
+                                                AWS-owned appliance. An AWS Snowball Edge device can hold up to 100
+                                                TB of data. It uses 256-bit encryption and an industry-standard
+                                                Trusted Platform Module (TPM) to ensure both security and full
+                                                chain-of-custody for your data. AWS SCT works with AWS Snowball Edge
+                                                devices.<br><br>When you use AWS SCT and an AWS Snowball Edge
+                                                device, you migrate your data in two stages. First, you use the AWS
+                                                SCT to process the data locally and then move that data to the AWS
+                                                Snowball Edge device. You then send the device to AWS using the AWS
+                                                Snowball Edge process, and then AWS automatically loads the data
+                                                into an Amazon S3 bucket. Next, when the data is available on Amazon
+                                                S3, you use AWS SCT to migrate the data to Amazon Redshift. Data
+                                                extraction agents can work in the background while AWS SCT is
+                                                closed. You manage your extraction agents by using AWS SCT. The
+                                                extraction agents act as listeners. When they receive instructions
+                                                from AWS SCT, they extract data from your data warehouse.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-12999"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-12999">
+                                            Create a new Oracle Database on Amazon RDS. Configure Site-to-Site VPN
+                                            connection from the on-premises data center to the Amazon VPC. Configure
+                                            replication from the on-premises database to Amazon RDS. Once
+                                            replication is complete, create an AWS Schema Conversion Tool (SCT)
+                                            project with AWS DMS task to migrate the Oracle database to Amazon
+                                            Redshift. Monitor and verify if the data migration is complete before
+                                            the cut-over
+                                            <br>
+                                            <i>Replicating 60 TB worth of data over the public Internet will take
+                                                several days over the 30-day migration window. It is also stated in
+                                                the scenario that the company can only allocate 50 Mbps of Internet
+                                                connection for the migration activity. Sending the data over the
+                                                Internet could potentially affect business operations.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13000"
+                                            disabled="" checked="">
+                                        <label class="form-check-labelx" for="answers-13000">
+                                            Create an AWS Snowball Edge job using the AWS Snowball console. Export
+                                            all data from the Oracle data warehouse to the Snowball Edge device.
+                                            Once the Snowball device is returned to Amazon and data is imported to
+                                            an S3 bucket, create an Oracle RDS instance to import the data. Create
+                                            an AWS Schema Conversion Tool (SCT) project with AWS DMS task to migrate
+                                            the Oracle database to Amazon Redshift. Copy the missing daily updates
+                                            from Oracle in the data center to the RDS for Oracle database over the
+                                            internet. Monitor and verify if the data migration is complete before
+                                            the cut-over
+                                            <br>
+                                            <i>You need to configure the data extraction agent first on your
+                                                on-premises server. In addition, you don't need the data to be
+                                                imported and exported via Amazon RDS. AWS DMS can directly migrate
+                                                the data to Amazon Redshift.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="" id="answers-13001"
+                                            disabled="">
+                                        <label class="form-check-labelx" for="answers-13001">
+                                            Since you have a 30-day window for migration, configure VPN connectivity
+                                            between AWS and the company's data center by provisioning a 1 Gbps AWS
+                                            Direct Connect connection. Install Oracle database on an EC2 instance
+                                            that is configured to synchronize with the on-premises Oracle database.
+                                            Once replication is complete, create an AWS DMS task on an AWS SCT
+                                            project to migrate the Oracle database to Amazon Redshift. Monitor and
+                                            verify if the data migration is complete before the cut-over Since you
+                                            have a 30-day window for migration, configure VPN connectivity between
+                                            AWS and the company's data center by provisioning a 1 Gbps AWS Direct
+                                            Connect connection. Launch an Oracle Real Application Clusters (RAC)
+                                            database on an EC2 instance and set it up to fetch and synchronize the
+                                            data from the on-premises Oracle database. Once replication is complete,
+                                            create an AWS DMS task on an AWS SCT project to migrate the Oracle
+                                            database to Amazon Redshift. Monitor and verify if the data migration is
+                                            complete before the cut-over
+                                            <br>
+                                            <i>Although this is possible, the company wants to keep the cost low.
+                                                Using a Direct Connect connection for a one-time migration is not a
+                                                cost-effective solution.</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tags accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
+                <div class="col-md-2"></div>
             </div>
         </div>
     </div>
